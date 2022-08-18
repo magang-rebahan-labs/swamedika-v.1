@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:swamedika/views/pages/home.dart';
+import 'package:swamedika/views/pages/logosplash.dart';
 import '../../main.dart';
 import '../../model/on_board_data.dart';
 import '../constants/app_style.dart';
@@ -64,7 +64,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
               itemBuilder: (context, index) => Column(
                 children: [
                   SizedBox(
-                    height: sizeV * 5,
+                    height: sizeV * 8,
                   ),
                   Text(
                     onboardingContents[index].title,
@@ -75,7 +75,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                     height: sizeV * 5,
                   ),
                   SizedBox(
-                    height: sizeV * 45,
+                    height: sizeV * 35,
                     child: Image.asset(
                       onboardingContents[index].image,
                       fit: BoxFit.contain,
@@ -107,7 +107,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const HomePage(),
+                              builder: (context) => const LogoSplash(),
                             ),
                           );
                         },
@@ -123,7 +123,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const HomePage(),
+                                  builder: (context) => const LogoSplash(),
                                 ),
                               );
                             },

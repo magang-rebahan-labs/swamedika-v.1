@@ -1,0 +1,75 @@
+// ignore_for_file: avoid_print
+
+import 'package:flutter/material.dart';
+
+class AppBarSearch extends StatelessWidget {
+  const AppBarSearch({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SizedBox(
+        height: 210.0,
+        child: Stack(
+          children: <Widget>[
+            Container(
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/images/appbar.png'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              width: MediaQuery.of(context).size.width,
+              height: 180.0,
+              child: const Padding(
+                padding: EdgeInsets.only(top: 65.0, left: 30.0),
+                child: Text(
+                  "Welcome",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            Positioned(
+              top: 155.0,
+              left: 0.0,
+              right: 0.0,
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20.0),
+                      border: Border.all(
+                          color: Colors.grey.withOpacity(0.5), width: 1.0),
+                      color: Colors.white),
+                  child: Row(
+                    children: [
+                      IconButton(
+                        icon: const Icon(
+                          Icons.search,
+                          color: Colors.black45,
+                        ),
+                        onPressed: () {
+                          print("your menu action here");
+                        },
+                      ),
+                      const Expanded(
+                        child: TextField(
+                          decoration: InputDecoration.collapsed(
+                            hintText: "Pencarian",
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

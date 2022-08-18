@@ -14,10 +14,10 @@ final kStart = TextStyle(
     fontWeight: FontWeight.bold);
 
 final kTitle = TextStyle(
-  fontFamily: 'Klasik',
-  fontSize: SizeConfig.blockSizeH! * 7,
-  color: kSecondaryColor,
-);
+    fontFamily: 'Klasik',
+    fontSize: SizeConfig.blockSizeH! * 8,
+    color: kSecondaryColor,
+    fontWeight: FontWeight.bold);
 
 final kTitle2 = TextStyle(
   fontFamily: 'Klasik',
