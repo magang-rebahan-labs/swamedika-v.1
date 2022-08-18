@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:swamedika/views/pages/content_screen.dart';
+import 'package:swamedika/views/pages/home.dart';
 
-import 'views/pages/splashscreen.dart';
+// import 'views/pages/splashscreen.dart';
 
 bool? seenOnBoard;
 
@@ -27,7 +29,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SplashScreen(),
+      home: const HomePage(),
+      // home: const SplashScreen(),
     );
   }
 }
