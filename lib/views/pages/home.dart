@@ -38,6 +38,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(200.0),
         child: AppBarSearch(),
@@ -67,8 +68,7 @@ class _HomePageState extends State<HomePage> {
                               onTap: () {
                                 Navigator.of(context).push(
                                   MaterialPageRoute(
-                                    builder: (context) => const ContentScreen(),
-                                    // builder: (context) => const DetailPage(),
+                                    builder: (context) => const DetailPage(),
                                   ),
                                 );
                               },

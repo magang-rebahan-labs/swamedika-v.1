@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
+import 'package:swamedika/views/pages/detail.dart';
 
 class AppBarSearch extends StatelessWidget {
   const AppBarSearch({Key? key}) : super(key: key);
@@ -40,7 +41,7 @@ class AppBarSearch extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: DecoratedBox(
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20.0),
+                      borderRadius: BorderRadius.circular(18.0),
                       border: Border.all(
                           color: Colors.grey.withOpacity(0.5), width: 1.0),
                       color: Colors.white),
@@ -52,12 +53,20 @@ class AppBarSearch extends StatelessWidget {
                           color: Colors.black45,
                         ),
                         onPressed: () {
-                          print("your menu action here");
+                          FocusScope.of(context).unfocus();
                         },
                       ),
-                      const Expanded(
+                      Expanded(
                         child: TextField(
-                          decoration: InputDecoration.collapsed(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => const DetailPage(),
+                              ),
+                            );
+                          },
+                          autofocus: false,
+                          decoration: const InputDecoration.collapsed(
                             hintText: "Pencarian",
                           ),
                         ),
