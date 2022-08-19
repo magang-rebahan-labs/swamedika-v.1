@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:swamedika/views/pages/copy.dart';
+import 'package:swamedika/views/pages/home.dart';
 
 // import 'views/pages/splashscreen.dart';
 

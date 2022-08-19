@@ -145,7 +145,7 @@ class _HomePageState extends State<HomePage> {
                                               CrossAxisAlignment.start,
                                           children: [
                                             SizedBox(
-                                              height: 250,
+                                              height: 249,
                                               child: ListView.builder(
                                                 shrinkWrap: true,
                                                 scrollDirection: Axis.vertical,
@@ -194,6 +194,29 @@ class _HomePageState extends State<HomePage> {
                   ),
           ),
         ],
+      ),
+      bottomNavigationBar: SizedBox(
+        height: 55,
+        child: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+                color: Colors.green,
+              ),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.grid_view_outlined),
+              label: 'Category',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.format_list_bulleted_outlined),
+              label: 'More',
+            ),
+          ],
+          selectedItemColor: Colors.green,
+        ),
       ),
     );
   }
