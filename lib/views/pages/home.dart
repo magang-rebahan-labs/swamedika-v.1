@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:swamedika/model/booklist_response.dart';
+import 'package:swamedika/views/pages/content_screen.dart';
 import 'package:swamedika/views/pages/detail.dart';
 import 'package:swamedika/views/widgets/appbar.dart';
 
@@ -81,7 +82,8 @@ class _HomePageState extends State<HomePage> {
                                 onTap: () {
                                   Navigator.of(context).push(
                                     MaterialPageRoute(
-                                      builder: (context) => const DetailPage(),
+                                      builder: (context) => ContentScreen(
+                                          isbn: currentBook.isbn13!),
                                     ),
                                   );
                                 },

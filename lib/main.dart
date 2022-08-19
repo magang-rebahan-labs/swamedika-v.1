@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:swamedika/views/pages/copy.dart';
+import 'package:swamedika/views/controlleres/book_controllers.dart';
+import 'package:swamedika/views/pages/home.dart';
+import 'package:provider/provider.dart';
 
 // import 'views/pages/splashscreen.dart';
 
@@ -22,14 +24,17 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Swamedika Thibbun Nabawi',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return ChangeNotifierProvider(
+      create: (context) => BookController(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Swamedika Thibbun Nabawi',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const HomePage(),
+        // home: const SplashScreen(),
       ),
-      home: const HomePage(),
-      // home: const SplashScreen(),
     );
   }
 }
