@@ -147,7 +147,7 @@ class _HomePageState extends State<HomePage> {
                                               CrossAxisAlignment.start,
                                           children: [
                                             SizedBox(
-                                              height: 249,
+                                              height: 250,
                                               child: ListView.builder(
                                                 shrinkWrap: true,
                                                 scrollDirection: Axis.vertical,
