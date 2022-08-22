@@ -10,7 +10,7 @@ class AppBarSearch extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SizedBox(
-        height: 210.0,
+        height: MediaQuery.of(context).size.height * 0.27,
         child: Stack(
           children: <Widget>[
             Container(
@@ -20,8 +20,8 @@ class AppBarSearch extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              width: MediaQuery.of(context).size.width,
-              height: 180.0,
+              width: MediaQuery.of(context).size.width * 1,
+              height: MediaQuery.of(context).size.height * 0.22,
               child: const Padding(
                 padding: EdgeInsets.only(top: 65.0, left: 30.0),
                 child: Text(
@@ -34,7 +34,7 @@ class AppBarSearch extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 155.0,
+              top: MediaQuery.of(context).size.width / 2.5,
               left: 0.0,
               right: 0.0,
               child: Container(
