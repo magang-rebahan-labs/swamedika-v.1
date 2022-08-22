@@ -55,8 +55,8 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       const Padding(
                         padding: EdgeInsets.only(
-                          top: 20.0,
-                          right: 115.0,
+                          top: 10.0,
+                          right: 15.0,
                           left: 10.0,
                           bottom: 5.0,
                         ),
@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       SizedBox(
-                        height: 200,
+                        height: MediaQuery.of(context).size.height * 0.25,
                         child: ListView.builder(
                           shrinkWrap: true,
                           scrollDirection: Axis.horizontal,
@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                           itemBuilder: (context, index) {
                             final currentBook = bookList!.books![index];
                             return SizedBox(
-                              width: 120,
+                              width: MediaQuery.of(context).size.width * 0.3,
                               child: GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).push(
@@ -91,7 +91,9 @@ class _HomePageState extends State<HomePage> {
                                   children: [
                                     Image.network(
                                       currentBook.image!,
-                                      height: 150,
+                                      height:
+                                          MediaQuery.of(context).size.height *
+                                              0.18,
                                       fit: BoxFit.cover,
                                     ),
                                     Text(
@@ -130,7 +132,7 @@ class _HomePageState extends State<HomePage> {
                                         const Padding(
                                           padding: EdgeInsets.only(
                                             top: 10.0,
-                                            right: 210.0,
+                                            right: 10.0,
                                             left: 10.0,
                                             bottom: 5.0,
                                           ),
@@ -147,7 +149,10 @@ class _HomePageState extends State<HomePage> {
                                               CrossAxisAlignment.start,
                                           children: [
                                             SizedBox(
-                                              height: 250,
+                                              height: MediaQuery.of(context)
+                                                      .size
+                                                      .height *
+                                                  0.27,
                                               child: ListView.builder(
                                                 shrinkWrap: true,
                                                 scrollDirection: Axis.vertical,
@@ -156,7 +161,11 @@ class _HomePageState extends State<HomePage> {
                                                   final currentBook =
                                                       bookList!.books![index];
                                                   return SizedBox(
-                                                    width: 120,
+                                                    width:
+                                                        MediaQuery.of(context)
+                                                                .size
+                                                                .width *
+                                                            0.22,
                                                     child: GestureDetector(
                                                       onTap: () {
                                                         Navigator.of(context)
@@ -174,7 +183,11 @@ class _HomePageState extends State<HomePage> {
                                                         children: [
                                                           Image.network(
                                                             currentBook.image!,
-                                                            height: 150,
+                                                            height: MediaQuery.of(
+                                                                        context)
+                                                                    .size
+                                                                    .height *
+                                                                0.18,
                                                             fit: BoxFit.cover,
                                                           ),
                                                         ],
@@ -198,7 +211,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       bottomNavigationBar: SizedBox(
-        height: 55,
+        height: MediaQuery.of(context).size.height * 0.08,
         child: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
