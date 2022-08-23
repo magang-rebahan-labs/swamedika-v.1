@@ -34,7 +34,7 @@ class AppBarSearch extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: MediaQuery.of(context).size.width / 2.5,
+              top: MediaQuery.of(context).size.width / 2.6,
               left: 0.0,
               right: 0.0,
               child: Container(
