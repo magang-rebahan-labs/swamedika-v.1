@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(200.0),
+        preferredSize: Size.fromHeight(190.0),
         child: AppBarSearch(),
       ),
       body: const RecomendationLocal(),

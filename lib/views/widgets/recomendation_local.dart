@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:swamedika/model/recomendation_data.dart';
-import 'package:swamedika/views/pages/detail.dart';
-import 'package:swamedika/views/widgets/news_section.dart';
+import 'package:swamedika/views/pages/herbal_view.dart';
+import 'package:swamedika/views/widgets/new_news_section.dart';
 
 class RecomendationLocal extends StatefulWidget {
   const RecomendationLocal({super.key});
@@ -18,9 +18,12 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
       children: [
         // Judul Rekomendasi
         const Padding(
-            padding: EdgeInsets.only(top: 2.0, right: 15.0, left: 15.0),
-            child: Text('Pengobatan Covid Dengan Swamedika',
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold))),
+          padding: EdgeInsets.only(top: 2.0, right: 15.0, left: 15.0),
+          child: Text(
+            'Pengobatan Covid Dengan Swamedika',
+            style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+          ),
+        ),
 
         // Konten (Gambar) Rekomendasi
         SizedBox(
@@ -39,7 +42,7 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => const DetailPage(),
+                            builder: (context) => const HerbalView(),
                           ),
                         );
                       },
@@ -50,14 +53,15 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                           Container(
                             // Setting containernya
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10.0),
-                                boxShadow: const [
-                                  BoxShadow(
-                                    color: Colors.transparent,
-                                    offset: Offset(0.0, 4.0),
-                                    blurRadius: 6.0,
-                                  )
-                                ]),
+                              borderRadius: BorderRadius.circular(10.0),
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Colors.transparent,
+                                  offset: Offset(0.0, 4.0),
+                                  blurRadius: 6.0,
+                                )
+                              ],
+                            ),
 
                             // Setting gambar dan judulnya
                             child: Column(
@@ -65,31 +69,33 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                               children: [
                                 // Setting gambarnya
                                 ClipRRect(
-                                    borderRadius: BorderRadius.circular(10.0),
-                                    child: Image.asset(
-                                      recomendationdataContents[index].image,
-                                      fit: BoxFit.cover,
-                                      width: 130,
-                                      height:
-                                          MediaQuery.of(context).size.height *
-                                              0.15,
-                                    )),
+                                  borderRadius: BorderRadius.circular(10.0),
+                                  child: Image.asset(
+                                    recomendationdataContents[index].image,
+                                    fit: BoxFit.cover,
+                                    width: 130,
+                                    height: MediaQuery.of(context).size.height *
+                                        0.15,
+                                  ),
+                                ),
 
                                 // Setting judulnya
                                 Padding(
-                                    padding: const EdgeInsets.only(
-                                      top: 15.0,
-                                      left: 5,
+                                  padding: const EdgeInsets.only(
+                                    top: 15.0,
+                                    left: 5,
+                                  ),
+                                  child: Text(
+                                    recomendationdataContents[index].title,
+                                    maxLines: 2,
+                                    textAlign: TextAlign.left,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: const TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold,
                                     ),
-                                    child: Text(
-                                        recomendationdataContents[index].title,
-                                        maxLines: 2,
-                                        textAlign: TextAlign.left,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: const TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.bold,
-                                        ))),
+                                  ),
+                                ),
                               ],
                             ),
                           )
@@ -100,7 +106,11 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                 );
               }),
         ),
-        const NewsSection()
+        const Expanded(
+          child: SingleChildScrollView(
+            child: NewNewsSection(),
+          ),
+        )
       ],
     );
   }
