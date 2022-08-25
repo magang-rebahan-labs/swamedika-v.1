@@ -1,32 +1,17 @@
-// ignore_for_file: unused_local_variable
-
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-// import 'package:swamedika/views/constants/r.dart';
+import 'package:swamedika/model/recomendation_data.dart';
 import 'package:swamedika/views/controlleres/book_controllers.dart';
-// import 'package:url_launcher/url_launcher.dart';
 
 class ContentScreen extends StatefulWidget {
-  const ContentScreen({
-    Key? key,
-    required this.isbn,
-  }) : super(key: key);
-  final String isbn;
+  const ContentScreen(RecomendationData recomendationdataContent, {super.key});
 
   @override
   State<ContentScreen> createState() => _ContentScreenState();
 }
 
 class _ContentScreenState extends State<ContentScreen> {
-  BookController? controller;
-  @override
-  void initState() {
-    super.initState();
-    controller = Provider.of<BookController>(context, listen: false);
-    controller!.fetchDetailBookApi(widget.isbn);
-  }
-
   final bool _pinned = true;
   final bool _snap = false;
   final bool _floating = false;

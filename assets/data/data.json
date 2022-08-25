@@ -1,10 +1,12 @@
-[
-  {
-    "id": 1,
-    "title": "Pengobatan Batuk Dengan Swamedika",
-    "cate": "Rempah ah",
-    "desc": "JAHE memiliki komponen zat aktif yang bisa membantu mengurangi gejala pilek, batuk, dan sakit tenggorokan. Jenis rempah ini dapat memberikan rasa hangat sehingga membantu melegakan tenggorokan. Alhasil, batuk pun bisa mereda lebih cepat.",
-    "serv": "ANDA bisa memilih mencampurkan jahe pada teh. Untuk membuat teh jahe, haluskanlah jahe menjadi bubuk terlebih dulu. Ambil sekitar 2 sendok teh bubuk jahe dan rebus dalam air hingga mendidih selama beberapa menit. Saring larutan jahe ini untuk mendapatkan sarinya dan masukkan teh ke dalamnya. Minumlah teh jahe untuk obat batuk ini selagi hangat.",
-    "images": "https://asset-a.grid.id/crop/0x0:0x0/x/photo/2021/08/23/webpnet-resizeimage-53jpg-20210823014956.jpg"
-  }
-]
+{
+  "body":[
+    {
+      "id": 1,
+      "title": "Pengobatan Batuk Dengan",
+      "cate": "Rempah ah",
+      "desc": "JAHE memiliki komponen zat aktif yang bisa membantu mengurangi gejala pilek, batuk, dan sakit tenggorokan. Jenis rempah ini dapat memberikan rasa hangat sehingga membantu melegakan tenggorokan. Alhasil, batuk pun bisa mereda lebih cepat.",
+      "serv": "ANDA bisa memilih mencampurkan jahe pada teh. Untuk membuat teh jahe, haluskanlah jahe menjadi bubuk terlebih dulu. Ambil sekitar 2 sendok teh bubuk jahe dan rebus dalam air hingga mendidih selama beberapa menit. Saring larutan jahe ini untuk mendapatkan sarinya dan masukkan teh ke dalamnya. Minumlah teh jahe untuk obat batuk ini selagi hangat.",
+      "images": "https://asset-a.grid.id/crop/0x0:0x0/x/photo/2021/08/23/webpnet-resizeimage-53jpg-20210823014956.jpg"
+    }
+  ]
+}

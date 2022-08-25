@@ -31,6 +31,7 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
               scrollDirection: Axis.horizontal,
               itemCount: recomendationdataContents.length,
               itemBuilder: (context, index) {
+                final senData = recomendationdataContents[index];
                 return Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Container(
@@ -39,7 +40,13 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => const DetailPage(),
+                            builder: (context) => DetailPage(
+                                subtitle: senData.subtitle,
+                                title: senData.title,
+                                desc: senData.desc,
+                                serve: senData.serve,
+                                image: senData.image,
+                                cate: senData.cate),
                           ),
                         );
                       },
@@ -100,7 +107,7 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                 );
               }),
         ),
-        const NewsSection()
+        // const NewsSection()
       ],
     );
   }
