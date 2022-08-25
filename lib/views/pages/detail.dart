@@ -36,9 +36,6 @@ class _DetailPageState extends State<DetailPage> {
 
   @override
   Widget build(BuildContext context) {
-    print(MediaQuery.of(context).size.width);
-    print(MediaQuery.of(context).size.height);
-    print(MediaQuery.of(context).size.height / 2.96);
     return Scaffold(
       body: CustomScrollView(slivers: [
         SliverAppBar(

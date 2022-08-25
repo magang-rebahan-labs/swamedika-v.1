@@ -107,7 +107,7 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                 );
               }),
         ),
-        // const NewsSection()
+        const NewsSection()
       ],
     );
   }
