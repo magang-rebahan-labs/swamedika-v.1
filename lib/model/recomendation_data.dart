@@ -18,7 +18,7 @@ class RecomendationData {
 
 List<RecomendationData> recomendationdataContents = [
   RecomendationData(
-    subtitle: '1',
+    subtitle: 'Pengobatan Batuk Dengan Swamedika',
     image: 'assets/images/batuk.jpg',
     title: 'Batuk',
     desc: 'Jahe memiliki',

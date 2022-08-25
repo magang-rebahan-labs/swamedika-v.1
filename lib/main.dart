@@ -27,7 +27,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           backgroundColor: Colors.white,
         ),
-        home: seenOnBoard == true ? const LogoSplash() : const SplashScreen());
+        // home: seenOnBoard == true ? const LogoSplash() : const SplashScreen());
+        home: const SplashScreen());
     // home: const DetailFruit());
   }
 }

@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:swamedika/views/pages/home.dart';
 
@@ -43,7 +42,9 @@ class _LogoSplashState extends State<LogoSplash> {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: Image.asset(
+            // Ditambah width
             'assets/images/logo.png',
+            width: MediaQuery.of(context).size.width / 1.524,
           ),
         ),
       ),
