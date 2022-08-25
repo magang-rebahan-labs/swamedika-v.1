@@ -61,7 +61,14 @@ class AppBarSearch extends StatelessWidget {
                           onTap: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => const DetailPage(),
+                                builder: (context) => const DetailPage(
+                                  image: '',
+                                  desc: '',
+                                  serve: '',
+                                  title: '',
+                                  cate: '',
+                                  subtitle: '',
+                                ),
                               ),
                             );
                           },

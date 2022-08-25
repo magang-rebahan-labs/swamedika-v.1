@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:swamedika/model/recomendation_data.dart';
-import 'package:swamedika/views/pages/herbal_view.dart';
+import 'package:swamedika/views/pages/detail.dart';
 import 'package:swamedika/views/widgets/new_news_section.dart';
 
 class RecomendationLocal extends StatefulWidget {
@@ -34,6 +34,7 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
               scrollDirection: Axis.horizontal,
               itemCount: recomendationdataContents.length,
               itemBuilder: (context, index) {
+                final senData = recomendationdataContents[index];
                 return Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Container(
@@ -42,7 +43,13 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => const HerbalView(),
+                            builder: (context) => DetailPage(
+                                subtitle: senData.subtitle,
+                                title: senData.title,
+                                desc: senData.desc,
+                                serve: senData.serve,
+                                image: senData.image,
+                                cate: senData.cate),
                           ),
                         );
                       },
