@@ -26,14 +26,6 @@ List<RecomendationData> recomendationdataContents = [
     cate: 'Rempah',
   ),
   RecomendationData(
-    subtitle: '2',
-    image: 'assets/images/batuk.jpg',
-    title: 'Batuk',
-    desc: 'Jahe memiliki',
-    serve: 'Anda bisa mencampurkan',
-    cate: 'Rempah',
-  ),
-  RecomendationData(
     subtitle: '3',
     image: 'assets/images/alergi.jpg',
     title: 'Pilek',
