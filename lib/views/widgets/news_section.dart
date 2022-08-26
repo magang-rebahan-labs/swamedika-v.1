@@ -1,11 +1,8 @@
-// ignore_for_file: avoid_print
-
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:swamedika/model/booklist_response.dart';
+import 'package:swamedika/model/newsapi_response.dart';
+// import 'package:swamedika/model/booklist_response.dart';
 import 'package:http/http.dart' as http;
-
 import '../pages/detail.dart';
 
 class NewsSection extends StatefulWidget {
@@ -16,16 +13,15 @@ class NewsSection extends StatefulWidget {
 }
 
 class _NewsSectionState extends State<NewsSection> {
-  BookListResponse? bookList;
+  NewsApi? bookList;
   fetchBookApi() async {
-    var url = Uri.parse('https://api.itbook.store/1.0/new');
+    var url = Uri.parse(
+        'https://newsapi.org/v2/top-headlines?country=id&apiKey=a02a45cc19264809becd195367877dde');
     var response = await http.get(url);
-    print('Response status: ${response.statusCode}');
-    print('Response body: ${response.body}');
 
     if (response.statusCode == 200) {
       final jsoonBookList = jsonDecode(response.body);
-      bookList = BookListResponse.fromJson(jsoonBookList);
+      bookList = NewsApi.fromJson(jsoonBookList);
       setState(() {});
     }
   }
@@ -78,7 +74,7 @@ class _NewsSectionState extends State<NewsSection> {
                             scrollDirection: Axis.vertical,
                             itemCount: 5,
                             itemBuilder: (context, index) {
-                              final currentBook = bookList!.books![index];
+                              final currentBook = bookList!.articles![index];
                               return SizedBox(
                                 width: MediaQuery.of(context).size.width * 0.30,
                                 child: GestureDetector(
@@ -101,7 +97,7 @@ class _NewsSectionState extends State<NewsSection> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Image.network(
-                                        currentBook.image!,
+                                        currentBook.urlToImage!,
                                         height:
                                             MediaQuery.of(context).size.height *
                                                 0.18,

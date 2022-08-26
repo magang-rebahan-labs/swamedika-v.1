@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:swamedika/model/recomendation_data.dart';
 import 'package:swamedika/views/pages/detail.dart';
+import 'package:swamedika/views/widgets/appbar.dart';
 import 'package:swamedika/views/widgets/new_news_section.dart';
 
 class RecomendationLocal extends StatefulWidget {
@@ -13,12 +14,18 @@ class RecomendationLocal extends StatefulWidget {
 class _RecomendationLocalState extends State<RecomendationLocal> {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(190.0),
+        child: AppBarSearch(),
+      ),
+      body: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         // Judul Rekomendasi
         const Padding(
-          padding: EdgeInsets.only(top: 2.0, right: 15.0, left: 15.0),
+          padding: EdgeInsets.only(top: 25.0, right: 15.0, left: 15.0),
           child: Text(
             'Pengobatan Covid Dengan Swamedika',
             style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
@@ -117,8 +124,9 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
           child: SingleChildScrollView(
             child: NewNewsSection(),
           ),
-        )
+        ),
       ],
+    ),
     );
   }
 }

@@ -1,10 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:swamedika/model/recomendation_data.dart';
-
-// class Details {
-//   final String id;
-//   const Details(this.id);
-// }
 
 class DetailPage extends StatefulWidget {
   const DetailPage(
@@ -28,16 +22,19 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> {
+  // Variabel untuk settingan SliverAppBar
   final bool _pinned = true;
   final bool _snap = false;
   final bool _floating = false;
 
-  // String get recomendationdataContent => recomendationdataContent;
-
   @override
   Widget build(BuildContext context) {
+    // Variabel untuk menghitung MediaQuiry Tinggi
+    double tinggi = MediaQuery.of(context).size.height;
+
     return Scaffold(
       body: CustomScrollView(slivers: [
+        // Sliver untuk AppBar
         SliverAppBar(
           // Setting buat urusan sliverAppBar
           pinned: _pinned,
@@ -45,7 +42,7 @@ class _DetailPageState extends State<DetailPage> {
           floating: _floating,
 
           // Setting Sliver Image
-          expandedHeight: MediaQuery.of(context).size.height / 2.96,
+          expandedHeight: tinggi / 3.06,
           flexibleSpace: FlexibleSpaceBar(
             background: Image.asset(
               widget.image,
@@ -53,6 +50,8 @@ class _DetailPageState extends State<DetailPage> {
             ),
           ),
         ),
+
+        // Sliver untuk kontennya
         SliverList(
           delegate: SliverChildBuilderDelegate(
             (BuildContext context, int index) {

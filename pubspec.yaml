@@ -39,6 +39,7 @@ dependencies:
   shared_preferences: ^2.0.15
   google_fonts: ^3.0.1
   get: ^4.6.5
+  dotted_line: ^3.1.0
 
 dev_dependencies:
   flutter_test:
@@ -97,6 +98,11 @@ flutter:
     - family: Sans-serif
       fonts:
         - asset: assets/fonts/FontsFree-Net-SFProText-Regular.ttf
+    - family: source-serif
+      fonts:
+        - asset: assets/fonts/source-serif-pro/SourceSerifPro-Bold.ttf
+        - asset: assets/fonts/source-serif-pro/SourceSerifPro-Regular.ttf
+        - asset: assets/fonts/source-serif-pro/SourceSerifPro-Semibold.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
