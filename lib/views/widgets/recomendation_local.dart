@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:swamedika/model/recomendation_data.dart';
 import 'package:swamedika/views/pages/detail.dart';
-import 'package:swamedika/views/widgets/new_news_section.dart';
+// import 'package:swamedika/views/widgets/new_news_section.dart';
+import 'package:swamedika/views/widgets/news_section.dart';
 
 class RecomendationLocal extends StatefulWidget {
   const RecomendationLocal({super.key});
@@ -115,7 +116,8 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
         ),
         const Expanded(
           child: SingleChildScrollView(
-            child: NewNewsSection(),
+            // child: NewNewsSection(),
+            child: NewsSection(),
           ),
         )
       ],
