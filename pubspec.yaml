@@ -98,6 +98,11 @@ flutter:
     - family: Sans-serif
       fonts:
         - asset: assets/fonts/FontsFree-Net-SFProText-Regular.ttf
+    - family: source-serif
+      fonts:
+        - asset: assets/fonts/source-serif-pro/SourceSerifPro-Bold.ttf
+        - asset: assets/fonts/source-serif-pro/SourceSerifPro-Regular.ttf
+        - asset: assets/fonts/source-serif-pro/SourceSerifPro-Semibold.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
