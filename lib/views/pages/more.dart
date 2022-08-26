@@ -36,7 +36,7 @@ class More extends StatelessWidget {
           body: Column(
             children: [
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.28,
+                height: MediaQuery.of(context).size.height * 0.16,
                 width: MediaQuery.of(context).size.width,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -45,14 +45,9 @@ class More extends StatelessWidget {
                       'Lainnya',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                          fontSize: 50,
+                          fontSize: 40,
                           fontWeight: FontWeight.bold,
                           color: Colors.black54),
-                    ),
-                    Text(
-                      'Kamu dapat mencari info yang kamu butuhkan disini',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 16, color: Colors.black54),
                     ),
                   ],
                 ),
@@ -60,7 +55,7 @@ class More extends StatelessWidget {
 
               // BAGIAN GARIS PEMBATAS (DOTTED LINE)
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.07,
+                height: MediaQuery.of(context).size.height * 0.04,
                 width: MediaQuery.of(context).size.width,
                 child: const DottedLine(
                   direction: Axis.horizontal,
@@ -101,27 +96,30 @@ class More extends StatelessWidget {
                               return SizedBox(
                                 height:
                                     MediaQuery.of(context).size.height * 0.4,
-                                child: SizedBox(
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: const [
-                                      Text(
-                                        'Tentang Kami',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 25,
-                                            fontWeight: FontWeight.bold,
-                                            height: 3),
-                                      ),
-                                      Text(
-                                        'Swamedika Thibbun Nabawi adalah aplikasi yang mengedukasi masyarakat untuk pengobatan yang dianjurkan oleh nabi. Bahan-bahan yang digunakan dalam pengobatan ini merupakan bahan alami berkhasiat obat yang dikenal dalam dunia farmasi.',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 15, height: 1.5),
-                                      ),
-                                    ],
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 20, right: 20),
+                                  child: SizedBox(
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: const [
+                                        Text(
+                                          'Tentang Kami',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              fontSize: 25,
+                                              fontWeight: FontWeight.bold,
+                                              height: 3),
+                                        ),
+                                        Text(
+                                          'Swamedika Thibbun Nabawi adalah aplikasi yang mengedukasi masyarakat untuk pengobatan yang dianjurkan oleh nabi. Bahan-bahan yang digunakan dalam pengobatan ini merupakan bahan alami berkhasiat obat yang dikenal dalam dunia farmasi.',
+                                          textAlign: TextAlign.justify,
+                                          style: TextStyle(
+                                              fontSize: 15, height: 2.3),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               );
@@ -144,6 +142,75 @@ class More extends StatelessWidget {
                     ),
 
                     // BUTTON RELEASE NOTES
+                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white,
+                        onPrimary: Colors.black,
+                        elevation: 1,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0)),
+                        minimumSize: const Size(300, 45),
+                      ),
+                      onPressed: () {
+                        showModalBottomSheet(
+                            context: context,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(25.0),
+                              ),
+                            ),
+                            builder: (context) {
+                              return SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.4,
+                                child: SizedBox(
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: const [
+                                      Text(
+                                        'Catatan Rilis',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.bold,
+                                            height: 3),
+                                      ),
+                                      Text(
+                                        'Perbaikan Bug',
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                            fontSize: 15, height: 2.3),
+                                      ),
+                                      Text(
+                                        'Perbaikan Overflow bottom',
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                            fontSize: 15, height: 2.3),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              );
+                            });
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          Text(
+                            'Catatan Rilis',
+                            style: TextStyle(fontSize: 19, color: Colors.black),
+                          ),
+                          Icon(
+                            Icons.arrow_forward_ios,
+                            size: 19,
+                            color: Colors.black,
+                          ),
+                        ],
+                      ),
+                    ),
+
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         primary: Colors.white,
@@ -172,7 +239,7 @@ class More extends StatelessWidget {
                                         CrossAxisAlignment.center,
                                     children: const [
                                       Text(
-                                        'Release Notes',
+                                        'Pengembang',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                             fontSize: 25,
@@ -180,25 +247,13 @@ class More extends StatelessWidget {
                                             height: 3),
                                       ),
                                       Text(
-                                        'Versi 1.0.0 BETA | 25/08/2022',
+                                        'PT. Rejeki Berkah Nusantara',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
-                                            fontSize: 15, height: 1.5),
+                                            fontSize: 15, height: 2),
                                       ),
                                       Text(
-                                        '- Perbaikan bug',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 15, height: 1.5),
-                                      ),
-                                      Text(
-                                        '- Perbaikan overflowed bottom pada beberapa perangkat',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 15, height: 1.5),
-                                      ),
-                                      Text(
-                                        '- Penambahan desain dotted line pada page More',
+                                        '1999',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                             fontSize: 15, height: 1.5),
@@ -213,7 +268,7 @@ class More extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const [
                           Text(
-                            'Release Notes',
+                            'Pengembang',
                             style: TextStyle(fontSize: 19, color: Colors.black),
                           ),
                           Icon(
