@@ -15,21 +15,8 @@ class _NewNewsSectionState extends State<NewNewsSection> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // Paddingnya buat apa???
-        // Buat bungkus doang haha???
-        const Padding(
-          padding: EdgeInsets.only(),
-          child: Text(
-            'Berita Terkini Covid-19',
-            style: TextStyle(
-                fontFamily: "Sans-serif",
-                fontWeight: FontWeight.bold,
-                fontSize: 14),
-          ),
-        ),
         Padding(
-          padding:
-              EdgeInsets.only(top: MediaQuery.of(context).size.height / 27.06),
+          padding: const EdgeInsets.only(),
           child: ListView.builder(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),

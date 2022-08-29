@@ -19,13 +19,10 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: PreferredSize(
-        // preferredSize: Size.fromHeight(300.0),
-
         preferredSize:
             Size.fromHeight(MediaQuery.of(context).size.height / 2.9),
         child: const AppBarSearch(),
       ),
-      // backgroundColor: Color.fromARGB(255, 241, 231, 231),
       body: Container(
         margin: const EdgeInsets.only(right: 15, left: 15),
         child: Column(
@@ -33,8 +30,6 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
           children: [
             // Judul Rekomendasi
             const Padding(
-              // padding: EdgeInsets.only(top: 25.0, right: 15.0, left: 15.0),
-              // padding: EdgeInsets.only(right: 15.0, left: 15.0),
               padding: EdgeInsets.only(),
               child: Text(
                 'Pengobatan Covid Dengan Swamedika',
@@ -48,7 +43,6 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
             // Konten (Gambar) Rekomendasi
             SizedBox(
               height: MediaQuery.of(context).size.height / 5,
-              // width: MediaQuery.of(context).size.width / 23.4375,
               child: ListView.builder(
                   padding: EdgeInsets.symmetric(
                       vertical: MediaQuery.of(context).size.height / 58),
@@ -58,13 +52,10 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                   itemBuilder: (context, index) {
                     // Ukuran Media query untuk dibawah
                     final senData = recomendationdataContents[index];
-                    final sizePadding =
-                        MediaQuery.of(context).size.width / 23.4375;
                     final sizeImage = MediaQuery.of(context).size.height / 8.12;
 
                     // Gambar dan Title
                     return Padding(
-                      // padding: EdgeInsets.only(left: sizePadding),
                       padding: const EdgeInsets.only(right: 15),
                       child: GestureDetector(
                         onTap: () {
@@ -90,10 +81,9 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                                 // borderRadius: BorderRadius.circular(10.0),
                                 boxShadow: [
                                   BoxShadow(
-                                    color: Colors.transparent,
-                                    offset: Offset(0.0, 4.0),
-                                    blurRadius: 6.0,
-                                  )
+                                      color: Colors.transparent,
+                                      offset: Offset(0.0, 4.0),
+                                      blurRadius: 6.0)
                                 ],
                               ),
 
@@ -121,16 +111,14 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                                             MediaQuery.of(context).size.height /
                                                 203),
                                     child: Text(
-                                      recomendationdataContents[index].title,
-                                      maxLines: 2,
-                                      textAlign: TextAlign.left,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: const TextStyle(
-                                        fontFamily: "Sans-serif",
-                                        fontSize: 11,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
+                                        recomendationdataContents[index].title,
+                                        maxLines: 2,
+                                        textAlign: TextAlign.left,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: const TextStyle(
+                                            fontFamily: "Sans-serif",
+                                            fontSize: 11,
+                                            fontWeight: FontWeight.bold)),
                                   ),
                                 ],
                               ),
@@ -141,6 +129,19 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                     );
                   }),
             ),
+
+            Padding(
+              padding: EdgeInsets.only(
+                  bottom: MediaQuery.of(context).size.height / 27.06),
+              child: const Text(
+                'Berita Terkini Covid-19',
+                style: TextStyle(
+                    fontFamily: "Sans-serif",
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14),
+              ),
+            ),
+
             const Expanded(
               child: SingleChildScrollView(
                 child: NewNewsSection(),
