@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:swamedika/views/pages/category.dart';
-import 'package:swamedika/views/pages/fruit_view.dart';
 import 'package:swamedika/views/pages/more.dart';
 import 'package:swamedika/views/widgets/recomendation_local.dart';
 
