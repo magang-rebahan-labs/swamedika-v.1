@@ -50,15 +50,21 @@ class AppBarSearch extends StatelessWidget {
                 child: DecoratedBox(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8.0),
-                      border: Border.all(
-                          color: Colors.grey.withOpacity(0.5), width: 1.0),
-                      color: Colors.white),
+                      // border: Border.all(
+                      //     color: Colors.grey.withOpacity(0.5), width: 1.0),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                            color: const Color(0xFF22292E).withOpacity(0.20),
+                            blurRadius: 40,
+                            offset: const Offset(0, 16))
+                      ]),
                   child: Row(
                     children: [
                       IconButton(
                         icon: const Icon(
-                          Icons.search,
-                          color: Colors.black45,
+                          Icons.search_sharp,
+                          color: Color(0xFFC5C5C7),
                         ),
                         onPressed: () {
                           FocusScope.of(context).unfocus();

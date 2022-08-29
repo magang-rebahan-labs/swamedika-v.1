@@ -32,7 +32,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         child: _children.elementAt(_pilihanbuttom),
       ),
       bottomNavigationBar: SizedBox(
-        height: MediaQuery.of(context).size.height * 0.08,
+        height: MediaQuery.of(context).size.height / 10.684,
         child: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
