@@ -32,7 +32,7 @@ List<HerbalDataList> herbaldataContents = [
     serve: '-',
   ),
   HerbalDataList(
-    image: 'assets/images/herbal/sirih.png',
+    image: 'assets/images/herbal/Sirih.png',
     title: 'Sirih',
     desc: 'Sirih',
     serve: '-',
@@ -44,7 +44,7 @@ List<HerbalDataList> herbaldataContents = [
     serve: '-',
   ),
   HerbalDataList(
-    image: 'assets/images/herbal/bawangputih.png',
+    image: 'assets/images/herbal/Bawangputih.png',
     title: 'Bawang Putih',
     desc: 'Bawang Putih',
     serve: '-',
