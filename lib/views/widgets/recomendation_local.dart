@@ -16,117 +16,142 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(200.0),
-        child: AppBarSearch(),
+      appBar: PreferredSize(
+        // preferredSize: Size.fromHeight(300.0),
+
+        preferredSize:
+            Size.fromHeight(MediaQuery.of(context).size.height / 2.9),
+        child: const AppBarSearch(),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // Judul Rekomendasi
-          const Padding(
-            padding: EdgeInsets.only(top: 25.0, right: 15.0, left: 15.0),
-            child: Text(
-              'Pengobatan Covid Dengan Swamedika',
-              style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+      // backgroundColor: Color.fromARGB(255, 241, 231, 231),
+      body: Container(
+        margin: const EdgeInsets.only(right: 15, left: 15),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Judul Rekomendasi
+            const Padding(
+              // padding: EdgeInsets.only(top: 25.0, right: 15.0, left: 15.0),
+              // padding: EdgeInsets.only(right: 15.0, left: 15.0),
+              padding: EdgeInsets.only(),
+              child: Text(
+                'Pengobatan Covid Dengan Swamedika',
+                style: TextStyle(
+                    fontSize: 12.5,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "Sans-serif"),
+              ),
             ),
-          ),
 
-          // Konten (Gambar) Rekomendasi
-          SizedBox(
-            height: MediaQuery.of(context).size.height / 4,
-            child: ListView.builder(
-                padding: const EdgeInsets.symmetric(vertical: 10.0),
-                shrinkWrap: true,
-                scrollDirection: Axis.horizontal,
-                itemCount: recomendationdataContents.length,
-                itemBuilder: (context, index) {
-                  final senData = recomendationdataContents[index];
-                  return Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Container(
-                      margin: const EdgeInsets.only(left: 5),
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => DetailPage(
-                                  subtitle: senData.subtitle,
-                                  title: senData.title,
-                                  desc: senData.desc,
-                                  serve: senData.serve,
-                                  image: senData.image,
-                                  cate: senData.cate),
-                            ),
-                          );
-                        },
+            // Konten (Gambar) Rekomendasi
+            SizedBox(
+              height: MediaQuery.of(context).size.height / 5,
+              // width: MediaQuery.of(context).size.width / 23.4375,
+              child: ListView.builder(
+                  padding: EdgeInsets.symmetric(
+                      vertical: MediaQuery.of(context).size.height / 58),
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: recomendationdataContents.length,
+                  itemBuilder: (context, index) {
+                    // Ukuran Media query untuk dibawah
+                    final senData = recomendationdataContents[index];
+                    final sizePadding =
+                        MediaQuery.of(context).size.width / 23.4375;
+                    final sizeImage = MediaQuery.of(context).size.height / 8.12;
 
-                        // Setting kotakan gambarnya
-                        child: Column(
-                          children: [
-                            Container(
-                              // Setting containernya
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10.0),
-                                boxShadow: const [
-                                  BoxShadow(
-                                    color: Colors.transparent,
-                                    offset: Offset(0.0, 4.0),
-                                    blurRadius: 6.0,
-                                  )
-                                ],
+                    // Gambar dan Title
+                    return Padding(
+                      // padding: EdgeInsets.only(left: sizePadding),
+                      padding: const EdgeInsets.only(right: 15),
+                      child: Container(
+                        // color: Colors.red,
+                        // margin: const EdgeInsets.only(left: 5),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => DetailPage(
+                                    subtitle: senData.subtitle,
+                                    title: senData.title,
+                                    desc: senData.desc,
+                                    serve: senData.serve,
+                                    image: senData.image,
+                                    cate: senData.cate),
                               ),
+                            );
+                          },
 
-                              // Setting gambar dan judulnya
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  // Setting gambarnya
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(10.0),
-                                    child: Image.asset(
-                                      recomendationdataContents[index].image,
-                                      fit: BoxFit.cover,
-                                      width: 130,
-                                      height:
-                                          MediaQuery.of(context).size.height *
-                                              0.15,
-                                    ),
-                                  ),
+                          // Setting kotakan gambarnya
+                          child: Column(
+                            children: [
+                              Container(
+                                // Setting containernya
+                                decoration: BoxDecoration(
+                                  // borderRadius: BorderRadius.circular(10.0),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.transparent,
+                                      offset: Offset(0.0, 4.0),
+                                      blurRadius: 6.0,
+                                    )
+                                  ],
+                                ),
 
-                                  // Setting judulnya
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                      top: 15.0,
-                                      left: 5,
-                                    ),
-                                    child: Text(
-                                      recomendationdataContents[index].title,
-                                      maxLines: 2,
-                                      textAlign: TextAlign.left,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: const TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.bold,
+                                // Setting gambar dan judulnya
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    // Setting gambarnya
+                                    ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(6.0),
+                                        child: Image.asset(
+                                            recomendationdataContents[index]
+                                                .image,
+                                            fit: BoxFit.cover,
+                                            width: sizeImage,
+                                            height: sizeImage)
+                                        // width: 130,
+                                        // height: MediaQuery.of(context).size.height * 0.15),
+                                        ),
+
+                                    // Setting judulnya
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                          top: MediaQuery.of(context)
+                                                  .size
+                                                  .height /
+                                              203),
+                                      child: Text(
+                                        recomendationdataContents[index].title,
+                                        maxLines: 2,
+                                        textAlign: TextAlign.left,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: const TextStyle(
+                                          fontFamily: "Sans-serif",
+                                          fontSize: 11,
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                            )
-                          ],
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  );
-                }),
-          ),
-          const Expanded(
-            child: SingleChildScrollView(
-              child: NewNewsSection(),
+                    );
+                  }),
             ),
-          ),
-        ],
+            const Expanded(
+              child: SingleChildScrollView(
+                child: NewNewsSection(),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
