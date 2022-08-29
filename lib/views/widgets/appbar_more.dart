@@ -12,7 +12,7 @@ class AppBarMore extends StatelessWidget {
           statusBarColor: Colors.transparent,
         ),
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios),
+          icon: const Icon(Icons.arrow_back_ios_new_rounded),
           onPressed: () {
             Navigator.pop;
           },

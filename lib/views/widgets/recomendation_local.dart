@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:swamedika/model/recomendation_data.dart';
 import 'package:swamedika/views/pages/detail.dart';

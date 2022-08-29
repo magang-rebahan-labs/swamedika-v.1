@@ -1,7 +1,6 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
-import 'package:swamedika/views/pages/herbal_view.dart';
 
 class AppBarSearch extends StatelessWidget {
   const AppBarSearch({Key? key}) : super(key: key);
@@ -73,19 +72,19 @@ class AppBarSearch extends StatelessWidget {
                       Expanded(
                         child: TextField(
                           onTap: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => const HerbalView(),
-                                // const DetailPage(
-                                //   image: '',
-                                //   desc: '',
-                                //   serve: '',
-                                //   title: '',
-                                //   cate: '',
-                                //   subtitle: '',
-                                // ),
-                              ),
-                            );
+                            // Navigator.of(context).push(
+                            //   MaterialPageRoute(
+                            //     builder: (context) => const HerbalView(),
+                            //     // const DetailPage(
+                            //     //   image: '',
+                            //     //   desc: '',
+                            //     //   serve: '',
+                            //     //   title: '',
+                            //     //   cate: '',
+                            //     //   subtitle: '',
+                            //     // ),
+                            //   ),
+                            // );
                           },
                           autofocus: false,
                           decoration: const InputDecoration.collapsed(
