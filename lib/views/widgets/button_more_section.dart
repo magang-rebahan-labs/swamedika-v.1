@@ -11,9 +11,8 @@ class _ButtonMoreState extends State<ButtonMore> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.95,
+      width: MediaQuery.of(context).size.width / 1.119,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           // BUTTON TENTANG KAMI
           ElevatedButton(
@@ -23,7 +22,8 @@ class _ButtonMoreState extends State<ButtonMore> {
               elevation: 1,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0)),
-              minimumSize: const Size(300, 45),
+              minimumSize:
+                  Size.fromHeight(MediaQuery.of(context).size.height / 16.24),
             ),
             onPressed: () {
               showModalBottomSheet(
@@ -39,24 +39,24 @@ class _ButtonMoreState extends State<ButtonMore> {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 20, right: 20),
                         child: SizedBox(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: const [
-                              Text(
-                                'Tentang Kami',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.bold,
-                                    height: 3),
-                              ),
-                              Text(
-                                'Swamedika Thibbun Nabawi adalah aplikasi yang mengedukasi masyarakat untuk pengobatan yang dianjurkan oleh nabi. Bahan-bahan yang digunakan dalam pengobatan ini merupakan bahan alami berkhasiat obat yang dikenal dalam dunia farmasi.',
-                                textAlign: TextAlign.justify,
-                                style: TextStyle(fontSize: 15, height: 2.3),
-                              ),
-                            ],
+                          child: SingleChildScrollView(
+                            child: Column(
+                              children: const [
+                                Text(
+                                  'Tentang Kami',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.bold,
+                                      height: 3),
+                                ),
+                                Text(
+                                  'Swamedika Thibbun Nabawi adalah aplikasi yang mengedukasi masyarakat untuk pengobatan yang dianjurkan oleh nabi. Bahan-bahan yang digunakan dalam pengobatan ini merupakan bahan alami berkhasiat obat yang dikenal dalam dunia farmasi.',
+                                  textAlign: TextAlign.justify,
+                                  style: TextStyle(fontSize: 15, height: 2.3),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -71,7 +71,7 @@ class _ButtonMoreState extends State<ButtonMore> {
                   style: TextStyle(fontSize: 19, color: Colors.black),
                 ),
                 Icon(
-                  Icons.arrow_forward_ios,
+                  Icons.arrow_forward_ios_rounded,
                   size: 19,
                   color: Colors.black,
                 ),
@@ -79,7 +79,7 @@ class _ButtonMoreState extends State<ButtonMore> {
             ),
           ),
 
-          // BUTTON RELEASE NOTES
+          // BUTTON CATATAN RILIS
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               primary: Colors.white,
@@ -87,7 +87,8 @@ class _ButtonMoreState extends State<ButtonMore> {
               elevation: 1,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0)),
-              minimumSize: const Size(300, 45),
+              minimumSize:
+                  Size.fromHeight(MediaQuery.of(context).size.height / 16.24),
             ),
             onPressed: () {
               showModalBottomSheet(
@@ -100,30 +101,33 @@ class _ButtonMoreState extends State<ButtonMore> {
                   builder: (context) {
                     return SizedBox(
                       height: MediaQuery.of(context).size.height * 0.4,
-                      child: SizedBox(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: const [
-                            Text(
-                              'Catatan Rilis',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.bold,
-                                  height: 3),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 20, right: 20),
+                        child: SizedBox(
+                          child: SingleChildScrollView(
+                            child: Column(
+                              children: const [
+                                Text(
+                                  'Catatan Rilis',
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.bold,
+                                      height: 3),
+                                ),
+                                Text(
+                                  'Versi 1.0.0 | 29/08/2022',
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(fontSize: 15, height: 2.3),
+                                ),
+                                Text(
+                                  '- Perbaikan Bug',
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(fontSize: 15, height: 2.3),
+                                ),
+                              ],
                             ),
-                            Text(
-                              'Perbaikan Bug',
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 15, height: 2.3),
-                            ),
-                            Text(
-                              'Perbaikan Overflow bottom',
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 15, height: 2.3),
-                            ),
-                          ],
+                          ),
                         ),
                       ),
                     );
@@ -137,72 +141,7 @@ class _ButtonMoreState extends State<ButtonMore> {
                   style: TextStyle(fontSize: 19, color: Colors.black),
                 ),
                 Icon(
-                  Icons.arrow_forward_ios,
-                  size: 19,
-                  color: Colors.black,
-                ),
-              ],
-            ),
-          ),
-
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              primary: Colors.white,
-              onPrimary: Colors.black,
-              elevation: 1,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0)),
-              minimumSize: const Size(300, 45),
-            ),
-            onPressed: () {
-              showModalBottomSheet(
-                  context: context,
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.vertical(
-                      top: Radius.circular(25.0),
-                    ),
-                  ),
-                  builder: (context) {
-                    return SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.4,
-                      child: SizedBox(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: const [
-                            Text(
-                              'Pengembang',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.bold,
-                                  height: 3),
-                            ),
-                            Text(
-                              'PT. Rejeki Berkah Nusantara',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 15, height: 2),
-                            ),
-                            Text(
-                              '1999',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 15, height: 1.5),
-                            ),
-                          ],
-                        ),
-                      ),
-                    );
-                  });
-            },
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Text(
-                  'Pengembang',
-                  style: TextStyle(fontSize: 19, color: Colors.black),
-                ),
-                Icon(
-                  Icons.arrow_forward_ios,
+                  Icons.arrow_forward_ios_rounded,
                   size: 19,
                   color: Colors.black,
                 ),

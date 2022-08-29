@@ -19,9 +19,9 @@ class _MoreState extends State<More> {
         return Scaffold(
           resizeToAvoidBottomInset: false,
           // BAGIAN APPBAR
-          appBar: const PreferredSize(
-            preferredSize: Size.fromHeight(50),
-            child: AppBarMore(),
+          appBar: PreferredSize(
+            preferredSize: Size.fromHeight(MediaQuery.of(context).size.height / 14.4974),
+            child: const AppBarMore(),
           ),
 
           // BAGIAN DESKRIPSI
@@ -37,7 +37,7 @@ class _MoreState extends State<More> {
                       'Lainnya',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                          fontSize: 40,
+                          fontSize: 36,
                           fontWeight: FontWeight.bold,
                           color: Colors.black54),
                     ),

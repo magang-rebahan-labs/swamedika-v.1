@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:swamedika/views/widgets/bottom_nav_bar.dart';
 
 class AppBarMore extends StatelessWidget {
   const AppBarMore({Key? key}) : super(key: key);
@@ -13,7 +12,7 @@ class AppBarMore extends StatelessWidget {
           statusBarColor: Colors.transparent,
         ),
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios),
+          icon: const Icon(Icons.arrow_back_ios_new_rounded),
           onPressed: () {Navigator.pop;},
         ),
         backgroundColor: Colors.transparent,
