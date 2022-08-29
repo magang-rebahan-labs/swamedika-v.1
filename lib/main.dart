@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 // import 'package:swamedika/views/pages/detail_fruit.dart';
 import 'package:swamedika/views/pages/logosplash.dart';
 import 'package:swamedika/views/pages/splashscreen.dart';
+import 'package:swamedika/views/widgets/recomendation_local.dart';
 
 bool? seenOnBoard;
 
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.white,
         ),
         // home: seenOnBoard == true ? const LogoSplash() : const SplashScreen());
-        home: const SplashScreen());
+        // home: const SplashScreen());
+        home: const RecomendationLocal());
     // home: const DetailFruit());
   }
 }
