@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:swamedika/views/pages/fruit_view.dart';
+import 'package:swamedika/views/pages/herbal_view.dart';
 import 'package:swamedika/views/widgets/dotted_line.dart';
 
 class Category extends StatefulWidget {
@@ -35,95 +37,115 @@ class _CategoryState extends State<Category> {
               elevation: 0,
             ),
           ),
-          body: Column(
-            children: [
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.16,
-                width: MediaQuery.of(context).size.width,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Text(
-                      'Kategori',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontSize: 40,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black54),
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.16,
+                  width: MediaQuery.of(context).size.width,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text(
+                        'Kategori',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black54),
+                      ),
+                    ],
+                  ),
+                ),
+
+                // BAGIAN DOTTED LINE
+                const DottedLineWidget(),
+
+                // BAGIAN LISTVIEW GAMBAR
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const FruitView(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    margin: const EdgeInsets.all(12),
+                    height: MediaQuery.of(context).size.height * 0.13,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.green,
                     ),
-                  ],
-                ),
-              ),
-
-              // BAGIAN DOTTED LINE
-              const DottedLineWidget(),
-
-              // BAGIAN LISTVIEW GAMBAR
-              Container(
-                margin: const EdgeInsets.all(12),
-                height: MediaQuery.of(context).size.height * 0.13,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  color: Colors.green,
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
-                  child: Image.asset(
-                    'assets/images/Buah.png',
-                    fit: BoxFit.cover,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Image.asset(
+                        'assets/images/Buah.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
                 ),
-              ),
-              Container(
-                margin: const EdgeInsets.all(16),
-                height: MediaQuery.of(context).size.height * 0.12,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  color: Colors.green,
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
-                  child: Image.asset(
-                    'assets/images/Herbal.png',
-                    fit: BoxFit.cover,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const HerbalView(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    margin: const EdgeInsets.all(16),
+                    height: MediaQuery.of(context).size.height * 0.12,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.green,
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Image.asset(
+                        'assets/images/Herbal.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
                 ),
-              ),
-              Container(
-                margin: const EdgeInsets.all(16),
-                height: MediaQuery.of(context).size.height * 0.12,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  color: Colors.green,
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
-                  child: Image.asset(
-                    'assets/images/Rempah.png',
-                    fit: BoxFit.cover,
+                Container(
+                  margin: const EdgeInsets.all(16),
+                  height: MediaQuery.of(context).size.height * 0.12,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: Colors.green,
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
+                    child: Image.asset(
+                      'assets/images/Rempah.png',
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
-              ),
-              Container(
-                margin: const EdgeInsets.all(16),
-                height: MediaQuery.of(context).size.height * 0.12,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  color: Colors.green,
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
-                  child: Image.asset(
-                    'assets/images/Sayur.png',
-                    fit: BoxFit.cover,
+                Container(
+                  margin: const EdgeInsets.all(16),
+                  height: MediaQuery.of(context).size.height * 0.12,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: Colors.green,
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
+                    child: Image.asset(
+                      'assets/images/Sayur.png',
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         );
       }),
