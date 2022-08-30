@@ -31,7 +31,7 @@ class _MoreState extends State<More> {
               elevation: 0,
               flexibleSpace: const Center(
                 child: Text(
-                  'More',
+                  'Lainnya',
                   style: TextStyle(
                       fontSize: 40,
                       fontWeight: FontWeight.bold,

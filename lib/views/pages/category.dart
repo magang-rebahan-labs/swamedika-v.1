@@ -11,7 +11,7 @@ class Category extends StatefulWidget {
   State<Category> createState() => _CategoryState();
 }
 
-class _CategoryState extends State<Category> {
+class _CategoryState extends State <Category> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -52,8 +52,8 @@ class _CategoryState extends State<Category> {
                     );
                   },
                   child: Container(
-                    margin: const EdgeInsets.all(12),
-                    height: MediaQuery.of(context).size.height * 0.13,
+                    margin: const EdgeInsets.all(16),
+                    height: MediaQuery.of(context).size.height * 0.12,
                     width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
