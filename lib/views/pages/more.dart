@@ -27,7 +27,7 @@ class _MoreState extends State<More> {
                 Icons.arrow_back_ios_new_rounded,
                 color: Colors.black,
               ),
-              backgroundColor: Colors.white,
+              backgroundColor: const Color(0xFFFAFAFA),
               elevation: 0,
               flexibleSpace: const Center(
                 child: Text(
@@ -43,7 +43,7 @@ class _MoreState extends State<More> {
 
           // BAGIAN DESKRIPSI
           body: Column(
-            children: const [
+            children: [
               // BAGIAN GARIS PEMBATAS (DOTTED LINE)
               DottedLineWidget(),
 
