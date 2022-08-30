@@ -1,11 +1,8 @@
-
-import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:swamedika/views/pages/fruit_view.dart';
 import 'package:swamedika/views/pages/herbal_view.dart';
 import 'package:swamedika/views/pages/rempah_view.dart';
 import 'package:swamedika/views/pages/vegetable_view.dart';
-import 'package:swamedika/views/widgets/dotted_line.dart';
 
 class Category extends StatefulWidget {
   const Category({Key? key}) : super(key: key);
