@@ -1,5 +1,6 @@
+
+import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:swamedika/views/pages/fruit_view.dart';
 import 'package:swamedika/views/pages/herbal_view.dart';
 import 'package:swamedika/views/pages/rempah_view.dart';
@@ -21,48 +22,29 @@ class _CategoryState extends State<Category> {
       home: Builder(builder: (BuildContext context) {
         return Scaffold(
           appBar: PreferredSize(
-            preferredSize: const Size.fromHeight(50),
+            preferredSize:
+                Size.fromHeight(MediaQuery.of(context).size.height / 4.413),
             child: AppBar(
-              systemOverlayStyle: const SystemUiOverlayStyle(
-                statusBarColor: Colors.transparent,
-                statusBarBrightness: Brightness.dark,
-                statusBarIconBrightness: Brightness.dark,
+              leading: const Icon(
+                Icons.arrow_back_ios_new_rounded,
+                color: Colors.black,
               ),
-              leading: IconButton(
-                icon: const Icon(Icons.arrow_back_ios),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-              ),
-              backgroundColor: Colors.transparent,
-              foregroundColor: Colors.black,
+              backgroundColor: Colors.white,
               elevation: 0,
+              flexibleSpace: const Center(
+                child: Text(
+                  'Kategori',
+                  style: TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black54),
+                ),
+              ),
             ),
           ),
           body: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.16,
-                  width: MediaQuery.of(context).size.width,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text(
-                        'Kategori',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: 40,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black54),
-                      ),
-                    ],
-                  ),
-                ),
-
-                // BAGIAN DOTTED LINE
-                const DottedLineWidget(),
-
                 // BAGIAN LISTVIEW GAMBAR
                 GestureDetector(
                   onTap: () {

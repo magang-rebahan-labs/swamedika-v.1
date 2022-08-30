@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:swamedika/views/widgets/appbar_more.dart';
 import 'package:swamedika/views/widgets/button_more_section.dart';
 import 'package:swamedika/views/widgets/dotted_line.dart';
 
@@ -17,39 +16,39 @@ class _MoreState extends State<More> {
       debugShowCheckedModeBanner: false,
       home: Builder(builder: (BuildContext context) {
         return Scaffold(
+          backgroundColor: Colors.transparent,
           resizeToAvoidBottomInset: false,
           // BAGIAN APPBAR
           appBar: PreferredSize(
-            preferredSize: Size.fromHeight(MediaQuery.of(context).size.height / 14.4974),
-            child: const AppBarMore(),
+            preferredSize:
+                Size.fromHeight(MediaQuery.of(context).size.height / 4.413),
+            child: AppBar(
+              leading: const Icon(
+                Icons.arrow_back_ios_new_rounded,
+                color: Colors.black,
+              ),
+              backgroundColor: Colors.white,
+              elevation: 0,
+              flexibleSpace: const Center(
+                child: Text(
+                  'More',
+                  style: TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black54),
+                ),
+              ),
+            ),
           ),
 
           // BAGIAN DESKRIPSI
           body: Column(
-            children: [
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.16,
-                width: MediaQuery.of(context).size.width,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Text(
-                      'Lainnya',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontSize: 36,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black54),
-                    ),
-                  ],
-                ),
-              ),
-
+            children: const [
               // BAGIAN GARIS PEMBATAS (DOTTED LINE)
-              const DottedLineWidget(),
+              DottedLineWidget(),
 
               // BAGIAN TOMBOL
-              const ButtonMore(),
+              ButtonMore(),
             ],
           ),
         );
