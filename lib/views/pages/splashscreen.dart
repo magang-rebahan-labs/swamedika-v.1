@@ -40,7 +40,8 @@ class _SplashScreenState extends State<SplashScreen> {
           SizedBox(
             width: lebar,
             height: tinggi,
-            child: Image.asset('assets/images/sick.jpg', fit: BoxFit.cover),
+            child: Image.asset('assets/images/WelcomeScreen4.png',
+                fit: BoxFit.cover),
           ),
 
           // Desain tulisan yang ada di tengahnya
@@ -50,6 +51,7 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Text("Swamedika Thibbun Nabawi",
                 style: TextStyle(
                     fontFamily: "source-serif",
+                    color: Colors.white,
                     fontWeight: FontWeight.w700,
                     fontStyle: FontStyle.normal,
                     fontSize: tinggi / 22.583),
