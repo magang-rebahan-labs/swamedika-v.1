@@ -10,6 +10,14 @@ class ButtonMore extends StatefulWidget {
 class _ButtonMoreState extends State<ButtonMore> {
   @override
   Widget build(BuildContext context) {
+    // Variabel
+    final heightVar = MediaQuery.of(context).size.height / 16.24;
+    final styleVar = TextStyle(
+        fontSize: 18,
+        fontFamily: "Sans-serif",
+        fontWeight: FontWeight.bold,
+        height: 3);
+
     return SizedBox(
       width: MediaQuery.of(context).size.width / 1.119,
       child: Column(
@@ -19,11 +27,11 @@ class _ButtonMoreState extends State<ButtonMore> {
             style: ElevatedButton.styleFrom(
               primary: Colors.white,
               onPrimary: Colors.black,
-              elevation: 1,
+              elevation: 20,
+              shadowColor: Color(0xFFA3B1C6).withOpacity(0.15),
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0)),
-              minimumSize:
-                  Size.fromHeight(MediaQuery.of(context).size.height / 16.24),
+                  borderRadius: BorderRadius.circular(5.0)),
+              minimumSize: Size.fromHeight(heightVar),
             ),
             onPressed: () {
               showModalBottomSheet(
@@ -68,7 +76,11 @@ class _ButtonMoreState extends State<ButtonMore> {
               children: const [
                 Text(
                   'Tentang Kami',
-                  style: TextStyle(fontSize: 19, color: Colors.black),
+                  style: TextStyle(
+                      fontSize: 18,
+                      color: Color(0xFF333333),
+                      fontFamily: "Sans-serif",
+                      fontWeight: FontWeight.bold),
                 ),
                 Icon(
                   Icons.arrow_forward_ios_rounded,
@@ -79,24 +91,25 @@ class _ButtonMoreState extends State<ButtonMore> {
             ),
           ),
 
+          SizedBox(height: MediaQuery.of(context).size.height / 101.5),
+
           // BUTTON CATATAN RILIS
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               primary: Colors.white,
               onPrimary: Colors.black,
-              elevation: 1,
+              elevation: 20,
+              shadowColor: Color(0xFFA3B1C6).withOpacity(0.15),
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0)),
-              minimumSize:
-                  Size.fromHeight(MediaQuery.of(context).size.height / 16.24),
+                  borderRadius: BorderRadius.circular(5.0)),
+              minimumSize: Size.fromHeight(heightVar),
             ),
             onPressed: () {
               showModalBottomSheet(
                   context: context,
                   shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.vertical(
-                      top: Radius.circular(25.0),
-                    ),
+                    borderRadius:
+                        BorderRadius.vertical(top: Radius.circular(25.0)),
                   ),
                   builder: (context) {
                     return SizedBox(
@@ -115,16 +128,14 @@ class _ButtonMoreState extends State<ButtonMore> {
                                       fontWeight: FontWeight.bold,
                                       height: 3),
                                 ),
-                                Text(
-                                  'Versi 1.0.0 | 29/08/2022',
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(fontSize: 15, height: 2.3),
-                                ),
-                                Text(
-                                  '- Perbaikan Bug',
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(fontSize: 15, height: 2.3),
-                                ),
+                                Text('Versi 1.0.0 | 29/08/2022',
+                                    textAlign: TextAlign.start,
+                                    style:
+                                        TextStyle(fontSize: 15, height: 2.3)),
+                                Text('- Perbaikan Bug',
+                                    textAlign: TextAlign.start,
+                                    style:
+                                        TextStyle(fontSize: 15, height: 2.3)),
                               ],
                             ),
                           ),
@@ -136,15 +147,14 @@ class _ButtonMoreState extends State<ButtonMore> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
-                Text(
-                  'Catatan Rilis',
-                  style: TextStyle(fontSize: 19, color: Colors.black),
-                ),
-                Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  size: 19,
-                  color: Colors.black,
-                ),
+                Text('Catatan Rilis',
+                    style: TextStyle(
+                        fontSize: 18,
+                        color: Color(0xFF333333),
+                        fontFamily: "Sans-serif",
+                        fontWeight: FontWeight.bold)),
+                Icon(Icons.arrow_forward_ios_rounded,
+                    size: 19, color: Colors.black),
               ],
             ),
           ),
