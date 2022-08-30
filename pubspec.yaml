@@ -67,9 +67,9 @@ flutter:
     - assets/images/
     - assets/images/buah/
     - assets/images/sayur/
-    - assets/images/rempah/
     - assets/images/herbal/
     - assets/data/
+    - assets/images/rempah/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
