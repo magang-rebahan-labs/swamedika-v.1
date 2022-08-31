@@ -12,11 +12,6 @@ class _ButtonMoreState extends State<ButtonMore> {
   Widget build(BuildContext context) {
     // Variabel
     final heightVar = MediaQuery.of(context).size.height / 16.24;
-    final styleVar = TextStyle(
-        fontSize: 18,
-        fontFamily: "Sans-serif",
-        fontWeight: FontWeight.bold,
-        height: 3);
 
     return SizedBox(
       width: MediaQuery.of(context).size.width / 1.119,
@@ -28,7 +23,7 @@ class _ButtonMoreState extends State<ButtonMore> {
               primary: Colors.white,
               onPrimary: Colors.black,
               elevation: 20,
-              shadowColor: Color(0xFFA3B1C6).withOpacity(0.15),
+              shadowColor: const Color(0xFFA3B1C6).withOpacity(0.15),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5.0)),
               minimumSize: Size.fromHeight(heightVar),
@@ -99,7 +94,7 @@ class _ButtonMoreState extends State<ButtonMore> {
               primary: Colors.white,
               onPrimary: Colors.black,
               elevation: 20,
-              shadowColor: Color(0xFFA3B1C6).withOpacity(0.15),
+              shadowColor: const Color(0xFFA3B1C6).withOpacity(0.15),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5.0)),
               minimumSize: Size.fromHeight(heightVar),
