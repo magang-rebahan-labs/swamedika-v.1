@@ -52,7 +52,7 @@ class _NewNewsSectionState extends State<NewNewsSection> {
                     ListView.builder(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
-                      itemCount: 5,
+                      itemCount: newsList!.articles!.length,
                       itemBuilder: (context, index) {
                         final currentNews = newsList!.articles![index];
                         return Container(
@@ -69,83 +69,98 @@ class _NewNewsSectionState extends State<NewNewsSection> {
                                 debugPrint('error');
                               }
                             },
-                            child: Row(
-                              children: [
-                                Container(
-                                  // Setting tingginya
-                                  width:
-                                      MediaQuery.of(context).size.height / 8.12,
-                                  height:
-                                      MediaQuery.of(context).size.height / 8.12,
+                            child: Container(
+                              child: currentNews.urlToImage == null
+                                  ? Container()
+                                  : Row(
+                                      children: [
+                                        Container(
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .height /
+                                              8.12,
+                                          height: MediaQuery.of(context)
+                                                  .size
+                                                  .height /
+                                              8.12, // Setting tingginya
 
-                                  // Box gambarnya
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(6),
-                                    color: Colors.white38,
-                                    image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: NetworkImage(
-                                        currentNews.urlToImage!,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Expanded(
-                                  child: Container(
-                                    // height: 300,
-                                    decoration: const BoxDecoration(
-                                      borderRadius: BorderRadius.only(
-                                        topRight: Radius.circular(20),
-                                        bottomRight: Radius.circular(20),
-                                      ),
-                                      color: Colors.transparent,
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 10,
-                                          right: 10,
-                                          top: 5,
-                                          bottom: 5),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            // "Kasus Positif Covid-19 Mingguan naik lebih dari 15 kali lipat selama 2 bulan",
-                                            currentNews.title!,
-                                            style: const TextStyle(
-                                                fontSize: 12,
-                                                fontWeight: FontWeight.w500,
-                                                fontStyle: FontStyle.normal,
-                                                fontFamily: 'Sans-serif',
-                                                color: Color(0xFF000000),
-                                                height: 1.75),
-                                          ),
-                                          // SizedBox(height: 11.0),
-                                          SizedBox(
-                                              height: MediaQuery.of(context)
-                                                      .size
-                                                      .height /
-                                                  73.81),
-
-                                          Text(
-                                            // "4 Agustus 2022",
-                                            currentNews.publishedAt!,
-                                            style: const TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: 'Sans-serif',
-                                              color: Color(0xFF828282),
+                                          // Box gambarnya
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(6),
+                                            color: Colors.white38,
+                                            image: DecorationImage(
+                                              fit: BoxFit.cover,
+                                              image: NetworkImage(
+                                                currentNews.urlToImage!,
+                                              ),
                                             ),
                                           ),
-                                        ],
-                                      ),
+                                        ),
+                                        Expanded(
+                                          child: Container(
+                                            // height: 300,
+                                            decoration: const BoxDecoration(
+                                              borderRadius: BorderRadius.only(
+                                                topRight: Radius.circular(20),
+                                                bottomRight:
+                                                    Radius.circular(20),
+                                              ),
+                                              color: Colors.transparent,
+                                            ),
+                                            child: Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 10,
+                                                  right: 10,
+                                                  top: 5,
+                                                  bottom: 5),
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    // "Kasus Positif Covid-19 Mingguan naik lebih dari 15 kali lipat selama 2 bulan",
+                                                    currentNews.title!,
+                                                    style: const TextStyle(
+                                                        fontSize: 12,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        fontStyle:
+                                                            FontStyle.normal,
+                                                        fontFamily:
+                                                            'Sans-serif',
+                                                        color:
+                                                            Color(0xFF000000),
+                                                        height: 1.75),
+                                                  ),
+                                                  // SizedBox(height: 11.0),
+                                                  SizedBox(
+                                                      height:
+                                                          MediaQuery.of(context)
+                                                                  .size
+                                                                  .height /
+                                                              73.81),
+
+                                                  Text(
+                                                    // "4 Agustus 2022",
+                                                    currentNews.publishedAt!,
+                                                    style: const TextStyle(
+                                                      fontSize: 12,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                      fontFamily: 'Sans-serif',
+                                                      color: Color(0xFF828282),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
-                                  ),
-                                ),
-                              ],
                             ),
                           ),
                         );

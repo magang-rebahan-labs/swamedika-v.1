@@ -134,7 +134,7 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
               padding: EdgeInsets.only(
                   bottom: MediaQuery.of(context).size.height / 27.06),
               child: const Text(
-                'Berita Terkini Covid-19',
+                'Berita Kesehatan Terkini',
                 style: TextStyle(
                     fontFamily: "Sans-serif",
                     fontWeight: FontWeight.bold,

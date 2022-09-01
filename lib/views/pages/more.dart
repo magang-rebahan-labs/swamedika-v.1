@@ -43,7 +43,7 @@ class _MoreState extends State<More> {
 
           // BAGIAN DESKRIPSI
           body: Column(
-            children: [
+            children: const [
               // BAGIAN GARIS PEMBATAS (DOTTED LINE)
               DottedLineWidget(),
 
