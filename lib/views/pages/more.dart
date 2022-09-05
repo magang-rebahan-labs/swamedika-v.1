@@ -23,10 +23,10 @@ class _MoreState extends State<More> {
             preferredSize:
                 Size.fromHeight(MediaQuery.of(context).size.height / 4.413),
             child: AppBar(
-              leading: const Icon(
-                Icons.arrow_back_ios_new_rounded,
-                color: Colors.black,
-              ),
+              // leading: const Icon(
+              //   Icons.arrow_back_ios_new_rounded,
+              //   color: Colors.black,
+              // ),
               backgroundColor: const Color(0xFFFAFAFA),
               elevation: 0,
               flexibleSpace: const Center(

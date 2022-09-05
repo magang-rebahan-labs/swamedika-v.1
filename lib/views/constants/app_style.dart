@@ -26,7 +26,7 @@ final kTitle2 = TextStyle(
 );
 
 final kBodyText1 = TextStyle(
-  color: kTextColor,
+  color: kSecondaryColor,
   fontSize: SizeConfig.blockSizeH! * 4.5,
   fontWeight: FontWeight.bold,
 );

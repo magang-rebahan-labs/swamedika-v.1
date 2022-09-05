@@ -16,7 +16,7 @@ class AppBarSearch extends StatelessWidget {
             Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/images/appbar.png'),
+                  image: AssetImage('assets/images/imghome/homescreen.png'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -29,7 +29,7 @@ class AppBarSearch extends StatelessWidget {
                     left: MediaQuery.of(context).size.width / 23.4375),
                 // padding: EdgeInsets.only(top: 0, left: 30.0),
                 child: const Text(
-                  "Welcome",
+                  "Selamat Datang",
                   style: TextStyle(
                       fontFamily: "Sans-serif",
                       color: Colors.white,
