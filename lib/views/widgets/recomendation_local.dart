@@ -32,11 +32,12 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
             const Padding(
               padding: EdgeInsets.only(),
               child: Text(
-                'Pengobatan Covid Dengan Swamedika',
+                'Rekomendasi Pengobatan Swamedikasi',
                 style: TextStyle(
-                    fontSize: 12.5,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: "Sans-serif"),
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "Sans-serif",
+                ),
               ),
             ),
 
@@ -44,90 +45,93 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
             SizedBox(
               height: MediaQuery.of(context).size.height / 5,
               child: ListView.builder(
-                  padding: EdgeInsets.symmetric(
-                      vertical: MediaQuery.of(context).size.height / 58),
-                  shrinkWrap: true,
-                  scrollDirection: Axis.horizontal,
-                  itemCount: recomendationdataContents.length,
-                  itemBuilder: (context, index) {
-                    // Ukuran Media query untuk dibawah
-                    final senData = recomendationdataContents[index];
-                    final sizeImage = MediaQuery.of(context).size.height / 8.12;
+                padding: EdgeInsets.symmetric(
+                    vertical: MediaQuery.of(context).size.height / 58),
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                itemCount: recomendationdataContents.length,
+                itemBuilder: (context, index) {
+                  // Ukuran Media query untuk dibawah
+                  final senData = recomendationdataContents[index];
+                  final sizeImage = MediaQuery.of(context).size.height / 8.12;
 
-                    // Gambar dan Title
-                    return Padding(
-                      padding: const EdgeInsets.only(right: 15),
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => DetailPage(
-                                  subtitle: senData.subtitle,
-                                  title: senData.title,
-                                  desc: senData.desc,
-                                  serve: senData.serve,
-                                  image: senData.image,
-                                  cate: senData.cate),
+                  // Gambar dan Title
+                  return Padding(
+                    padding: const EdgeInsets.only(right: 15),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => DetailPage(
+                              subtitle: senData.subtitle,
+                              title: senData.title,
+                              desc: senData.desc,
+                              serve: senData.serve,
+                              image: senData.image,
+                              cate: senData.cate,
                             ),
-                          );
-                        },
+                          ),
+                        );
+                      },
 
-                        // Setting kotakan gambarnya
-                        child: Column(
-                          children: [
-                            Container(
-                              // Setting containernya
-                              decoration: const BoxDecoration(
-                                // borderRadius: BorderRadius.circular(10.0),
-                                boxShadow: [
-                                  BoxShadow(
-                                      color: Colors.transparent,
-                                      offset: Offset(0.0, 4.0),
-                                      blurRadius: 6.0)
-                                ],
-                              ),
+                      // Setting kotakan gambarnya
+                      child: Column(
+                        children: [
+                          Container(
+                            // Setting containernya
+                            decoration: const BoxDecoration(
+                              // borderRadius: BorderRadius.circular(10.0),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.transparent,
+                                  offset: Offset(0.0, 4.0),
+                                  blurRadius: 6.0,
+                                )
+                              ],
+                            ),
 
-                              // Setting gambar dan judulnya
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  // Setting gambarnya
-                                  ClipRRect(
-                                      borderRadius: BorderRadius.circular(6.0),
-                                      child: Image.asset(
-                                          recomendationdataContents[index]
-                                              .image,
-                                          fit: BoxFit.cover,
-                                          width: sizeImage,
-                                          height: sizeImage)
-                                      // width: 130,
-                                      // height: MediaQuery.of(context).size.height * 0.15),
-                                      ),
+                            // Setting gambar dan judulnya
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Setting gambarnya
+                                ClipRRect(
+                                    borderRadius: BorderRadius.circular(6.0),
+                                    child: Image.asset(
+                                      recomendationdataContents[index].image,
+                                      // scale: 1,
+                                      fit: BoxFit.cover,
+                                      width: sizeImage,
+                                      height: sizeImage,
+                                    )
+                                    // width: 130,
+                                    // height: MediaQuery.of(context).size.height * 0.15),
+                                    ),
 
-                                  // Setting judulnya
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        top:
-                                            MediaQuery.of(context).size.height /
-                                                203),
-                                    child: Text(
-                                        recomendationdataContents[index].title,
-                                        maxLines: 2,
-                                        textAlign: TextAlign.left,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: const TextStyle(
-                                            fontFamily: "Sans-serif",
-                                            fontSize: 11,
-                                            fontWeight: FontWeight.bold)),
-                                  ),
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
+                                // Setting judulnya
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                      top: MediaQuery.of(context).size.height /
+                                          203),
+                                  child: Text(
+                                      recomendationdataContents[index].title,
+                                      maxLines: 2,
+                                      textAlign: TextAlign.left,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: const TextStyle(
+                                          fontFamily: "Sans-serif",
+                                          fontSize: 11,
+                                          fontWeight: FontWeight.bold)),
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
                       ),
-                    );
-                  }),
+                    ),
+                  );
+                },
+              ),
             ),
 
             Padding(

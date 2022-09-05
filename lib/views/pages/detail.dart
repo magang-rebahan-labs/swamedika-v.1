@@ -40,7 +40,7 @@ class _DetailPageState extends State<DetailPage> {
           pinned: _pinned,
           snap: _snap,
           floating: _floating,
-
+          backgroundColor: Colors.grey,
           // Setting Sliver Image
           expandedHeight: tinggi / 3.06,
           flexibleSpace: FlexibleSpaceBar(

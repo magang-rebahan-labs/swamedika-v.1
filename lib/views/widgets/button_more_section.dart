@@ -20,8 +20,8 @@ class _ButtonMoreState extends State<ButtonMore> {
           // BUTTON TENTANG KAMI
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              primary: Colors.white,
-              onPrimary: Colors.black,
+              backgroundColor: Colors.white,
+              disabledBackgroundColor: Colors.black,
               elevation: 20,
               shadowColor: const Color(0xFFA3B1C6).withOpacity(0.15),
               shape: RoundedRectangleBorder(
@@ -91,8 +91,8 @@ class _ButtonMoreState extends State<ButtonMore> {
           // BUTTON CATATAN RILIS
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              primary: Colors.white,
-              onPrimary: Colors.black,
+              backgroundColor: Colors.white,
+              disabledBackgroundColor: Colors.black,
               elevation: 20,
               shadowColor: const Color(0xFFA3B1C6).withOpacity(0.15),
               shape: RoundedRectangleBorder(

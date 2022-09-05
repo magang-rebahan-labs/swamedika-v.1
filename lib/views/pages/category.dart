@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:swamedika/views/pages/fruit_view.dart';
 import 'package:swamedika/views/pages/herbal_view.dart';
-import 'package:swamedika/views/pages/rempah_view.dart';
-import 'package:swamedika/views/pages/vegetable_view.dart';
+import 'package:swamedika/views/pages/hewani_view.dart';
 
 class Category extends StatefulWidget {
   const Category({Key? key}) : super(key: key);
@@ -22,10 +20,10 @@ class _CategoryState extends State <Category> {
             preferredSize:
                 Size.fromHeight(MediaQuery.of(context).size.height / 4.413),
             child: AppBar(
-              leading: const Icon(
-                Icons.arrow_back_ios_new_rounded,
-                color: Colors.black,
-              ),
+              // leading: const Icon(
+              //   Icons.arrow_back_ios_new_rounded,
+              //   color: Colors.black,
+              // ),
               backgroundColor: Colors.white,
               elevation: 0,
               flexibleSpace: const Center(
@@ -47,31 +45,6 @@ class _CategoryState extends State <Category> {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const FruitView(),
-                      ),
-                    );
-                  },
-                  child: Container(
-                    margin: const EdgeInsets.all(16),
-                    height: MediaQuery.of(context).size.height * 0.12,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: Colors.green,
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: Image.asset(
-                        'assets/images/Buah.png',
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
                         builder: (context) => const HerbalView(),
                       ),
                     );
@@ -87,7 +60,7 @@ class _CategoryState extends State <Category> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(12),
                       child: Image.asset(
-                        'assets/images/Herbal.png',
+                        'assets/images/kategori/covernabati.png',
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -97,7 +70,7 @@ class _CategoryState extends State <Category> {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const RempahView(),
+                        builder: (context) => const HewaniView(),
                       ),
                     );
                   },
@@ -112,7 +85,7 @@ class _CategoryState extends State <Category> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(12),
                       child: Image.asset(
-                        'assets/images/Rempah.png',
+                        'assets/images/kategori/coverhewani.png',
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -120,11 +93,11 @@ class _CategoryState extends State <Category> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const VegetableView(),
-                      ),
-                    );
+                    // Navigator.of(context).push(
+                    //   MaterialPageRoute(
+                    //     builder: (context) => const RempahView(),
+                    //   ),
+                    // );
                   },
                   child: Container(
                     margin: const EdgeInsets.all(16),
@@ -137,7 +110,7 @@ class _CategoryState extends State <Category> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(12),
                       child: Image.asset(
-                        'assets/images/Sayur.png',
+                        'assets/images/kategori/coverjamu.png',
                         fit: BoxFit.cover,
                       ),
                     ),
