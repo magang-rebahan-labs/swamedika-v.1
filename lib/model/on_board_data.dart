@@ -12,12 +12,12 @@ class OnBoarding {
 
 List<OnBoarding> onboardingContents = [
   OnBoarding(
-    title: 'Swamedika \n Thibbun Nabawi',
+    title: 'Swamedikasi \n Thibbun Nabawi',
     image: 'assets/images/onboard1.png',
-    desc: 'Selamat Datang \n Di Aplikasi Swamedika Thibbun Nabawi',
+    desc: 'Selamat Datang \n Di Aplikasi Swamedikasi Thibbun Nabawi',
   ),
   OnBoarding(
-    title: 'Swamedika \n Thibbun Nabawi',
+    title: 'Swamedikasi \n Thibbun Nabawi',
     image: 'assets/images/onboard2.png',
     desc: 'Klik Mulai \n Untuk Menjelajah Lebih Dalam',
   ),

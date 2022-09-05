@@ -118,7 +118,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           OnBoardNavBtn(
-                            name: 'Skip',
+                            name: 'Lewati',
                             onPressed: () {
                               Navigator.push(
                                 context,
@@ -135,7 +135,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                             ),
                           ),
                           OnBoardNavBtn(
-                            name: 'Next',
+                            name: 'Lanjut',
                             onPressed: () {
                               _pageController.nextPage(
                                 duration: const Duration(milliseconds: 400),
