@@ -52,7 +52,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
           child: Column(
         children: [
           Expanded(
-            flex: 8,
+            flex: 3,
             child: PageView.builder(
               controller: _pageController,
               onPageChanged: (value) {
@@ -75,22 +75,19 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                     height: sizeV * 5,
                   ),
                   SizedBox(
-                    height: sizeV * 35,
+                    height: sizeV * 30,
                     child: Image.asset(
                       onboardingContents[index].image,
                       fit: BoxFit.contain,
                     ),
                   ),
                   SizedBox(
-                    height: sizeV * 5,
+                    height: sizeV * 6,
                   ),
                   Text(
                     onboardingContents[index].desc,
                     style: kBodyText1,
                     textAlign: TextAlign.center,
-                  ),
-                  SizedBox(
-                    height: sizeV * 5,
                   ),
                 ],
               ),
@@ -100,25 +97,19 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
             flex: 1,
             child: Column(
               children: [
-                currentPage == onboardingContents.length - 1
-                    ? MyTextButton(
-                        buttonName: 'Mulai',
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const LogoSplash(),
-                            ),
-                          );
-                        },
-                        bgColor: kSecondaryColor,
-                        borderColor: kSecondaryColor,
-                      )
-                    : Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          OnBoardNavBtn(
-                            name: 'Lewati',
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: List.generate(
+                    onboardingContents.length,
+                    (index) => dotIndicator(index),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 30.0),
+                  child: Container(
+                    child: currentPage == onboardingContents.length - 1
+                        ? MyTextButton(
+                            buttonName: 'Mulai',
                             onPressed: () {
                               Navigator.push(
                                 context,
@@ -127,24 +118,21 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                                 ),
                               );
                             },
-                          ),
-                          Row(
-                            children: List.generate(
-                              onboardingContents.length,
-                              (index) => dotIndicator(index),
-                            ),
-                          ),
-                          OnBoardNavBtn(
-                            name: 'Lanjut',
+                            bgColor: kSecondaryColor,
+                            borderColor: kSecondaryColor,
+                          )
+                        : MyTextButton(
+                            buttonName: 'Lanjut',
                             onPressed: () {
                               _pageController.nextPage(
-                                duration: const Duration(milliseconds: 400),
-                                curve: Curves.easeInOut,
-                              );
+                                  duration: const Duration(milliseconds: 400),
+                                  curve: Curves.easeInOut);
                             },
-                          )
-                        ],
-                      ),
+                            bgColor: kSecondaryColor,
+                            borderColor: kSecondaryColor,
+                          ),
+                  ),
+                )
               ],
             ),
           )

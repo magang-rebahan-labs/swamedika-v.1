@@ -48,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
           Center(
               child: SizedBox(
             width: lebar / 1.38,
-            child: Text("Swamedika Thibbun Nabawi",
+            child: Text("Swamedikasi Thibbun Nabawi",
                 style: TextStyle(
                     fontFamily: "source-serif",
                     color: Colors.white,
