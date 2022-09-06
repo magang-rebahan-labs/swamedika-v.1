@@ -99,7 +99,7 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                                     borderRadius: BorderRadius.circular(6.0),
                                     child: Image.asset(
                                       recomendationdataContents[index].image,
-                                      // scale: 1,
+                                      // scale: 0,
                                       fit: BoxFit.cover,
                                       width: sizeImage,
                                       height: sizeImage,

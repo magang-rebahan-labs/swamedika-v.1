@@ -13,11 +13,11 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   int _pilihanbuttom = 0;
 
-  final List _children = [
-    const RecomendationLocal(),
-    const Category(),
-    const More(),
-  ];
+//  final List _children = [
+//     const RecomendationLocal(),
+//     const Category(),
+//     const More(),
+//   ];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -28,8 +28,13 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: _children.elementAt(_pilihanbuttom),
+      body: IndexedStack(
+        index: _pilihanbuttom,
+        children: const [
+          RecomendationLocal(),
+          Category(),
+          More(),
+        ],
       ),
       bottomNavigationBar: SizedBox(
         height: MediaQuery.of(context).size.height / 10.684,

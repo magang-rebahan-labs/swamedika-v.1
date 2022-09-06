@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:swamedika/views/pages/home.dart';
+
+import 'home.dart';
 
 class LogoSplash extends StatefulWidget {
   const LogoSplash({super.key});

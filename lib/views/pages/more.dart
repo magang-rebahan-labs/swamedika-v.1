@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:swamedika/views/widgets/button_more_section.dart';
-import 'package:swamedika/views/widgets/dotted_line.dart';
+import 'package:swamedika/views/widgets/widgets.dart';
 
 class More extends StatefulWidget {
   const More({Key? key}) : super(key: key);
