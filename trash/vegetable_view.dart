@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:swamedika/model/vegetable_data_list.dart';
+
+
+import 'vegetable_data_list.dart';
 
 class VegetableView extends StatefulWidget {
   const VegetableView({super.key});

@@ -25,7 +25,8 @@ class _CategoryState extends State<Category> {
               //   Icons.arrow_back_ios_new_rounded,
               //   color: Colors.black,
               // ),
-              backgroundColor: Colors.white,
+              backgroundColor: Colors.transparent,
+              foregroundColor: Colors.black,
               elevation: 0,
               flexibleSpace: const Center(
                 child: Text(
