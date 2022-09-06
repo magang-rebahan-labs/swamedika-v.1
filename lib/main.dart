@@ -22,12 +22,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Swamedika Thibbun Nabawi',
-        theme: ThemeData(
-          backgroundColor: Colors.white,
-        ),
-        home:
-            seenOnBoard == true ? const LogoSplash() : const OnBoardingPage());
+      debugShowCheckedModeBanner: false,
+      title: 'Swamedika Thibbun Nabawi',
+      theme: ThemeData(
+        backgroundColor: Colors.white,
+      ),
+      home: seenOnBoard == true ? const LogoSplash() : const OnBoardingPage(),
+    );
   }
 }

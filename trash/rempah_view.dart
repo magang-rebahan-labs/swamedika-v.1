@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:swamedika/model/fruit_data_list.dart';
 
-class FruitView extends StatefulWidget {
-  const FruitView({super.key});
+import 'rempah_data_list.dart';
+
+class RempahView extends StatefulWidget {
+  const RempahView({super.key});
 
   @override
-  State<FruitView> createState() => _FruitViewState();
+  State<RempahView> createState() => _RempahViewState();
 }
 
-class _FruitViewState extends State<FruitView> {
+class _RempahViewState extends State<RempahView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +26,7 @@ class _FruitViewState extends State<FruitView> {
             ),
             toolbarHeight: 100,
             title: const Text(
-              "Buah",
+              "Rempah",
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
@@ -71,7 +72,7 @@ class _FruitViewState extends State<FruitView> {
                       crossAxisSpacing: 10,
                       mainAxisSpacing: 10,
                     ),
-                    itemCount: fruitdataContents.length,
+                    itemCount: rempahdataContents.length,
                     itemBuilder: (BuildContext context, int index) {
                       return GridTile(
                         child: Padding(
@@ -92,7 +93,7 @@ class _FruitViewState extends State<FruitView> {
                                 scale: 7.0,
                                 fit: BoxFit.none,
                                 image: AssetImage(
-                                  fruitdataContents[index].image,
+                                  rempahdataContents[index].image,
                                 ),
                               ),
                             ),
@@ -100,7 +101,7 @@ class _FruitViewState extends State<FruitView> {
                               padding: const EdgeInsets.only(top: 130),
                               child: Center(
                                 child: Text(
-                                  fruitdataContents[index].title,
+                                  rempahdataContents[index].title,
                                   maxLines: 2,
                                   style: const TextStyle(
                                     fontSize: 14,
