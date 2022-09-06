@@ -21,28 +21,32 @@ class Pencarian extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: const Text('Pencarian'), titleTextStyle: TextStyle(color: Colors.black),
-        actions: <Widget> [
-          IconButton(onPressed: () => showSearch(
-          context: context,
-          delegate: SearchPage<KategoriPencarian>(
-            // ignore: avoid_print
-            onQueryUpdate: (s) => print(s),
-            items: people,
-            searchLabel: 'Pencarian',
-            failure: const Center(
-              child: Text('Tidak ditemukan :('),
-            ),
-            filter: (person) => [
-              person.nama,
-          
-            ],
-            builder: (person) => ListTile(
-              title: Text(person.nama),
-             
-            ),
-          ),
-        ), icon: const Icon(Icons.search, color: Colors.black,))
+        title: const Text('Pencarian'),
+        titleTextStyle: const TextStyle(color: Colors.black),
+        actions: <Widget>[
+          IconButton(
+              onPressed: () => showSearch(
+                    context: context,
+                    delegate: SearchPage<KategoriPencarian>(
+                      // ignore: avoid_print
+                      onQueryUpdate: (s) => print(s),
+                      items: people,
+                      searchLabel: 'Pencarian',
+                      failure: const Center(
+                        child: Text('Tidak ditemukan :('),
+                      ),
+                      filter: (person) => [
+                        person.nama,
+                      ],
+                      builder: (person) => ListTile(
+                        title: Text(person.nama),
+                      ),
+                    ),
+                  ),
+              icon: const Icon(
+                Icons.search,
+                color: Colors.black,
+              ))
         ],
       ),
       body: ListView.builder(
@@ -51,7 +55,6 @@ class Pencarian extends StatelessWidget {
           final KategoriPencarian person = people[index];
           return ListTile(
             title: Text(person.nama),
-            
           );
         },
       ),
