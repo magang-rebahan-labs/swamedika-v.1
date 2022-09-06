@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "swamedika-v.1 - Copy",
+            "name": "swamedika-v.1",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "swamedika-v.1 - Copy (profile mode)",
+            "name": "swamedika-v.1 (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "swamedika-v.1 - Copy (release mode)",
+            "name": "swamedika-v.1 (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

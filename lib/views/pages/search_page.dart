@@ -9,7 +9,7 @@ class KategoriPencarian {
 }
 
 class Pencarian extends StatelessWidget {
-  static List<KategoriPencarian> people = [
+  static List<KategoriPencarian> kategori = [
     KategoriPencarian('Nabati'),
     KategoriPencarian('Hewani'),
     KategoriPencarian('Jamur'),
@@ -21,6 +21,8 @@ class Pencarian extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        elevation: 1,
         title: const Text('Pencarian'),
         titleTextStyle: const TextStyle(color: Colors.black),
         actions: <Widget>[
@@ -28,9 +30,7 @@ class Pencarian extends StatelessWidget {
               onPressed: () => showSearch(
                     context: context,
                     delegate: SearchPage<KategoriPencarian>(
-                      // ignore: avoid_print
-                      onQueryUpdate: (s) => print(s),
-                      items: people,
+                      items: kategori,
                       searchLabel: 'Pencarian',
                       failure: const Center(
                         child: Text('Tidak ditemukan :('),
@@ -50,9 +50,9 @@ class Pencarian extends StatelessWidget {
         ],
       ),
       body: ListView.builder(
-        itemCount: people.length,
+        itemCount: kategori.length,
         itemBuilder: (context, index) {
-          final KategoriPencarian person = people[index];
+          final KategoriPencarian person = kategori[index];
           return ListTile(
             title: Text(person.nama),
           );
