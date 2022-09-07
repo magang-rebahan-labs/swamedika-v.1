@@ -186,18 +186,14 @@ class _ButtonMoreState extends State<ButtonMore> {
                             child: Column(
                               children: const [
                                 Text(
-                                  'Catatan Rilis',
+                                  'Literatur',
                                   textAlign: TextAlign.start,
                                   style: TextStyle(
                                       fontSize: 25,
                                       fontWeight: FontWeight.bold,
                                       height: 3),
                                 ),
-                                Text('Versi 1.0.0 | 29/08/2022',
-                                    textAlign: TextAlign.start,
-                                    style:
-                                        TextStyle(fontSize: 15, height: 2.3)),
-                                Text('- Perbaikan Bug',
+                                Text('Buku Saku Pengobatan Swamedikasi BPOM',
                                     textAlign: TextAlign.start,
                                     style:
                                         TextStyle(fontSize: 15, height: 2.3)),

@@ -11,10 +11,7 @@ class More extends StatefulWidget {
 class _MoreState extends State<More> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Builder(builder: (BuildContext context) {
-        return Scaffold(
+    return Scaffold(
           backgroundColor: Colors.transparent,
           resizeToAvoidBottomInset: false,
           // BAGIAN APPBAR
@@ -33,7 +30,8 @@ class _MoreState extends State<More> {
                   'Lainnya',
                   style: TextStyle(
                       fontSize: 40,
-                      fontWeight: FontWeight.bold,
+                      fontFamily: "Poppins",
+                      fontWeight: FontWeight.w800,
                       color: Colors.black54),
                 ),
               ),
@@ -51,7 +49,5 @@ class _MoreState extends State<More> {
             ],
           ),
         );
-      }),
-    );
+      }
   }
-}
