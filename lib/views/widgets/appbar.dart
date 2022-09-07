@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
+import 'package:swamedika/views/pages/search_page.dart';
 
 class AppBarSearch extends StatelessWidget {
   const AppBarSearch({Key? key}) : super(key: key);
@@ -66,7 +67,9 @@ class AppBarSearch extends StatelessWidget {
                           color: Color(0xFFC5C5C7),
                         ),
                         onPressed: () {
-                          FocusScope.of(context).unfocus();
+                          Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => const Pencarian()));
                         },
                       ),
                       Expanded(
