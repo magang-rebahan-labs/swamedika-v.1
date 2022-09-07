@@ -113,12 +113,11 @@ class _DetailPageState extends State<DetailPage> {
                           // Content Deskripsi
                           Text(
                             widget.desc,
-                            style: const TextStyle(
-                                color: Color(0xFF828282),
+                            style: TextStyle(
+                                color: Colors.black.withOpacity(0.6),
                                 fontFamily: "Poppins",
                                 fontSize: 13,
                                 fontStyle: FontStyle.normal,
-                                fontWeight: FontWeight.w200,
                                 height: 1.2),
                             textAlign: TextAlign.justify,
                           ),
@@ -126,7 +125,7 @@ class _DetailPageState extends State<DetailPage> {
                               height:
                                   MediaQuery.of(context).size.height / 37.6),
 
-                          // Cara Penyajian
+                          // Manfaat
                           const Text(
                             "Manfaat",
                             style: TextStyle(
@@ -141,15 +140,15 @@ class _DetailPageState extends State<DetailPage> {
                               height:
                                   MediaQuery.of(context).size.height / 75.2),
 
-                          // Content Cara Penyajian
+                          // Manfaat
                           Padding(
                             padding: const EdgeInsets.only(left: 3, right: 3),
                             child: Text(
                               widget.manfaat,
-                              style: const TextStyle(
-                                  color: Color(0xFF828282),
+                              style: TextStyle(
+                                  color: Colors.black.withOpacity(0.6),
                                   fontSize: 14,
-                                  fontWeight: FontWeight.w200,
+
                                   fontStyle: FontStyle.normal,
                                   fontFamily: "Poppins",
                                   height: 1.21),
@@ -176,10 +175,9 @@ class _DetailPageState extends State<DetailPage> {
                           // Content Cara Penyajian
                           Text(
                             widget.serve,
-                            style: const TextStyle(
-                                color: Color(0xFF828282),
+                            style: TextStyle(
+                                color: Colors.black.withOpacity(0.6),
                                 fontSize: 14,
-                                fontWeight: FontWeight.w200,
                                 fontStyle: FontStyle.normal,
                                 fontFamily: "Poppins",
                                 height: 1.21),
@@ -204,13 +202,12 @@ class _DetailPageState extends State<DetailPage> {
                                   MediaQuery.of(context).size.height / 75.2),
 
                           // Content Anjuran
-                          const Text(
+                          Text(
                             // widget.serve,
                             "Membaca Basmalah sebelum sebelum meminum",
                             style: TextStyle(
-                                color: Color(0xFF828282),
+                                color: Colors.black.withOpacity(0.6),
                                 fontSize: 14,
-                                fontWeight: FontWeight.w200,
                                 fontStyle: FontStyle.normal,
                                 fontFamily: "Poppins",
                                 height: 1.21),

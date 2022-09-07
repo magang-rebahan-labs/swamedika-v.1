@@ -48,60 +48,49 @@ class AppBarSearch extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 height: MediaQuery.of(context).size.height / 14.5,
-                child: DecoratedBox(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8.0),
-                      // border: Border.all(
-                      //     color: Colors.grey.withOpacity(0.5), width: 1.0),
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                            color: const Color(0xFF22292E).withOpacity(0.20),
-                            blurRadius: 40,
-                            offset: const Offset(0, 16))
-                      ]),
-                  child: Row(
-                    children: [
-                      IconButton(
-                        icon: const Icon(
-                          Icons.search_sharp,
-                          color: Color(0xFFC5C5C7),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const Pencarian()));
+                  },
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8.0),
+                        // border: Border.all(
+                        //     color: Colors.grey.withOpacity(0.5), width: 1.0),
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                              color: const Color(0xFF22292E).withOpacity(0.20),
+                              blurRadius: 40,
+                              offset: const Offset(0, 16))
+                        ]),
+                    child: Row(
+                      children: const [
+                        Padding(
+                          padding: EdgeInsets.only(
+                            left: 10.0,
+                            right: 10.0,
+                          ),
+                          child: Icon(
+                            Icons.search_sharp,
+                            color: Color(0xFFC5C5C7),
+                            size: 33,
+                          ),
                         ),
-                        onPressed: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => const Pencarian()));
-                        },
-                      ),
-                      Expanded(
-                        child: TextField(
-                          onTap: () {
-                            // Navigator.of(context).push(
-                            //   MaterialPageRoute(
-                            //     builder: (context) => const HerbalView(),
-                            //     // const DetailPage(
-                            //     //   image: '',
-                            //     //   desc: '',
-                            //     //   serve: '',
-                            //     //   title: '',
-                            //     //   cate: '',
-                            //     //   subtitle: '',
-                            //     // ),
-                            //   ),
-                            // );
-                          },
-                          autofocus: false,
-                          decoration: const InputDecoration.collapsed(
-                              hintText: "Pencarian",
-                              // fillColor: Color(0xFFC5C5C7),
-                              hintStyle: TextStyle(
-                                  color: Color(0xFFC5C5C7),
-                                  fontFamily: "Sans-serif",
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w400,
-                                  fontStyle: FontStyle.normal)),
+                        Expanded(
+                          child: Text(
+                            'Pencarian bahan',
+                            style: TextStyle(
+                              color: Color(0xFFC5C5C7),
+                              fontFamily: "Poppins",
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
