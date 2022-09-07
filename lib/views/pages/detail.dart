@@ -6,6 +6,7 @@ class DetailPage extends StatefulWidget {
       required this.subtitle,
       required this.title,
       required this.desc,
+      required this.manfaat,
       required this.serve,
       required this.image,
       required this.cate})
@@ -13,6 +14,7 @@ class DetailPage extends StatefulWidget {
   final String subtitle;
   final String title;
   final String desc;
+  final String manfaat;
   final String serve;
   final String image;
   final String cate;
@@ -99,8 +101,9 @@ class _DetailPageState extends State<DetailPage> {
                             style: TextStyle(
                                 fontFamily: "Poppins",
                                 fontSize: 24,
+                                color: Color(0xFF333333),
                                 fontStyle: FontStyle.normal,
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w400,
                                 height: 1.2),
                           ),
                           SizedBox(
@@ -113,9 +116,9 @@ class _DetailPageState extends State<DetailPage> {
                             style: const TextStyle(
                                 color: Color(0xFF828282),
                                 fontFamily: "Poppins",
-                                fontSize: 14,
+                                fontSize: 13,
                                 fontStyle: FontStyle.normal,
-                                fontWeight: FontWeight.w400,
+                                fontWeight: FontWeight.w200,
                                 height: 1.2),
                             textAlign: TextAlign.justify,
                           ),
@@ -129,8 +132,9 @@ class _DetailPageState extends State<DetailPage> {
                             style: TextStyle(
                                 fontFamily: "Poppins",
                                 fontSize: 24,
+                                color: Color(0xFF333333),
                                 fontStyle: FontStyle.normal,
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w400,
                                 height: 1.2),
                           ),
                           SizedBox(
@@ -138,16 +142,19 @@ class _DetailPageState extends State<DetailPage> {
                                   MediaQuery.of(context).size.height / 75.2),
 
                           // Content Cara Penyajian
-                          Text(
-                            widget.serve,
-                            style: const TextStyle(
-                                color: Color(0xFF828282),
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                                fontStyle: FontStyle.normal,
-                                fontFamily: "Poppins",
-                                height: 1.21),
-                            textAlign: TextAlign.justify,
+                          Padding(
+                            padding: const EdgeInsets.only(left: 3, right: 3),
+                            child: Text(
+                              widget.manfaat,
+                              style: const TextStyle(
+                                  color: Color(0xFF828282),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w200,
+                                  fontStyle: FontStyle.normal,
+                                  fontFamily: "Poppins",
+                                  height: 1.21),
+                              textAlign: TextAlign.left,
+                            ),
                           ),
                           SizedBox(
                               height:
@@ -159,7 +166,7 @@ class _DetailPageState extends State<DetailPage> {
                                 fontFamily: "Poppins",
                                 fontSize: 24,
                                 fontStyle: FontStyle.normal,
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w400,
                                 height: 1.2),
                           ),
                           SizedBox(
@@ -172,40 +179,42 @@ class _DetailPageState extends State<DetailPage> {
                             style: const TextStyle(
                                 color: Color(0xFF828282),
                                 fontSize: 14,
-                                fontWeight: FontWeight.w400,
+                                fontWeight: FontWeight.w200,
                                 fontStyle: FontStyle.normal,
                                 fontFamily: "Poppins",
                                 height: 1.21),
-                            textAlign: TextAlign.justify,
+                            textAlign: TextAlign.left,
                           ),
                           SizedBox(
                               height:
                                   MediaQuery.of(context).size.height / 37.6),
 
+                          // Content Anjuran
                           const Text(
                             "Anjuran",
                             style: TextStyle(
                                 fontFamily: "Poppins",
                                 fontSize: 24,
                                 fontStyle: FontStyle.normal,
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w400,
                                 height: 1.2),
                           ),
                           SizedBox(
                               height:
                                   MediaQuery.of(context).size.height / 75.2),
 
-                          // Content Cara Penyajian
-                          Text(
-                            widget.serve,
-                            style: const TextStyle(
+                          // Content Anjuran
+                          const Text(
+                            // widget.serve,
+                            "Membaca Basmalah sebelum sebelum meminum",
+                            style: TextStyle(
                                 color: Color(0xFF828282),
                                 fontSize: 14,
-                                fontWeight: FontWeight.w400,
+                                fontWeight: FontWeight.w200,
                                 fontStyle: FontStyle.normal,
                                 fontFamily: "Poppins",
                                 height: 1.21),
-                            textAlign: TextAlign.justify,
+                            textAlign: TextAlign.left,
                           ),
                           // SizedBox(height: 17),
                         ],

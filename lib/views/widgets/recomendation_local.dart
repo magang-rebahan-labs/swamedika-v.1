@@ -66,6 +66,7 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                               subtitle: senData.subtitle,
                               title: senData.title,
                               desc: senData.desc,
+                              manfaat: senData.manfaat,
                               serve: senData.serve,
                               image: senData.image,
                               cate: senData.cate,
