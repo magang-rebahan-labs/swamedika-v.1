@@ -65,20 +65,21 @@ class AppBarSearch extends StatelessWidget {
                               offset: const Offset(0, 16))
                         ]),
                     child: Row(
-                      children: [
-                        IconButton(
-                          icon: const Icon(
+                      children: const [
+                        Padding(
+                          padding: EdgeInsets.only(
+                            left: 10.0,
+                            right: 10.0,
+                          ),
+                          child: Icon(
                             Icons.search_sharp,
                             color: Color(0xFFC5C5C7),
+                            size: 33,
                           ),
-                          onPressed: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => const Pencarian()));
-                          },
                         ),
-                        const Expanded(
+                        Expanded(
                           child: Text(
-                            'Pencarian',
+                            'Pencarian bahan',
                             style: TextStyle(
                               color: Color(0xFFC5C5C7),
                               fontFamily: "Poppins",
