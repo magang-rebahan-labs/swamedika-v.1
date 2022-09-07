@@ -33,7 +33,8 @@ class _MoreState extends State<More> {
                   'Lainnya',
                   style: TextStyle(
                       fontSize: 40,
-                      fontWeight: FontWeight.bold,
+                      fontFamily: "Poppins",
+                      fontWeight: FontWeight.w800,
                       color: Colors.black54),
                 ),
               ),
