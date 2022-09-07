@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:swamedika/model/herbal_data_list.dart';
 
-class HerbalView extends StatelessWidget {
+class HerbalView extends StatefulWidget {
   const HerbalView({super.key});
 
   @override
+  State<HerbalView> createState() => _HerbalViewState();
+}
+
+class _HerbalViewState extends State<HerbalView> {
+  @override
   Widget build(BuildContext context) {
+    double tinggi = MediaQuery.of(context).size.height;
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: CustomScrollView(
@@ -18,7 +25,7 @@ class HerbalView extends StatelessWidget {
               ),
               onPressed: () => Navigator.of(context).pop(),
             ),
-            toolbarHeight: 100,
+            // toolbarHeight: 100,
             title: const Text(
               "Herbal",
               style: TextStyle(
@@ -30,7 +37,7 @@ class HerbalView extends StatelessWidget {
             ),
             centerTitle: true,
             bottom: PreferredSize(
-              preferredSize: const Size.fromHeight(20),
+              preferredSize: const Size.fromHeight(10),
               child: Container(
                 width: double.maxFinite,
                 padding: const EdgeInsets.only(
@@ -48,13 +55,13 @@ class HerbalView extends StatelessWidget {
             ),
             pinned: true,
             backgroundColor: Colors.green,
-            expandedHeight: 100,
+            expandedHeight: tinggi / 9.0,
           ),
           SliverToBoxAdapter(
             child: Column(
               children: [
                 Container(
-                  height: 600,
+                  height: tinggi / 1.2,
                   margin: const EdgeInsets.only(
                     left: 20,
                     right: 20,
@@ -92,7 +99,7 @@ class HerbalView extends StatelessWidget {
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.only(top: 130),
+                              padding: EdgeInsets.only(top: tinggi / 6),
                               child: Center(
                                 child: Text(
                                   herbaldataContents[index].title,
