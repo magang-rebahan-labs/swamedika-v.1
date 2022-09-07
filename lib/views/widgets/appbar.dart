@@ -26,7 +26,8 @@ class AppBarSearch extends StatelessWidget {
               height: MediaQuery.of(context).size.height / 4.04,
               child: Padding(
                 padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height / 12.6875,
+                    // top: MediaQuery.of(context).size.height / 12.6875,
+                    top: MediaQuery.of(context).size.height / 6.76,
                     left: MediaQuery.of(context).size.width / 23.4375),
                 // padding: EdgeInsets.only(top: 0, left: 30.0),
                 child: const Text(
@@ -34,7 +35,7 @@ class AppBarSearch extends StatelessWidget {
                   style: TextStyle(
                       fontFamily: "Sans-serif",
                       color: Colors.white,
-                      fontSize: 18,
+                      fontSize: 24,
                       fontWeight: FontWeight.normal),
                 ),
               ),
@@ -67,9 +68,8 @@ class AppBarSearch extends StatelessWidget {
                           color: Color(0xFFC5C5C7),
                         ),
                         onPressed: () {
-                          Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => const Pencarian()));
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => const Pencarian()));
                         },
                       ),
                       Expanded(
