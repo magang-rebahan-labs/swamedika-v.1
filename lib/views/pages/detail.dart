@@ -6,6 +6,7 @@ class DetailPage extends StatefulWidget {
       required this.subtitle,
       required this.title,
       required this.desc,
+      required this.manfaat,
       required this.serve,
       required this.image,
       required this.cate})
@@ -13,6 +14,7 @@ class DetailPage extends StatefulWidget {
   final String subtitle;
   final String title;
   final String desc;
+  final String manfaat;
   final String serve;
   final String image;
   final String cate;
@@ -55,95 +57,146 @@ class _DetailPageState extends State<DetailPage> {
         SliverList(
           delegate: SliverChildBuilderDelegate(
             (BuildContext context, int index) {
-              return Column(children: [
-                Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          // Judul
-                          Text(
-                            widget.subtitle,
-                            style: const TextStyle(
-                                fontFamily: "Sans-serif",
-                                fontSize: 24,
-                                fontWeight: FontWeight.w500,
-                                fontStyle: FontStyle.normal,
-                                height: 1.2),
-                          ),
-                          const SizedBox(height: 1),
+              return Column(
+                children: [
+                  Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            // Judul
+                            Text(
+                              widget.subtitle,
+                              style: const TextStyle(
+                                  fontFamily: "Sans-serif",
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w500,
+                                  fontStyle: FontStyle.normal,
+                                  height: 1.2),
+                            ),
+                            const SizedBox(height: 1),
 
-                          // Tag
-                          Text(
-                            "Tag: ${widget.cate}",
-                            style: const TextStyle(
-                                fontFamily: "Sans-serif",
-                                fontSize: 12,
-                                fontStyle: FontStyle.normal,
-                                fontWeight: FontWeight.w400,
-                                height: 1.5),
-                          ),
-                          const SizedBox(height: 35),
+                            // Tag
+                            Text(
+                              "Tag: ${widget.cate}",
+                              style: const TextStyle(
+                                  fontFamily: "Sans-serif",
+                                  fontSize: 12,
+                                  fontStyle: FontStyle.normal,
+                                  fontWeight: FontWeight.w400,
+                                  height: 1.5),
+                            ),
+                            const SizedBox(height: 35),
 
-                          // Deskripsi
-                          const Text(
-                            "Deskripsi",
-                            style: TextStyle(
-                                fontFamily: "Sans-serif",
-                                fontSize: 24,
-                                fontStyle: FontStyle.normal,
-                                fontWeight: FontWeight.w500,
-                                height: 1.2),
-                          ),
-                          const SizedBox(height: 8),
+                            // Deskripsi
+                            const Text(
+                              "Deskripsi",
+                              style: TextStyle(
+                                  fontFamily: "Sans-serif",
+                                  fontSize: 24,
+                                  fontStyle: FontStyle.normal,
+                                  fontWeight: FontWeight.w500,
+                                  height: 1.2),
+                            ),
+                            const SizedBox(height: 8),
 
-                          // Content Deskripsi
-                          Text(
-                            widget.desc,
-                            style: const TextStyle(
-                                color: Color(0xFF828282),
-                                fontFamily: "Sans-serif",
-                                fontSize: 14,
-                                fontStyle: FontStyle.normal,
-                                fontWeight: FontWeight.w400,
-                                height: 1.2),
-                            textAlign: TextAlign.justify,
-                          ),
-                          const SizedBox(height: 17),
+                            // Content Deskripsi
+                            Text(
+                              widget.desc,
+                              style: const TextStyle(
+                                  color: Color(0xFF828282),
+                                  fontFamily: "Sans-serif",
+                                  fontSize: 14,
+                                  fontStyle: FontStyle.normal,
+                                  fontWeight: FontWeight.w400,
+                                  height: 1.2),
+                              textAlign: TextAlign.justify,
+                            ),
+                            const SizedBox(height: 17),
 
-                          // Cara Penyajian
-                          const Text(
-                            "Cara Penyajian",
-                            style: TextStyle(
-                                fontFamily: "Sans-serif",
-                                fontSize: 24,
-                                fontStyle: FontStyle.normal,
-                                fontWeight: FontWeight.w500,
-                                height: 1.2),
-                          ),
-                          const SizedBox(height: 8),
+                            //Manfaat
+                            const Text(
+                              "Manfaat",
+                              style: TextStyle(
+                                  fontFamily: "Sans-serif",
+                                  fontSize: 24,
+                                  fontStyle: FontStyle.normal,
+                                  fontWeight: FontWeight.w500,
+                                  height: 1.2),
+                            ),
+                            const SizedBox(height: 8),
 
-                          // Content Cara Penyajian
-                          Text(
-                            widget.serve,
-                            style: const TextStyle(
-                                color: Color(0xFF828282),
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                                fontStyle: FontStyle.normal,
-                                fontFamily: "Sans-serif",
-                                height: 1.21),
-                            textAlign: TextAlign.justify,
-                          ),
-                          // SizedBox(height: 17),
-                        ],
+                            // Content Manfaat
+                            Text(
+                              widget.manfaat,
+                              style: const TextStyle(
+                                  color: Color(0xFF828282),
+                                  fontFamily: "Sans-serif",
+                                  fontSize: 14,
+                                  fontStyle: FontStyle.normal,
+                                  fontWeight: FontWeight.w400,
+                                  height: 1.2),
+                              textAlign: TextAlign.justify,
+                            ),
+                            const SizedBox(height: 17),
+
+                            // Cara Penyajian
+                            const Text(
+                              "Saran Penyajian",
+                              style: TextStyle(
+                                  fontFamily: "Sans-serif",
+                                  fontSize: 24,
+                                  fontStyle: FontStyle.normal,
+                                  fontWeight: FontWeight.w500,
+                                  height: 1.2),
+                            ),
+                            const SizedBox(height: 8),
+
+                            // Content Cara Penyajian
+                            Text(
+                              widget.serve,
+                              style: const TextStyle(
+                                  color: Color(0xFF828282),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400,
+                                  fontStyle: FontStyle.normal,
+                                  fontFamily: "Sans-serif",
+                                  height: 1.21),
+                              textAlign: TextAlign.justify,
+                            ),
+                            const SizedBox(height: 17),
+
+                            const Text(
+                              "Anjuran",
+                              style: TextStyle(
+                                  fontFamily: "Sans-serif",
+                                  fontSize: 24,
+                                  fontStyle: FontStyle.normal,
+                                  fontWeight: FontWeight.w500,
+                                  height: 1.2),
+                            ),
+                            const SizedBox(height: 8),
+
+                            const Text(
+                              'Membaca Basmalah sebelum meminum.',
+                              style: TextStyle(
+                                  color: Color(0xFF828282),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400,
+                                  fontStyle: FontStyle.normal,
+                                  fontFamily: "Sans-serif",
+                                  height: 1.21),
+                              textAlign: TextAlign.justify,
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  )
-                ])
-              ]);
+                    )
+                  ])
+                ],
+              );
             },
             childCount: 1,
           ),
