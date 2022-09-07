@@ -32,7 +32,7 @@ class AppBarSearch extends StatelessWidget {
                 child: const Text(
                   "Selamat Datang",
                   style: TextStyle(
-                      fontFamily: "Sans-serif",
+                      fontFamily: "Poppins",
                       color: Colors.white,
                       fontSize: 18,
                       fontWeight: FontWeight.normal),

@@ -1,20 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:swamedika/model/herbal_data_list.dart';
 
-class HerbalView extends StatefulWidget {
+class HerbalView extends StatelessWidget {
   const HerbalView({super.key});
 
-  @override
-  State<HerbalView> createState() => _HerbalViewState();
-}
-
-class _HerbalViewState extends State<HerbalView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: CustomScrollView(
-        slivers: <Widget>[
+        slivers: [
           SliverAppBar(
             leading: IconButton(
               icon: const Icon(

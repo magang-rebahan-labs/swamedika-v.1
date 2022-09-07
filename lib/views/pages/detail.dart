@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatefulWidget {
-  const DetailPage(
-      {Key? key,
-      required this.subtitle,
-      required this.title,
-      required this.desc,
-      required this.manfaat,
-      required this.serve,
-      required this.image,
-      required this.cate})
-      : super(key: key);
-  final String subtitle;
-  final String title;
-  final String desc;
-  final String manfaat;
-  final String serve;
+  const DetailPage({
+    Key? key,
+    required this.image,
+    required this.title,
+    required this.cate,
+    required this.desc,
+    required this.khasiat,
+    required this.serve,
+    required this.keamanan,
+    required this.peringatan,
+  }) : super(key: key);
   final String image;
+  final String title;
   final String cate;
+  final String desc;
+  final String khasiat;
+  final String serve;
+  final String keamanan;
+  final String peringatan;
 
   @override
   State<DetailPage> createState() => _DetailPageState();
@@ -67,110 +69,116 @@ class _DetailPageState extends State<DetailPage> {
                         children: [
                           // Judul
                           Text(
-                            widget.subtitle,
+                            "Swamedikasi Dengan \nBahan ${widget.title}",
                             style: const TextStyle(
-                                fontFamily: "Poppins",
-                                fontSize: 24,
-                                fontWeight: FontWeight.w400,
-                                color: Color(0xFF333333),
-                                fontStyle: FontStyle.normal,
-                                height: 1.2),
+                              fontFamily: "Poppins",
+                              fontSize: 24,
+                              fontWeight: FontWeight.w400,
+                              color: Color(0xFF333333),
+                              fontStyle: FontStyle.normal,
+                              height: 1.2,
+                            ),
                           ),
                           SizedBox(
-                              height:
-                                  MediaQuery.of(context).size.height / 150.4),
+                            height: MediaQuery.of(context).size.height / 150.4,
+                          ),
 
                           // Tag
                           Text(
                             "Tag: ${widget.cate}",
                             style: const TextStyle(
-                                fontFamily: "Poppins",
-                                fontSize: 12,
-                                color: Color(0xFF000000),
-                                fontStyle: FontStyle.normal,
-                                fontWeight: FontWeight.w400,
-                                height: 1.5),
+                              fontFamily: "Poppins",
+                              fontSize: 12,
+                              color: Color(0xFF000000),
+                              fontStyle: FontStyle.normal,
+                              fontWeight: FontWeight.w400,
+                              height: 1.5,
+                            ),
                           ),
                           SizedBox(
-                              height:
-                                  MediaQuery.of(context).size.height / 28.923),
+                            height: MediaQuery.of(context).size.height / 28.923,
+                          ),
 
                           // Deskripsi
                           const Text(
-                            "Deskripsi",
+                            "Informasi Umum",
                             style: TextStyle(
-                                fontFamily: "Poppins",
-                                fontSize: 24,
-                                color: Color(0xFF333333),
-                                fontStyle: FontStyle.normal,
-                                fontWeight: FontWeight.w400,
-                                height: 1.2),
+                              fontFamily: "Poppins",
+                              fontSize: 24,
+                              color: Color(0xFF333333),
+                              fontStyle: FontStyle.normal,
+                              fontWeight: FontWeight.w400,
+                              height: 1.2,
+                            ),
                           ),
                           SizedBox(
-                              height:
-                                  MediaQuery.of(context).size.height / 75.2),
+                            height: MediaQuery.of(context).size.height / 75.2,
+                          ),
 
                           // Content Deskripsi
                           Text(
                             widget.desc,
                             style: TextStyle(
-                                color: Colors.black.withOpacity(0.6),
-                                fontFamily: "Poppins",
-                                fontSize: 13,
-                                fontStyle: FontStyle.normal,
-                                height: 1.2),
+                              color: Colors.black.withOpacity(0.6),
+                              fontFamily: "Poppins",
+                              fontSize: 13,
+                              fontStyle: FontStyle.normal,
+                              height: 1.2,
+                            ),
                             textAlign: TextAlign.justify,
                           ),
                           SizedBox(
-                              height:
-                                  MediaQuery.of(context).size.height / 37.6),
+                            height: MediaQuery.of(context).size.height / 37.6,
+                          ),
 
                           // Manfaat
                           const Text(
-                            "Manfaat",
+                            "Khasiat",
                             style: TextStyle(
-                                fontFamily: "Poppins",
-                                fontSize: 24,
-                                color: Color(0xFF333333),
-                                fontStyle: FontStyle.normal,
-                                fontWeight: FontWeight.w400,
-                                height: 1.2),
+                              fontFamily: "Poppins",
+                              fontSize: 24,
+                              color: Color(0xFF333333),
+                              fontStyle: FontStyle.normal,
+                              fontWeight: FontWeight.w400,
+                              height: 1.2,
+                            ),
                           ),
                           SizedBox(
-                              height:
-                                  MediaQuery.of(context).size.height / 75.2),
+                            height: MediaQuery.of(context).size.height / 75.2,
+                          ),
 
                           // Manfaat
                           Padding(
                             padding: const EdgeInsets.only(left: 3, right: 3),
                             child: Text(
-                              widget.manfaat,
+                              widget.khasiat,
                               style: TextStyle(
-                                  color: Colors.black.withOpacity(0.6),
-                                  fontSize: 14,
-
-                                  fontStyle: FontStyle.normal,
-                                  fontFamily: "Poppins",
-                                  height: 1.21),
-                              textAlign: TextAlign.left,
+                                color: Colors.black.withOpacity(0.6),
+                                fontSize: 14,
+                                fontStyle: FontStyle.normal,
+                                fontFamily: "Poppins",
+                                height: 1.21,
+                              ),
+                              textAlign: TextAlign.justify,
                             ),
                           ),
                           SizedBox(
-                              height:
-                                  MediaQuery.of(context).size.height / 25.06),
+                            height: MediaQuery.of(context).size.height / 25.06,
+                          ),
 
                           const Text(
-                            "Saran Penyajian",
+                            "Penggunaan",
                             style: TextStyle(
-                                fontFamily: "Poppins",
-                                fontSize: 24,
-                                fontStyle: FontStyle.normal,
-                                fontWeight: FontWeight.w400,
-                                height: 1.2),
+                              fontFamily: "Poppins",
+                              fontSize: 24,
+                              fontStyle: FontStyle.normal,
+                              fontWeight: FontWeight.w400,
+                              height: 1.2,
+                            ),
                           ),
                           SizedBox(
-                              height:
-                                  MediaQuery.of(context).size.height / 75.2),
+                            height: MediaQuery.of(context).size.height / 75.2,
+                          ),
 
                           // Content Cara Penyajian
                           Text(
@@ -181,39 +189,74 @@ class _DetailPageState extends State<DetailPage> {
                                 fontStyle: FontStyle.normal,
                                 fontFamily: "Poppins",
                                 height: 1.21),
-                            textAlign: TextAlign.left,
+                            textAlign: TextAlign.start,
                           ),
                           SizedBox(
-                              height:
-                                  MediaQuery.of(context).size.height / 37.6),
+                            height: MediaQuery.of(context).size.height / 37.6,
+                          ),
 
-                          // Content Anjuran
+                          //Keamanan
                           const Text(
-                            "Anjuran",
+                            "Keamanan",
+                            style: TextStyle(
+                              fontFamily: "Poppins",
+                              fontSize: 24,
+                              color: Color(0xFF333333),
+                              fontStyle: FontStyle.normal,
+                              fontWeight: FontWeight.w400,
+                              height: 1.2,
+                            ),
+                          ),
+                          SizedBox(
+                            height: MediaQuery.of(context).size.height / 75.2,
+                          ),
+
+                          // Manfaat
+                          Padding(
+                            padding: const EdgeInsets.only(left: 3, right: 3),
+                            child: Text(
+                              widget.keamanan,
+                              style: TextStyle(
+                                  color: Colors.black.withOpacity(0.6),
+                                  fontSize: 14,
+                                  fontStyle: FontStyle.normal,
+                                  fontFamily: "Poppins",
+                                  height: 1.21),
+                              textAlign: TextAlign.start,
+                            ),
+                          ),
+                          SizedBox(
+                            height: MediaQuery.of(context).size.height / 75.2,
+                          ),
+                          //Peringatan
+                          const Text(
+                            "Peringatan",
                             style: TextStyle(
                                 fontFamily: "Poppins",
                                 fontSize: 24,
+                                color: Color(0xFF333333),
                                 fontStyle: FontStyle.normal,
                                 fontWeight: FontWeight.w400,
                                 height: 1.2),
                           ),
                           SizedBox(
-                              height:
-                                  MediaQuery.of(context).size.height / 75.2),
-
-                          // Content Anjuran
-                          Text(
-                            // widget.serve,
-                            "Membaca Basmalah sebelum sebelum meminum",
-                            style: TextStyle(
-                                color: Colors.black.withOpacity(0.6),
-                                fontSize: 14,
-                                fontStyle: FontStyle.normal,
-                                fontFamily: "Poppins",
-                                height: 1.21),
-                            textAlign: TextAlign.left,
+                            height: MediaQuery.of(context).size.height / 75.2,
                           ),
-                          // SizedBox(height: 17),
+
+                          // Manfaat
+                          Padding(
+                            padding: const EdgeInsets.only(left: 3, right: 3),
+                            child: Text(
+                              widget.peringatan,
+                              style: TextStyle(
+                                  color: Colors.black.withOpacity(0.6),
+                                  fontSize: 14,
+                                  fontStyle: FontStyle.normal,
+                                  fontFamily: "Poppins",
+                                  height: 1.21),
+                              textAlign: TextAlign.justify,
+                            ),
+                          ),
                         ],
                       ),
                     ),

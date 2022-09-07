@@ -63,13 +63,14 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) => DetailPage(
-                              subtitle: senData.subtitle,
-                              title: senData.title,
-                              desc: senData.desc,
-                              manfaat: senData.manfaat,
-                              serve: senData.serve,
                               image: senData.image,
+                              title: senData.title,
                               cate: senData.cate,
+                              desc: senData.desc,
+                              khasiat: senData.khasiat,
+                              serve: senData.serve,
+                              keamanan: senData.keamanan,
+                              peringatan: senData.peringatan,
                             ),
                           ),
                         );

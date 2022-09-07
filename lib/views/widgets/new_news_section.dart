@@ -52,7 +52,8 @@ class _NewNewsSectionState extends State<NewNewsSection> {
                     ListView.builder(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
-                      itemCount: newsList!.articles!.length,
+                      // itemCount: newsList!.articles!.length,
+                      itemCount: 5,
                       itemBuilder: (context, index) {
                         final currentNews = newsList!.articles![index];
                         return Container(
