@@ -21,7 +21,8 @@ List<RecomendationData> recomendationdataContents = [
     subtitle: 'Swamedikasi Dengan Bahan Jahe',
     image: 'assets/images/imghome/jahee.png',
     title: 'Jahe',
-    desc: 'Jahe memiliki',
+    desc:
+        'Jahe memiliki komponen zat aktif yang bisa membantu mengurangi gejala pilek, batuk, dan sakit tenggorokan. Jenis rempah ini dapat memberikan rasa hangat sehingga membantu melegakan tenggorokan. Alhasil, batuk pun bisa mereda lebih cepat. yuk cari tahu apa saja manfaat jahe berikut ini.',
     serve: 'Anda bisa mencampurkan',
     cate: 'Rempah',
   ),

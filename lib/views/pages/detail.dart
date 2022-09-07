@@ -67,63 +67,75 @@ class _DetailPageState extends State<DetailPage> {
                           Text(
                             widget.subtitle,
                             style: const TextStyle(
-                                fontFamily: "Sans-serif",
+                                fontFamily: "Poppins",
                                 fontSize: 24,
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w400,
+                                color: Color(0xFF333333),
                                 fontStyle: FontStyle.normal,
                                 height: 1.2),
                           ),
-                          const SizedBox(height: 1),
+                          SizedBox(
+                              height:
+                                  MediaQuery.of(context).size.height / 150.4),
 
                           // Tag
                           Text(
                             "Tag: ${widget.cate}",
                             style: const TextStyle(
-                                fontFamily: "Sans-serif",
+                                fontFamily: "Poppins",
                                 fontSize: 12,
+                                color: Color(0xFF000000),
                                 fontStyle: FontStyle.normal,
                                 fontWeight: FontWeight.w400,
                                 height: 1.5),
                           ),
-                          const SizedBox(height: 35),
+                          SizedBox(
+                              height:
+                                  MediaQuery.of(context).size.height / 28.923),
 
                           // Deskripsi
                           const Text(
                             "Deskripsi",
                             style: TextStyle(
-                                fontFamily: "Sans-serif",
+                                fontFamily: "Poppins",
                                 fontSize: 24,
                                 fontStyle: FontStyle.normal,
                                 fontWeight: FontWeight.w500,
                                 height: 1.2),
                           ),
-                          const SizedBox(height: 8),
+                          SizedBox(
+                              height:
+                                  MediaQuery.of(context).size.height / 75.2),
 
                           // Content Deskripsi
                           Text(
                             widget.desc,
                             style: const TextStyle(
                                 color: Color(0xFF828282),
-                                fontFamily: "Sans-serif",
+                                fontFamily: "Poppins",
                                 fontSize: 14,
                                 fontStyle: FontStyle.normal,
                                 fontWeight: FontWeight.w400,
                                 height: 1.2),
                             textAlign: TextAlign.justify,
                           ),
-                          const SizedBox(height: 17),
+                          SizedBox(
+                              height:
+                                  MediaQuery.of(context).size.height / 37.6),
 
                           // Cara Penyajian
                           const Text(
-                            "Cara Penyajian",
+                            "Manfaat",
                             style: TextStyle(
-                                fontFamily: "Sans-serif",
+                                fontFamily: "Poppins",
                                 fontSize: 24,
                                 fontStyle: FontStyle.normal,
                                 fontWeight: FontWeight.w500,
                                 height: 1.2),
                           ),
-                          const SizedBox(height: 8),
+                          SizedBox(
+                              height:
+                                  MediaQuery.of(context).size.height / 75.2),
 
                           // Content Cara Penyajian
                           Text(
@@ -133,7 +145,65 @@ class _DetailPageState extends State<DetailPage> {
                                 fontSize: 14,
                                 fontWeight: FontWeight.w400,
                                 fontStyle: FontStyle.normal,
-                                fontFamily: "Sans-serif",
+                                fontFamily: "Poppins",
+                                height: 1.21),
+                            textAlign: TextAlign.justify,
+                          ),
+                          SizedBox(
+                              height:
+                                  MediaQuery.of(context).size.height / 25.06),
+
+                          const Text(
+                            "Saran Penyajian",
+                            style: TextStyle(
+                                fontFamily: "Poppins",
+                                fontSize: 24,
+                                fontStyle: FontStyle.normal,
+                                fontWeight: FontWeight.w500,
+                                height: 1.2),
+                          ),
+                          SizedBox(
+                              height:
+                                  MediaQuery.of(context).size.height / 75.2),
+
+                          // Content Cara Penyajian
+                          Text(
+                            widget.serve,
+                            style: const TextStyle(
+                                color: Color(0xFF828282),
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                fontStyle: FontStyle.normal,
+                                fontFamily: "Poppins",
+                                height: 1.21),
+                            textAlign: TextAlign.justify,
+                          ),
+                          SizedBox(
+                              height:
+                                  MediaQuery.of(context).size.height / 37.6),
+
+                          const Text(
+                            "Anjuran",
+                            style: TextStyle(
+                                fontFamily: "Poppins",
+                                fontSize: 24,
+                                fontStyle: FontStyle.normal,
+                                fontWeight: FontWeight.w500,
+                                height: 1.2),
+                          ),
+                          SizedBox(
+                              height:
+                                  MediaQuery.of(context).size.height / 75.2),
+
+                          // Content Cara Penyajian
+                          Text(
+                            widget.serve,
+                            style: const TextStyle(
+                                color: Color(0xFF828282),
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                fontStyle: FontStyle.normal,
+                                fontFamily: "Poppins",
                                 height: 1.21),
                             textAlign: TextAlign.justify,
                           ),
