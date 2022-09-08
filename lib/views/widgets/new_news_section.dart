@@ -75,7 +75,7 @@ class _NewNewsSectionState extends State<NewNewsSection> {
                               try {
                                 (await canLaunchUrl(uri))
                                     ? launchUrl(uri)
-                                    : debugPrint('tidak bersahasil');
+                                    : debugPrint('tidak berhasil');
                               } catch (e) {
                                 debugPrint('error');
                               }
