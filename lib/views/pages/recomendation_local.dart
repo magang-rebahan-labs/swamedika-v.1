@@ -17,7 +17,8 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
       resizeToAvoidBottomInset: false,
       appBar: PreferredSize(
         preferredSize:
-            Size.fromHeight(MediaQuery.of(context).size.height / 2.9),
+            Size.fromHeight(MediaQuery.of(context).size.height / 2.985),
+        // Size.fromHeight(MediaQuery.of(context).size.height / 3.9),
         child: const AppBarSearch(),
       ),
       body: Container(
@@ -26,15 +27,12 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Judul Rekomendasi
-            const Padding(
-              padding: EdgeInsets.only(),
-              child: Text(
-                'Rekomendasi Pengobatan Swamedikasi',
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: "Sans-serif",
-                ),
+            const Text(
+              'Rekomendasi Pengobatan Swamedikasi',
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+                fontFamily: "Sans-serif",
               ),
             ),
 
