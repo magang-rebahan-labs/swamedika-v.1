@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:swamedika/model/recomendation_data.dart';
-import 'package:swamedika/views/pages/detail.dart';
-import 'package:swamedika/views/widgets/appbar.dart';
-import 'package:swamedika/views/widgets/new_news_section.dart';
+import '../../model/recomendation_data.dart';
+import '../widgets/widgets.dart';
+import 'detail.dart';
 
 class RecomendationLocal extends StatefulWidget {
   const RecomendationLocal({super.key});

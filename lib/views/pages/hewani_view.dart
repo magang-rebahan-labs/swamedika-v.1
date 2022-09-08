@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:swamedika/model/hewani_data_list.dart';
+import '../../model/hewani_data_list.dart';
 
 class HewaniView extends StatefulWidget {
   const HewaniView({super.key});

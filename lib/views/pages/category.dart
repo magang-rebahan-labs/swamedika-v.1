@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:swamedika/views/pages/herbal_view.dart';
-import 'package:swamedika/views/pages/hewani_view.dart';
-import 'package:swamedika/views/widgets/dotted_line.dart';
+import '../widgets/widgets.dart';
+import 'herbal_view.dart';
+import 'hewani_view.dart';
 
 class Category extends StatefulWidget {
   const Category({Key? key}) : super(key: key);

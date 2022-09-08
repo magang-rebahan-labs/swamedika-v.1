@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:swamedika/views/widgets/widgets.dart';
-
 import '../../main.dart';
 import '../../model/on_board_data.dart';
 import '../constants/app_style.dart';
 import '../constants/size_config.dart';
+import '../widgets/widgets.dart';
 import 'logosplash.dart';
 
 class OnBoardingPage extends StatefulWidget {
