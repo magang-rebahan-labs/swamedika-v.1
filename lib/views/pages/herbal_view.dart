@@ -25,7 +25,7 @@ class _HerbalViewState extends State<HerbalView> {
               ),
               onPressed: () => Navigator.of(context).pop(),
             ),
-            // toolbarHeight: 100,
+            toolbarHeight: tinggi / 8.5,
             title: const Text(
               "Herbal",
               style: TextStyle(

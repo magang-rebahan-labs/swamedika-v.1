@@ -12,7 +12,7 @@ class DottedLineWidget extends StatelessWidget {
       child: const DottedLine(
         direction: Axis.horizontal,
         lineLength: double.infinity,
-        lineThickness: 0.8,
+        lineThickness: 2,
         dashLength: 4.0,
         dashColor: Colors.grey,
         dashGapLength: 4.0,

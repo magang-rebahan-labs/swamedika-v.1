@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:swamedika/views/constants/app_style.dart';
+import '../constants/app_style.dart';
 
 class OnBoardNavBtn extends StatelessWidget {
   const OnBoardNavBtn({Key? key, required this.name, required this.onPressed})

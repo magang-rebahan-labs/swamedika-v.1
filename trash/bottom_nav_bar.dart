@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:swamedika/views/pages/category.dart';
 import 'package:swamedika/views/pages/more.dart';
-import 'package:swamedika/views/widgets/recomendation_local.dart';
+import 'package:swamedika/views/pages/recomendation_local.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);

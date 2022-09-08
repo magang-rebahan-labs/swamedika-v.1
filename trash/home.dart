@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:swamedika/views/widgets/widgets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -12,8 +11,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: RecomendationLocal(),
-      bottomNavigationBar: BottomNavBar(),
-    );
+        // body: RecomendationLocal(),
+        // bottomNavigationBar: BottomBar(),
+        );
   }
 }

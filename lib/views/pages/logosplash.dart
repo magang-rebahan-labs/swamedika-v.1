@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-
-import 'home.dart';
+import 'package:swamedika/views/widgets/bottom_bar.dart';
 
 class LogoSplash extends StatefulWidget {
   const LogoSplash({super.key});
@@ -26,7 +25,7 @@ class _LogoSplashState extends State<LogoSplash> {
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(
             builder: (_) {
-              return const HomePage();
+              return const BottomBar();
             },
           ),
         );
