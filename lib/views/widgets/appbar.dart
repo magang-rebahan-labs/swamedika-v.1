@@ -9,7 +9,7 @@ class AppBarSearch extends StatelessWidget {
     return Scaffold(
       body: SizedBox(
         // height: MediaQuery.of(context).size.height * 0.27,
-        height: MediaQuery.of(context).size.height / 2.9,
+        height: MediaQuery.of(context).size.height / 2.985,
         child: Stack(
           children: <Widget>[
             Container(
