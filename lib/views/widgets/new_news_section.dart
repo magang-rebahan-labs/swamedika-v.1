@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:swamedika/model/new_news_response.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -55,7 +56,16 @@ class _NewNewsSectionState extends State<NewNewsSection> {
                       // itemCount: newsList!.articles!.length,
                       itemCount: 5,
                       itemBuilder: (context, index) {
+                        // Variable
                         final currentNews = newsList!.articles![index];
+                        DateTime parseDate =
+                            DateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'")
+                                .parse(currentNews.publishedAt!);
+                        var inputDate = DateTime.parse(parseDate.toString());
+                        var outputFormat = DateFormat('dd MMMM yyyy');
+                        var outputDate = outputFormat.format(inputDate);
+
+                        // Konten
                         return Container(
                           margin:
                               const EdgeInsets.only(right: 8.0, bottom: 21.41),
@@ -146,7 +156,8 @@ class _NewNewsSectionState extends State<NewNewsSection> {
 
                                                   Text(
                                                     // "4 Agustus 2022",
-                                                    currentNews.publishedAt!,
+                                                    // currentNews.publishedAt!,
+                                                    outputDate,
                                                     style: const TextStyle(
                                                       fontSize: 12,
                                                       fontWeight:
