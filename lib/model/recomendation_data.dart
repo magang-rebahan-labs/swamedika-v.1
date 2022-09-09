@@ -36,49 +36,60 @@ List<RecomendationData> recomendationdataContents = [
     peringatan: 'Tidak ada',
   ),
   RecomendationData(
-    image: 'assets/images/imghome/jeruknipis.png',
-    title: 'Jeruk Nipis',
+    image: 'assets/images/imghome/jambubiji.png',
+    title: 'Jambu Biji',
     desc:
-        'Jeruk Nipis memiliki rasa yang asam, berbentuk bulat dan berkulit tipis. Diameter buahnya sekitar 3 sampa 6 cm dan permukaannya memiliki banyak kelenjar. Buah jeruk nipis memerlukan waktu 5-6 bulan untuk berkembang. Buah yang masak pohon akan berubah warna dari hijau menjadi kuning dan jeruk akan jatuh ke tanah setelah mencapai tahap masak penuh, yuk cari tahu apa saja khasiat jeruk nipis berikut ini.',
+        'Jambu biji memiliki nama ilmiah Psidium guajava L. Sinonim: P. cujavillus Burm f., P. pomiferum L., P. pumilum Vahl, P. pyreferum. Kandungan kimia pada buah jambu biji adalah vitamin C, vitamin A, besi, fosfor, kalsium, flavonoid dan kelompok polifenol. Buah jambu biji memiliki kadar polifenol yang tinggi seperti senyawa mirisetin dan apigenin, asam elagat, dan antosianin. Selain itu mengandung terpenoid (triterpen dan karotenoid), flavonol, tanin dan derivat asam fenolat. Berdasarkan hasil analisis HPLC-MS, GC-MS dan NMR, ditemukan senyawa kimia asam kojat dan 5-hydroxymethylfurfural. Kandungan lainnya adalah saponin, asam oleonat, lyxopyranoside, arabopyranoside, guaijavarin, kuersetin, caryophyllene oxide dan p-seline.',
     khasiat:
-        '1. Untuk menurunkan panas. \n2. Untuk obat batuk. \n3. Untuk menghilangkan ketombe. \n4. Untuk obat jerawat. \n5. Untuk influenza, antiinflamasi, dan antiseptik.',
-    serve: 'Anda bisa mencampurkan',
+        'Buah jambu biji dikenal sebagai buah tropis yang terkenal di Asia. Buah jambu biji memiliki sifat antioksidatif, antiinflamasi dan antidiabetes. Di Indonesia, buah jambu biji biasa digunakan untuk meningkatkan platelet pada demam berdarah dengue. Digunakan secara tradisional di China untuk diabetes.',
+    serve:
+        '1. 100 gram buah jambu biji (sekitar 1 buah besar) atau 55 gram buah jambu biji (sekitar 1 buah berukuran sedang). Kandungan vitamin C sebesar 228,3 mg dalam 100 gram buah. \n\n2. Dapat pula dikonsumsi dengan cara: satu buah jambu biji setengah masak, dibelah empat dan direbus dengan 1 L air sampai mendidih, kemudian disaring untuk diambil airnya. Diminum 2 kali sehari pagi dan sore.',
     cate: 'Nabati',
-    keamanan: "Test",
-    peringatan: 'Test',
+    keamanan:
+        "1. Efek yang tidak diinginkan: dapat menyebabkan konstipasi. \n\n2. Interaksi Obat: secara teoretis dapat meningkatkan potensi obat-obatan kolesterol, depresi, diabetes, gangguan tidur dan diare.",
+    peringatan: 'Tidak Ada',
   ),
   RecomendationData(
-    image: 'assets/images/imghome/madu.png',
-    title: 'Madu',
-    desc: 'Jahe Memiliki',
+    image: 'assets/images/imghome/temulawak.png',
+    title: 'Temulawak',
+    desc:
+        'Curcuma xanthorrhiza Roxb disebut juga temulawak, mengandung Kurkuminoid (1-2%) dan minyak atsiri dengan komponen xanthorrhizol (31.9%), ß-curcumene (17.1%), arcurcumene (13.2%), camphor (5.4%), γ-curcumene (2.6%), (Z)-γ-bisabolene (2.6%), and (E)-ß-farnesene (1.2%).',
     khasiat:
-        '1. Dapat menguatkan imunitas dalam tubuh \n2. Dapat mengobati penyakit peradangan. \n3. Mempunyai kandungan antibakteri. \n4. Dapat meredakan mual. \n5. Sebagai obat sakit kepala. \n6. Melegakan tenggorokan.',
-    serve: 'Anda Bisa Mencampurkan',
-    cate: 'Rempah',
-    keamanan: "Test",
-    peringatan: 'Test',
+        'Secara empiris temulawak telah digunakan secara turun temurun di Indonesia untuk mengobati berbagai keluhan perut dan gangguan hati, demam dan sembelit, galaktogogue, diare berdarah, disentri, radang rektum, wasir, gangguan lambung yang disebabkan oleh dingin, luka yang terinfeksi, erupsi kulit, akne vulgaris, eksim, cacar dan anoreksia serta untuk mengurangi peradangan rahim setelah melahirkan.',
+    serve:
+        'Penggunaan empiris di Indonesia terutama untuk meredakan gangguan fungsi hati dapat dilakukan dengan merebus 25 g irisan temulawak segar dengan 500 mL air hingga tinggal 300 mL, diminum untuk sehari. Cara lain dapat dilakukan dengan mengambil 25 g rimpang segar, diparut, diperas, disaring dibagi tiga dan diminum untuk sehari.',
+    cate: 'Nabati',
+    keamanan:
+        "1. European Medicine Agency melaporkan tidak ada efek samping serius yang dilaporkan sampai sekarang. Lebih lanjut komposisi kimia dari temulawak tidak memberikan alasan untuk masalah keamanan. \n\n2. Penggunaan temulawak pada wanita hamil dan selama menyusui tidak dianjurkan hingga ada data bahwa kurkumin dan/ atau metabolitnya dapat ditransfer melalui laktasi. \n\n3. Penggunaan pada penderita penyumbatan saluran empedu, cholangitis, batu empedu atau penyakit empedu lainnya sebaiknya berkonsultasi dengan dokter.",
+    peringatan: 'Tidak Ada',
   ),
   RecomendationData(
-    image: 'assets/images/imghome/bawangputih.png',
-    title: 'Bawang Putih',
-    desc: 'Jahe Memiliki',
+    image: 'assets/images/imghome/daunjambubiji.png',
+    title: 'Daun Jambu Biji',
+    desc:
+        'Daun jambu biji mengandung flavonoid kuersetin, guajaverin (kuersetin-3-O-arabinoside) dan glikosida kuersetin lain, gallocatechin dan tanin asam elagat dan guavin A, C dan D. Mengandung pula kelompok senyawa triterpen termasuk asam ursolat dan asam oleonolat. Mengandung minyak atsiri dengan komponen utama 1,8-sineol dan α-pinene. Kandungan kimia ekstrak daun jambu biji dengan urutan dari paling besar yaitu asam kafeat, kuersetin, kaempferol, katekin, kuersitrin, asam klorogenat, rutin, luteolin, epikatekin, dan asam galat.',
     khasiat:
-        '1. Dapat menguatkan imunitas dalam tubuh \n2. Dapat mengobati penyakit peradangan. \n3. Mempunyai kandungan antibakteri. \n4. Dapat meredakan mual. \n5. Sebagai obat sakit kepala. \n6. Melegakan tenggorokan.',
-    serve: 'Anda Bisa Mecampurkan',
-    cate: 'Rempah',
-    keamanan: "Test",
-    peringatan: 'Test',
+        'Di Indonesia secara tradisional digunakan untuk antidiare. Penelitian di Indonesia diprioritaskan sebagai antivirus, dengue. Pada Buku Cabe Puyang, jambu biji digunakan untuk disentri, lumpuh, mencret, radang lambung, sariawan, cucur darah tak henti-henti, keputihan (daun, kulit dan akarnya).\n Cara kerja: sebagai antibakteri, anti HIV, antioksidan, antiseptik. Indikasi: bakteria, candida, batuk, infeksi, inflamasi, malaria, parasit, salmonella, diare, shigella, radang tenggorokan.',
+    serve:
+        '15 gram daun segar atau daun kering direbus dengan 1 liter air selama 10 menit dan dihabiskan dalam 1 hari.',
+    cate: 'Nabati',
+    keamanan:
+        "1. Efek yang tidak diinginkan: dapat menyebabkan konstipasi. Dilaporkan adanya dermatitis alergi setelah penggunaan eksternal sediaan teh dari tumbuhan ini. \n\n2. Hanya untuk penderita kencing manis yang telah ditetapkan dokter. Jangan digunakan lebih dari 30 hari. Tidak direkomendasikan untuk penggunaan pada anak-anak, wanita hamil dan menyusui. Hipersensitif atau alergi terhadap tumbuhan ini. \n\n3. Interaksi Obat: Secara teoretis dapat meningkatkan potensi obat-obatan kolesterol, depresi, diabetes, gangguan tidur dan diare. Kandungan tanin tumbuhan ini berpotensi menghambat absorpsi besi.",
+    peringatan: 'Tidak Ada',
   ),
   RecomendationData(
-    image: 'assets/images/imghome/delima.png',
-    title: 'Delima',
-    desc: 'Jahe Memiliki',
+    image: 'assets/images/imghome/meniran.png',
+    title: 'Meniran',
+    desc:
+        'Phyllanthus niruri L. sering disebut juga meniran, didukung anak, daun gendong anak, gosau ma dung-dung. Tumbuhan ini memiliki kandungan kimia tanin, damar, kalium, flavonoid (kuersetin, kuersitrin, isokuersitrin, astragalin, rutin; kaemferol-4-ramnopiranosid, eridiktol-7-ramnopiranosid), dan lignan.',
     khasiat:
-        '1. Dapat menguatkan imunitas dalam tubuh \n2. Dapat mengobati penyakit peradangan. \n3. Mempunyai kandungan antibakteri. \n4. Dapat meredakan mual. \n5. Sebagai obat sakit kepala. \n6. Melegakan tenggorokan.',
-    serve: 'Anda Bisa Mecampurkan',
-    cate: 'Rempah',
-    keamanan: "Test",
-    peringatan: 'Test',
+        'Berdasarkan buku Cabe Puyang, daun, akar dan semua bagian tumbuhan ini dapat digunakan secara empiris untuk pengobatan ayan, malaria, sembelit, tekanan darah tinggi, tidak teratur datang haid, seriawan (daunnya), mulas, gigi nyeri (akarnya), kencing kurang lancar, kencing nanah, rajasinga, ginjal nyeri, menceret, demam, tetanus, darah kotor, kejang gagau, putih telur dalam kencing, kencing batu (semua bagiannya) dan lain-lain.',
+    serve:
+        'Sebagai dekokta: 15-30 g herba meniran dalam 250 mL air, diminum 2-3 kali per hari. Dekokta merupan sediaan cair yang dibuat dengan mengektraksi sediaan herbal dengan air pada suhu 90%C selama 30 menit',
+    cate: 'Nabati',
+    keamanan:
+        "1. Efek tidak diinginkan: Hipoglikemi, hipotensi, ketidakseimbangan elektrolit dan mineral. \n\n2. Interaksi Obat: Dapat meningkatkan efek insulin dan obat-obat diabetes. Meniran mengandung geraniin yang dilaporkan mempunyai efek inotropik negatif, kronotropik negatif, hipotensi dan ACE inhibitor, oleh karena itu, kemungkinan dapat meningkatkan efek obat-obat antihipertensi, alfa blocker dan obat jantung. Ekstrak etanol herba meniran dapat menghambat enzim sitokrom P450 secara in vivo maupun in vitro. Meniran memiliki efek sinergis dengan obat antimikroba, antagonis dengan kortikosteroid. \n\n3. Kontraindikasi: tidak boleh digunakan pada wanita hamil, pasien dengan hipersensitivitas terhadap Phyllanthus niruri L., dan pasien penderita penyakit autoimun.",
+    peringatan: 'Tidak Ada',
   ),
   RecomendationData(
     image: 'assets/images/imghome/kayumanis.png',
