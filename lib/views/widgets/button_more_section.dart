@@ -51,12 +51,16 @@ class _ButtonMoreState extends State<ButtonMore> {
                                   style: TextStyle(
                                       fontSize: 25,
                                       fontWeight: FontWeight.bold,
-                                      height: 3),
+                                      height: 3,
+                                      fontFamily: "Poppins"),
                                 ),
                                 Text(
-                                  'Swamedika Thibbun Nabawi adalah aplikasi yang mengedukasi masyarakat untuk pengobatan yang dianjurkan oleh Nabi. Bahan-bahan yang digunakan dalam pengobatan ini merupakan bahan alami berkhasiat obat yang dikenal dalam dunia farmasi.',
-                                  textAlign: TextAlign.justify,
-                                  style: TextStyle(fontSize: 15, height: 2.3),
+                                  'Swamedikasi Thibbun Nabawi adalah aplikasi yang mengedukasi masyarakat untuk pengobatan yang dianjurkan oleh Nabi. Bahan-bahan yang digunakan dalam pengobatan ini merupakan bahan alami berkhasiat obat yang dikenal dalam dunia farmasi.',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      height: 2.3,
+                                      fontFamily: "Poppins"),
                                 ),
                               ],
                             ),
@@ -72,10 +76,11 @@ class _ButtonMoreState extends State<ButtonMore> {
                 Text(
                   'Tentang Kami',
                   style: TextStyle(
-                      fontSize: 18,
-                      color: Color(0xFF333333),
-                      fontFamily: "Sans-serif",
-                      fontWeight: FontWeight.bold),
+                    fontSize: 18,
+                    color: Color(0xFF333333),
+                    fontFamily: "Poppins",
+                    // fontWeight: FontWeight.bold,
+                  ),
                 ),
                 Icon(
                   Icons.arrow_forward_ios_rounded,
@@ -118,20 +123,41 @@ class _ButtonMoreState extends State<ButtonMore> {
                               children: const [
                                 Text(
                                   'Catatan Rilis',
-                                  textAlign: TextAlign.start,
                                   style: TextStyle(
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold,
-                                      height: 3),
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.bold,
+                                    height: 3,
+                                    fontFamily: "Poppins",
+                                  ),
                                 ),
-                                Text('Versi 1.0.0 | 29/08/2022',
-                                    textAlign: TextAlign.start,
-                                    style:
-                                        TextStyle(fontSize: 15, height: 2.3)),
-                                Text('- Perbaikan Bug',
-                                    textAlign: TextAlign.start,
-                                    style:
-                                        TextStyle(fontSize: 15, height: 2.3)),
+                                Text(
+                                  'Versi 1.0.0 - Pra Rilis | 09/09/2022',
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      height: 2.3,
+                                      fontFamily: "Poppins"),
+                                ),
+                                Text(
+                                  '- Peningkatan performa aplikasi',
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      height: 2.3,
+                                      fontFamily: "Poppins"),
+                                ),
+                                Text(
+                                  '- Perbaikan bug navbar yang selalu muncul',
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      height: 2.3,
+                                      fontFamily: "Poppins"),
+                                ),
+                                Text(
+                                  '- Perbaikan informasi berita yang tidak memunculkan gambar',
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      height: 2.3,
+                                      fontFamily: "Poppins"),
+                                ),
                               ],
                             ),
                           ),
@@ -145,10 +171,11 @@ class _ButtonMoreState extends State<ButtonMore> {
               children: const [
                 Text('Catatan Rilis',
                     style: TextStyle(
-                        fontSize: 18,
-                        color: Color(0xFF333333),
-                        fontFamily: "Sans-serif",
-                        fontWeight: FontWeight.bold)),
+                      fontSize: 18,
+                      color: Color(0xFF333333),
+                      fontFamily: "Poppins",
+                      // fontWeight: FontWeight.bold,
+                    )),
                 Icon(Icons.arrow_forward_ios_rounded,
                     size: 19, color: Colors.black),
               ],
@@ -191,12 +218,17 @@ class _ButtonMoreState extends State<ButtonMore> {
                                   style: TextStyle(
                                       fontSize: 25,
                                       fontWeight: FontWeight.bold,
-                                      height: 3),
+                                      height: 3,
+                                      fontFamily: "Poppins"),
                                 ),
-                                Text('Buku Saku Pengobatan Swamedikasi BPOM',
-                                    textAlign: TextAlign.start,
-                                    style:
-                                        TextStyle(fontSize: 15, height: 2.3)),
+                                Text(
+                                  'Buku Saku Pengobatan Swamedikasi BPOM',
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      height: 2.3,
+                                      fontFamily: "Poppins"),
+                                ),
                               ],
                             ),
                           ),
@@ -210,10 +242,11 @@ class _ButtonMoreState extends State<ButtonMore> {
               children: const [
                 Text('Literatur',
                     style: TextStyle(
-                        fontSize: 18,
-                        color: Color(0xFF333333),
-                        fontFamily: "Sans-serif",
-                        fontWeight: FontWeight.bold)),
+                      fontSize: 18,
+                      color: Color(0xFF333333),
+                      fontFamily: "Poppins",
+                      // fontWeight: FontWeight.bold,
+                    )),
                 Icon(Icons.arrow_forward_ios_rounded,
                     size: 19, color: Colors.black),
               ],
