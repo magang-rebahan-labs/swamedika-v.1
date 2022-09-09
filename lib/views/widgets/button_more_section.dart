@@ -56,7 +56,7 @@ class _ButtonMoreState extends State<ButtonMore> {
                                 ),
                                 Text(
                                   'Swamedikasi Thibbun Nabawi adalah aplikasi yang mengedukasi masyarakat untuk pengobatan yang dianjurkan oleh Nabi. Bahan-bahan yang digunakan dalam pengobatan ini merupakan bahan alami berkhasiat obat yang dikenal dalam dunia farmasi.',
-                                  textAlign: TextAlign.center,
+                                  textAlign: TextAlign.justify,
                                   style: TextStyle(
                                       fontSize: 15,
                                       height: 2.3,
