@@ -11,6 +11,8 @@ class HewaniView extends StatefulWidget {
 class _HewaniViewState extends State<HewaniView> {
   @override
   Widget build(BuildContext context) {
+    double tinggi = MediaQuery.of(context).size.height;
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: CustomScrollView(
@@ -59,7 +61,7 @@ class _HewaniViewState extends State<HewaniView> {
             child: Column(
               children: [
                 Container(
-                  height: 600,
+                  height: tinggi / 1.2,
                   margin: const EdgeInsets.only(
                     left: 20,
                     right: 20,
