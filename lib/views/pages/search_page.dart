@@ -86,10 +86,19 @@ class _SearchPageState extends State<SearchPage> {
                   ),
                 ),
                 suffixIcon: IconButton(
-                  onPressed: _controller.clear,
-                  icon: const IconTheme(
-                    data: IconThemeData(color: Colors.black),
-                    child: Icon(
+                  onPressed: _controller.text.isEmpty
+                      ? null
+                      : () {
+                          _controller.clear();
+                          FocusScope.of(context).unfocus();
+                        },
+                  icon: IconTheme(
+                    data: IconThemeData(
+                      color: _controller.text.isNotEmpty
+                          ? Colors.red
+                          : Colors.black,
+                    ),
+                    child: const Icon(
                       Icons.close,
                     ),
                   ),
