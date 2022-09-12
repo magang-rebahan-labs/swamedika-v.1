@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../pages/search_page.dart';
+import 'package:swamedika/views/pages/search_page.dart';
 
 class AppBarSearch extends StatelessWidget {
   const AppBarSearch({Key? key}) : super(key: key);
@@ -48,8 +48,11 @@ class AppBarSearch extends StatelessWidget {
                 height: MediaQuery.of(context).size.height / 14.5,
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const Pencarian()));
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const SearchPage(),
+                      ),
+                    );
                   },
                   child: DecoratedBox(
                     decoration: BoxDecoration(
