@@ -14,7 +14,7 @@ List<OnBoarding> onboardingContents = [
   OnBoarding(
     title: 'Swamedikasi \n Thibbun Nabawi',
     image: 'assets/images/onboard/welcome1.png',
-    desc: 'Metode Pengobatan Ala\n Nabi Rasulullah SAW',
+    desc: 'Metode Pengobatan Ala\n Rasulullah SAW',
   ),
   OnBoarding(
     title: 'Swamedikasi \n Thibbun Nabawi',
