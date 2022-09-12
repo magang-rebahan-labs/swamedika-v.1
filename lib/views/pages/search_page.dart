@@ -1,62 +1,162 @@
 import 'package:flutter/material.dart';
-import 'package:search_page/search_page.dart';
+import 'package:swamedika/model/herbal_data_list.dart';
 
-/// This is a very simple class, used to
-/// demo the `SearchPage` package
-class KategoriPencarian {
-  final String nama;
-  KategoriPencarian(this.nama);
+class SearchPage extends StatefulWidget {
+  const SearchPage({super.key});
+
+  @override
+  State<SearchPage> createState() => _SearchPageState();
 }
 
-class Pencarian extends StatelessWidget {
-  static List<KategoriPencarian> kategori = [
-    KategoriPencarian('Nabati'),
-    KategoriPencarian('Hewani'),
-    KategoriPencarian('Jamur'),
-  ];
+class _SearchPageState extends State<SearchPage> {
+  final _controller = TextEditingController();
+  List<HerbalDataList> displayList = List.from(herbaldataContents);
 
-  const Pencarian({super.key});
+  void updateList(String value) {
+    setState(
+      () {
+        displayList = herbaldataContents
+            .where(
+              (element) => element.title.toLowerCase().contains(
+                    value.toLowerCase(),
+                  ),
+            )
+            .toList();
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
         foregroundColor: Colors.black,
-        elevation: 1,
-        title: const Text('Pencarian'),
-        titleTextStyle: const TextStyle(color: Colors.black),
-        actions: <Widget>[
-          IconButton(
-              onPressed: () => showSearch(
-                    context: context,
-                    delegate: SearchPage<KategoriPencarian>(
-                      items: kategori,
-                      searchLabel: 'Pencarian',
-                      failure: const Center(
-                        child: Text('Tidak ditemukan :('),
-                      ),
-                      filter: (person) => [
-                        person.nama,
-                      ],
-                      builder: (person) => ListTile(
-                        title: Text(person.nama),
-                      ),
+        backgroundColor: Colors.white,
+        elevation: 0.0,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              "Cari Bahan",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 22.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(
+              height: 20.0,
+            ),
+            TextField(
+              autofocus: true,
+              cursorColor: Colors.black,
+              onChanged: (value) => updateList(value),
+              style: const TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w500,
+              ),
+              controller: _controller,
+              decoration: InputDecoration(
+                disabledBorder: InputBorder.none,
+                filled: true,
+                fillColor: Colors.grey.shade300,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                  borderSide: BorderSide.none,
+                ),
+                hintText: "Contoh: Madu",
+                prefixIcon: IconButton(
+                  onPressed: () {
+                    // Navigator.of(context).push(
+                    //   MaterialPageRoute(
+                    //     builder: (context) => const Test(),
+                    //   ),
+                    // );
+                  },
+                  icon: const IconTheme(
+                    data: IconThemeData(color: Colors.black),
+                    child: Icon(
+                      Icons.search,
                     ),
                   ),
-              icon: const Icon(
-                Icons.search,
-                color: Colors.black,
-              ))
-        ],
-      ),
-      body: ListView.builder(
-        itemCount: kategori.length,
-        itemBuilder: (context, index) {
-          final KategoriPencarian person = kategori[index];
-          return ListTile(
-            title: Text(person.nama),
-          );
-        },
+                ),
+                suffixIcon: IconButton(
+                  onPressed: _controller.text.isEmpty
+                      ? null
+                      : () {
+                          _controller.clear();
+                          FocusScope.of(context).unfocus();
+                        },
+                  icon: IconTheme(
+                    data: IconThemeData(
+                      color: _controller.text.isNotEmpty
+                          ? Colors.red
+                          : Colors.black,
+                    ),
+                    child: const Icon(
+                      Icons.close,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Expanded(
+              child: displayList.isEmpty
+                  ? const Center(
+                      child: Text(
+                        "Pencarian Tidak Ditemukan",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 22.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    )
+                  : ListView.builder(
+                      itemCount: displayList.length,
+                      itemBuilder: (context, index) => ListTile(
+                        contentPadding: const EdgeInsets.all(8.0),
+                        title: Text(
+                          displayList[index].title,
+                          style: const TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        // subtitle: Text(
+                        //   displayList[index].desc,
+                        //   style: const TextStyle(
+                        //     color: Colors.black,
+                        //     fontWeight: FontWeight.normal,
+                        //     fontSize: 12,
+                        //   ),
+                        // ),
+                        leading: ConstrainedBox(
+                          constraints: const BoxConstraints(
+                            minWidth: 44,
+                            minHeight: 44,
+                            maxWidth: 64,
+                            maxHeight: 64,
+                          ),
+                          child: Image(
+                            image: AssetImage(
+                              displayList[index].image,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+            ),
+          ],
+        ),
       ),
     );
   }

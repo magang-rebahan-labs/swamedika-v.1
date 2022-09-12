@@ -52,23 +52,27 @@ class _BottomBarState extends State<BottomBar> {
       ),
       bottomNavigationBar: SizedBox(
         height: MediaQuery.of(context).size.height / 10.684,
-        child: BottomNavigationBar(
-          currentIndex: _activeScreenIndex,
-          onTap: (index) {
-            setState(() {
-              _activeScreenIndex = index;
-            });
-          },
-          items: _items.map(
-            (item) {
-              return BottomNavigationBarItem(
-                label: item.title,
-                icon: Icon(item.icon),
-              );
+        child: ClipRRect(
+          borderRadius: const BorderRadius.only(topLeft: Radius.circular(28), topRight: Radius.circular(28)),
+          child: BottomNavigationBar(
+            backgroundColor: Colors.white,
+            currentIndex: _activeScreenIndex,
+            onTap: (index) {
+              setState(() {
+                _activeScreenIndex = index;
+              });
             },
-          ).toList(),
-          selectedItemColor: Colors.green,
-          unselectedItemColor: Colors.grey,
+            items: _items.map(
+              (item) {
+                return BottomNavigationBarItem(
+                  label: item.title,
+                  icon: Icon(item.icon),
+                );
+              },
+            ).toList(),
+            selectedItemColor: Colors.green,
+            unselectedItemColor: Colors.grey,
+          ),
         ),
       ),
     );
