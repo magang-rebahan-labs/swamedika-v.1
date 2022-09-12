@@ -38,7 +38,7 @@ class _ButtonMoreState extends State<ButtonMore> {
                   ),
                   builder: (context) {
                     return SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.4,
+                      height: MediaQuery.of(context).size.height * 0.8,
                       child: Padding(
                         padding: const EdgeInsets.only(left: 20, right: 20),
                         child: SizedBox(
@@ -114,7 +114,7 @@ class _ButtonMoreState extends State<ButtonMore> {
                   builder: (context) {
                     // Untuk Penjelasannya
                     return SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.4,
+                      height: MediaQuery.of(context).size.height * 0.8,
                       child: Padding(
                         padding: const EdgeInsets.only(left: 20, right: 20),
                         child: SizedBox(
@@ -205,7 +205,7 @@ class _ButtonMoreState extends State<ButtonMore> {
                   builder: (context) {
                     // Untuk Penjelasannya
                     return SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.4,
+                      height: MediaQuery.of(context).size.height * 0.8,
                       child: Padding(
                         padding: const EdgeInsets.only(left: 20, right: 20),
                         child: SizedBox(
