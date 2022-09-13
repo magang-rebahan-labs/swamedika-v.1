@@ -1,6 +1,5 @@
 export './my_text_btn.dart';
 export './onboard_navbtn.dart';
-export './appbar_more.dart';
 export './appbar.dart';
 export './button_more_section.dart';
 export './dotted_line.dart';
