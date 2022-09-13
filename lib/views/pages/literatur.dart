@@ -8,7 +8,8 @@ class Literatur extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(MediaQuery.of(context).size.height / 4.413),
+          preferredSize:
+              Size.fromHeight(MediaQuery.of(context).size.height / 4.413),
           child: AppBar(
             backgroundColor: Colors.white,
             foregroundColor: Colors.black,
@@ -28,7 +29,8 @@ class Literatur extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 height: 50,
-                child: ElevatedButton(onPressed: () {}, child: Text("Button")),
+                child: ElevatedButton(
+                    onPressed: () {}, child: const Text("Button")),
               ),
             ],
           ),

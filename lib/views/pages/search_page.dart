@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:swamedika/model/herbal_data_list.dart';
+import 'package:swamedika/model/recomendation_data.dart';
+import 'package:swamedika/views/pages/detail.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
@@ -10,16 +11,15 @@ class SearchPage extends StatefulWidget {
 
 class _SearchPageState extends State<SearchPage> {
   final _controller = TextEditingController();
-  List<HerbalDataList> displayList = List.from(herbaldataContents);
+  List<RecomendationData> displayList = List.from(recomendationdataContents);
 
   void updateList(String value) {
     setState(
       () {
-        displayList = herbaldataContents
+        displayList = recomendationdataContents
             .where(
-              (element) => element.title.toLowerCase().contains(
-                    value.toLowerCase(),
-                  ),
+              (element) =>
+                  element.title.toLowerCase().contains(value.toLowerCase()),
             )
             .toList();
       },
@@ -90,7 +90,7 @@ class _SearchPageState extends State<SearchPage> {
                       ? null
                       : () {
                           _controller.clear();
-                          FocusScope.of(context).unfocus();
+                          // FocusScope.of(context).unfocus();
                         },
                   icon: IconTheme(
                     data: IconThemeData(
@@ -123,6 +123,24 @@ class _SearchPageState extends State<SearchPage> {
                   : ListView.builder(
                       itemCount: displayList.length,
                       itemBuilder: (context, index) => ListTile(
+                        onTap: () {
+                          var senData = recomendationdataContents[index];
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => DetailPage(
+                                image: senData.image,
+                                title: senData.title,
+                                cate: senData.cate,
+                                desc: senData.desc,
+                                khasiat: senData.khasiat,
+                                serve: senData.serve,
+                                keamanan: senData.keamanan,
+                                peringatan: senData.peringatan,
+                              ),
+                            ),
+                          );
+                          _controller.clear();
+                        },
                         contentPadding: const EdgeInsets.all(8.0),
                         title: Text(
                           displayList[index].title,
@@ -131,14 +149,6 @@ class _SearchPageState extends State<SearchPage> {
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                        // subtitle: Text(
-                        //   displayList[index].desc,
-                        //   style: const TextStyle(
-                        //     color: Colors.black,
-                        //     fontWeight: FontWeight.normal,
-                        //     fontSize: 12,
-                        //   ),
-                        // ),
                         leading: ConstrainedBox(
                           constraints: const BoxConstraints(
                             minWidth: 44,
