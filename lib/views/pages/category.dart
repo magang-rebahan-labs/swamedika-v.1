@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../widgets/widgets.dart';
-import 'herbal_view.dart';
-import 'hewani_view.dart';
+import 'package:swamedika/views/widgets/widgets.dart';
+import 'package:swamedika/views/pages/hewani_view.dart';
+import 'package:swamedika/views/pages/herbal_view.dart';
 
 class Category extends StatefulWidget {
   const Category({Key? key}) : super(key: key);
@@ -45,127 +45,80 @@ class _CategoryState extends State<Category> {
 
           // KONTEN KATEGORINYA
           SingleChildScrollView(
-            padding: const EdgeInsets.only(
-              right: 16,
-              left: 16,
-            ),
+            padding: const EdgeInsets.only(right: 16, left: 16),
 
             // BAGIAN LISTVIEW GAMBAR
             child: Column(
               children: [
                 // TAB NABATI
-                GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const HerbalView(),
-                      ),
-                    );
-                  },
-                  child: Container(
-                    height: MediaQuery.of(context).size.height * 0.12,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(width: 1),
-                      color: const Color(0xFF000000),
-                      boxShadow: [
-                        BoxShadow(
-                          color: const Color(0xFF000000).withOpacity(0.25),
-                          offset: const Offset(0, 4),
-                          blurRadius: 4,
-                        )
-                      ],
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: Image.asset(
-                        'assets/images/kategori/covernabati.png',
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                ),
-
-                SizedBox(
-                  height: MediaQuery.of(context).size.height / 62.461,
-                ),
+                const CategoryName(
+                    imageRoute: 'covernabati.png', urlRoute: 'Nabati'),
+                SizedBox(height: MediaQuery.of(context).size.height / 62.461),
 
                 // TAB HEWANI
-                GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const HewaniView(),
-                      ),
-                    );
-                  },
-                  child: Container(
-                    height: MediaQuery.of(context).size.height * 0.12,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(width: 1),
-                      color: const Color(0xFF000000),
-                      boxShadow: [
-                        BoxShadow(
-                          color: const Color(0xFF000000).withOpacity(0.25),
-                          offset: const Offset(0, 4),
-                          blurRadius: 4,
-                        )
-                      ],
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: Image.asset(
-                        'assets/images/kategori/coverhewani.png',
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                ),
-
-                SizedBox(
-                  height: MediaQuery.of(context).size.height / 62.461,
-                ),
+                const CategoryName(
+                    imageRoute: 'coverhewani.png', urlRoute: 'Hewani'),
+                SizedBox(height: MediaQuery.of(context).size.height / 62.461),
 
                 // TAB JAMU
-                GestureDetector(
-                  onTap: () {
-                    // Navigator.of(context).push(
-                    //   MaterialPageRoute(
-                    //     builder: (context) => const RempahView(),
-                    //   ),
-                    // );
-                  },
-                  child: Container(
-                    height: MediaQuery.of(context).size.height * 0.12,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(width: 1),
-                      color: const Color(0xFF000000),
-                      boxShadow: [
-                        BoxShadow(
-                          color: const Color(0xFF000000).withOpacity(0.25),
-                          offset: const Offset(0, 4),
-                          blurRadius: 4,
-                        )
-                      ],
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: Image.asset(
-                        'assets/images/kategori/coverjamu.png',
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                ),
+                const CategoryName(
+                    imageRoute: 'coverjamu.png', urlRoute: 'Jamu'),
               ],
             ),
           )
         ],
+      ),
+    );
+  }
+}
+
+class CategoryName extends StatelessWidget {
+  final String urlRoute;
+  final String imageRoute;
+
+  const CategoryName(
+      {super.key, required this.urlRoute, required this.imageRoute});
+
+  @override
+  Widget build(BuildContext context) {
+    // KETIKA DI KLIK
+    return GestureDetector(
+      onTap: () {
+        if (urlRoute == "Nabati") {
+          Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const HerbalView()));
+        } else if (urlRoute == "Hewani") {
+          Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const HewaniViewSatu()));
+        } else if (urlRoute == "Jamu") {
+          // Navigator.of(context).push(
+          //     MaterialPageRoute(builder: (context) => const HewaniViewSatu()));
+        }
+      },
+
+      // CONTAINER ITEM
+      child: Container(
+        height: MediaQuery.of(context).size.height * 0.12,
+        width: MediaQuery.of(context).size.width,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(width: 1),
+          color: const Color(0xFF000000),
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0xFF000000).withOpacity(0.25),
+              offset: const Offset(0, 4),
+              blurRadius: 4,
+            )
+          ],
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(12),
+          child: Image.asset(
+            'assets/images/kategori/$imageRoute',
+            fit: BoxFit.cover,
+          ),
+        ),
       ),
     );
   }
