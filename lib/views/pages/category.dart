@@ -85,11 +85,13 @@ class CategoryName extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         if (urlRoute == "Nabati") {
-          Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const HerbalView()));
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) =>
+                  const HewaniViewSatu(categoryName: "Nabati")));
         } else if (urlRoute == "Hewani") {
-          Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const HewaniViewSatu()));
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) =>
+                  const HewaniViewSatu(categoryName: 'Hewani')));
         } else if (urlRoute == "Jamu") {
           // Navigator.of(context).push(
           //     MaterialPageRoute(builder: (context) => const HewaniViewSatu()));
