@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:swamedika/model/data_list.dart';
 import 'package:swamedika/views/pages/detail.dart';
+import 'package:swamedika/model/database.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
@@ -142,20 +143,20 @@ class _SearchPageState extends State<SearchPage> {
                       itemCount: displayList.length,
                       itemBuilder: (context, index) => ListTile(
                         onTap: () {
-                          var senData = dataListContent[index];
+                          var senData = herbaldataContents[index];
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => DetailPage(
-                                image: senData.image,
-                                title: senData.title,
-                                cate: senData.cate,
-                                desc: senData.desc,
-                                khasiat: senData.khasiat,
-                                serve: senData.serve,
-                                keamanan: senData.keamanan,
-                                peringatan: senData.peringatan,
-                              ),
-                            ),
+                                builder: (context) => const DetailPage(
+                                    // image: senData.image,
+                                    // title: senData.title,
+                                    // cate: senData.cate,
+                                    // desc: senData.desc,
+                                    // khasiat: senData.khasiat,
+                                    // serve: senData.serve,
+                                    // keamanan: senData.keamanan,
+                                    // peringatan: senData.peringatan,
+                                    ),
+                                settings: RouteSettings(arguments: senData)),
                           );
                           _controller.clear();
                         },

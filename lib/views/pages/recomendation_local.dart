@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../model/recomendation_data.dart';
 import '../widgets/widgets.dart';
 import 'detail.dart';
+import 'package:swamedika/model/database.dart';
 
 class RecomendationLocal extends StatefulWidget {
   const RecomendationLocal({super.key});
@@ -43,10 +44,10 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                     vertical: MediaQuery.of(context).size.height / 58),
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
-                itemCount: recomendationdataContents.length,
+                itemCount: 4,
                 itemBuilder: (context, index) {
                   // Ukuran Media query untuk dibawah
-                  final senData = recomendationdataContents[index];
+                  final senData = herbaldataContents[index];
                   final sizeImage = MediaQuery.of(context).size.height / 8.12;
 
                   // Gambar dan Title
@@ -56,17 +57,17 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => DetailPage(
-                              image: senData.image,
-                              title: senData.title,
-                              cate: senData.cate,
-                              desc: senData.desc,
-                              khasiat: senData.khasiat,
-                              serve: senData.serve,
-                              keamanan: senData.keamanan,
-                              peringatan: senData.peringatan,
-                            ),
-                          ),
+                              builder: (context) => const DetailPage(
+                                  // image: senData.image,
+                                  // title: senData.title,
+                                  // cate: senData.cate,
+                                  // desc: senData.desc,
+                                  // khasiat: senData.khasiat,
+                                  // serve: senData.serve,
+                                  // keamanan: senData.keamanan,
+                                  // peringatan: senData.peringatan,
+                                  ),
+                              settings: RouteSettings(arguments: senData)),
                         );
                       },
 
@@ -94,7 +95,7 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                                 ClipRRect(
                                     borderRadius: BorderRadius.circular(6.0),
                                     child: Image.asset(
-                                      recomendationdataContents[index].image,
+                                      herbaldataContents[index].image,
                                       // scale: 0,
                                       fit: BoxFit.cover,
                                       width: sizeImage,
@@ -109,8 +110,7 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                                   padding: EdgeInsets.only(
                                       top: MediaQuery.of(context).size.height /
                                           203),
-                                  child: Text(
-                                      recomendationdataContents[index].title,
+                                  child: Text(herbaldataContents[index].title,
                                       maxLines: 2,
                                       textAlign: TextAlign.left,
                                       overflow: TextOverflow.ellipsis,
@@ -143,11 +143,11 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
               ),
             ),
 
-            const Expanded(
-              child: SingleChildScrollView(
-                child: NewNewsSection(),
-              ),
-            ),
+            // const Expanded(
+            //   child: SingleChildScrollView(
+            //     child: NewNewsSection(),
+            //   ),
+            // ),
           ],
         ),
       ),

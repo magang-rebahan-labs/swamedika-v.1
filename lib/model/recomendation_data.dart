@@ -38,13 +38,13 @@ List<RecomendationData> recomendationdataContents = [
   RecomendationData(
     image: 'assets/images/imghome/jambubiji.png',
     title: 'Jambu Biji',
+    cate: 'Nabati',
     desc:
         'Jambu biji memiliki nama ilmiah Psidium guajava L. Sinonim: P. cujavillus Burm f., P. pomiferum L., P. pumilum Vahl, P. pyreferum. Kandungan kimia pada buah jambu biji adalah vitamin C, vitamin A, besi, fosfor, kalsium, flavonoid dan kelompok polifenol. Buah jambu biji memiliki kadar polifenol yang tinggi seperti senyawa mirisetin dan apigenin, asam elagat, dan antosianin. Selain itu mengandung terpenoid (triterpen dan karotenoid), flavonol, tanin dan derivat asam fenolat. Berdasarkan hasil analisis HPLC-MS, GC-MS dan NMR, ditemukan senyawa kimia asam kojat dan 5-hydroxymethylfurfural. Kandungan lainnya adalah saponin, asam oleonat, lyxopyranoside, arabopyranoside, guaijavarin, kuersetin, caryophyllene oxide dan p-seline.',
     khasiat:
         'Buah jambu biji dikenal sebagai buah tropis yang terkenal di Asia. Buah jambu biji memiliki sifat antioksidatif, antiinflamasi dan antidiabetes. Di Indonesia, buah jambu biji biasa digunakan untuk meningkatkan platelet pada demam berdarah dengue. Digunakan secara tradisional di China untuk diabetes.',
     serve:
         '1. 100 gram buah jambu biji (sekitar 1 buah besar) atau 55 gram buah jambu biji (sekitar 1 buah berukuran sedang). Kandungan vitamin C sebesar 228,3 mg dalam 100 gram buah. \n\n2. Dapat pula dikonsumsi dengan cara: satu buah jambu biji setengah masak, dibelah empat dan direbus dengan 1 L air sampai mendidih, kemudian disaring untuk diambil airnya. Diminum 2 kali sehari pagi dan sore.',
-    cate: 'Nabati',
     keamanan:
         "1. Efek yang tidak diinginkan: dapat menyebabkan konstipasi. \n\n2. Interaksi Obat: secara teoretis dapat meningkatkan potensi obat-obatan kolesterol, depresi, diabetes, gangguan tidur dan diare.",
     peringatan: 'Tidak Ada',
