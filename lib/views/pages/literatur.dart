@@ -9,6 +9,7 @@ class Literatur extends StatelessWidget {
         backgroundColor: Colors.white,
         appBar: PreferredSize(
           preferredSize:
+             
               Size.fromHeight(MediaQuery.of(context).size.height / 4.413),
           child: AppBar(
             backgroundColor: Colors.white,
