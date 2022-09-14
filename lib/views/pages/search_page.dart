@@ -60,6 +60,24 @@ class _SearchPageState extends State<SearchPage> {
                 color: Colors.black,
                 fontWeight: FontWeight.w500,
               ),
+              // onSubmitted: (value) {
+              //    var senData = recomendationdataContents[
+              //    ]
+              //   Navigator.of(context).push(
+              //               MaterialPageRoute(
+              //                 builder: (context) => DetailPage(
+              //                   image: senData.image,
+              //                   title: senData.title,
+              //                   cate: senData.cate,
+              //                   desc: senData.desc,
+              //                   khasiat: senData.khasiat,
+              //                   serve: senData.serve,
+              //                   keamanan: senData.keamanan,
+              //                   peringatan: senData.peringatan,
+              //                 ),
+              //               ),
+              //             );
+              // },
               controller: _controller,
               decoration: InputDecoration(
                 disabledBorder: InputBorder.none,
