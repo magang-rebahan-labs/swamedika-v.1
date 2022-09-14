@@ -1,24 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:swamedika/model/database.dart';
 
-class HewaniViewSatu extends StatefulWidget {
-  const HewaniViewSatu({super.key, required this.categoryName});
+class CategoryViews extends StatefulWidget {
+  const CategoryViews({super.key, required this.categoryName});
   final String categoryName;
 
   @override
-  State<HewaniViewSatu> createState() => _HewaniViewSatuState();
+  State<CategoryViews> createState() => _CategoryViewsState();
 }
 
 // CLASS UNTUK LOGIC
-class _HewaniViewSatuState extends State<HewaniViewSatu> {
+class _CategoryViewsState extends State<CategoryViews> {
+  // VARIABLE
+  List<Databases> _database = [];
+
+  @override
+  void initState() {
+    super.initState();
+    _database =
+        herbaldataContents.where((i) => i.cate == widget.categoryName).toList();
+  }
+
   Widget _buildChild() {
     if (widget.categoryName == "Nabati") {
       return Scaffold(
         backgroundColor: const Color(0xFF12A546),
         appBar: AppBarDetail(title: widget.categoryName),
         body: ContainerDetails(
-          dataSource: herbaldataContents,
-          skala: 1,
+          dataSource: _database,
+          skala: 7.0,
         ),
       );
     } else if (widget.categoryName == "Hewani") {
@@ -26,7 +36,7 @@ class _HewaniViewSatuState extends State<HewaniViewSatu> {
         backgroundColor: const Color(0xFF12A546),
         appBar: AppBarDetail(title: widget.categoryName),
         body: ContainerDetails(
-          dataSource: hewanidataContents,
+          dataSource: _database,
           skala: 1,
         ),
       );
@@ -35,7 +45,7 @@ class _HewaniViewSatuState extends State<HewaniViewSatu> {
         backgroundColor: const Color(0xFF12A546),
         appBar: AppBarDetail(title: widget.categoryName),
         body: ContainerDetails(
-          dataSource: hewanidataContents,
+          dataSource: _database,
           skala: 1,
         ),
       );
@@ -55,7 +65,7 @@ class ContainerDetails extends StatelessWidget {
   const ContainerDetails(
       {super.key, required this.dataSource, required this.skala});
   final List<Databases> dataSource;
-  final int skala;
+  final double skala;
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +92,7 @@ class ContainerDetails extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Colors.white,
                   image: DecorationImage(
-                      scale: 1.0,
+                      scale: skala,
                       fit: BoxFit.none,
                       image: AssetImage(dataSource[index].image)),
                 ),
@@ -122,7 +132,6 @@ class AppBarDetail extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       backgroundColor: Colors.transparent,
       elevation: 0,
-      // toolbarHeight: MediaQuery.of(context).size.height / 7.960,
       toolbarHeight: MediaQuery.of(context).size.height / 8.5,
       centerTitle: true,
       leading: IconButton(
@@ -137,6 +146,5 @@ class AppBarDetail extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  // Size get preferredSize => throw UnimplementedError();
-  Size get preferredSize => const Size.fromHeight(100);
+  Size get preferredSize => const Size.fromHeight(102);
 }
