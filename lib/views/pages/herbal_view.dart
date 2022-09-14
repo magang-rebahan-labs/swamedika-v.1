@@ -11,117 +11,78 @@ class HerbalView extends StatefulWidget {
 class _HerbalViewState extends State<HerbalView> {
   @override
   Widget build(BuildContext context) {
-    double tinggi = MediaQuery.of(context).size.height;
+    const radiusTop = Radius.circular(20);
 
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: CustomScrollView(
-        slivers: [
-          SliverAppBar(
-            leading: IconButton(
-              icon: const Icon(
-                Icons.arrow_back_ios_new_rounded,
-                color: Colors.white,
-              ),
-              onPressed: () => Navigator.of(context).pop(),
-            ),
-            toolbarHeight: tinggi / 8.5,
-            title: const Text(
-              "Herbal",
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Roboto',
-                fontSize: 24,
-              ),
-            ),
-            centerTitle: true,
-            bottom: PreferredSize(
-              preferredSize: const Size.fromHeight(10),
-              child: Container(
-                width: double.maxFinite,
-                padding: const EdgeInsets.only(
-                  top: 10,
-                  bottom: 10,
-                ),
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(20),
-                    topRight: Radius.circular(20),
+      backgroundColor: const Color(0xFF12A546),
+
+      // APPBAR
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        // toolbarHeight: MediaQuery.of(context).size.height / 7.960,
+        toolbarHeight: MediaQuery.of(context).size.height / 8.5,
+        centerTitle: true,
+        leading: IconButton(
+            icon: const Icon(Icons.arrow_back_ios_new_rounded),
+            onPressed: () => Navigator.of(context).pop()),
+        title: const Text(
+          "Nabati",
+          style: TextStyle(
+              fontFamily: "Poppins", fontStyle: FontStyle.normal, fontSize: 20),
+        ),
+      ),
+
+      // BODY
+      body: Container(
+        decoration: const BoxDecoration(
+          color: Color(0xFFF4F5F7),
+          borderRadius:
+              BorderRadius.only(topLeft: radiusTop, topRight: radiusTop),
+        ),
+        child: Container(
+          margin: const EdgeInsets.only(top: 13, right: 13, left: 13),
+          child: GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2, crossAxisSpacing: 2, mainAxisSpacing: 2),
+            physics: const BouncingScrollPhysics(),
+
+            // SETTING DATA SOURCE
+            itemCount: herbaldataContents.length,
+            itemBuilder: (BuildContext context, int index) {
+              // KOTAKAN
+              return GridTile(
+                child: Container(
+                  // BAGIAN IMAGES
+                  decoration: BoxDecoration(
+                    // borderRadius: BorderRadius.circular(20),
+                    color: Colors.white,
+                    image: DecorationImage(
+                        scale: 7.0,
+                        fit: BoxFit.none,
+                        image: AssetImage(herbaldataContents[index].image)),
                   ),
-                ),
-              ),
-            ),
-            pinned: true,
-            backgroundColor: Colors.green,
-            expandedHeight: tinggi / 9.0,
-          ),
-          SliverToBoxAdapter(
-            child: Column(
-              children: [
-                Container(
-                  height: tinggi / 1.2,
-                  margin: const EdgeInsets.only(
-                    left: 20,
-                    right: 20,
-                  ),
-                  child: GridView.builder(
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 10,
-                      mainAxisSpacing: 10,
+
+                  // BAGIAN TITLE
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 130),
+                    child: Center(
+                      child: Text(
+                        herbaldataContents[index].title,
+                        maxLines: 2,
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: "Poppins",
+                            color: const Color(0xFF000000).withOpacity(0.4)),
+                      ),
                     ),
-                    itemCount: herbaldataContents.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return GridTile(
-                        child: Padding(
-                          padding: const EdgeInsets.all(3.0),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.5),
-                                  spreadRadius: 2,
-                                  blurRadius: 3,
-                                  offset: const Offset(1, 1),
-                                ),
-                              ],
-                              borderRadius: BorderRadius.circular(20),
-                              color: Colors.white,
-                              image: DecorationImage(
-                                scale: 7.0,
-                                fit: BoxFit.none,
-                                image: AssetImage(
-                                  herbaldataContents[index].image,
-                                ),
-                              ),
-                            ),
-                            child: Padding(
-                              padding: EdgeInsets.only(top: tinggi / 6),
-                              child: Center(
-                                child: Text(
-                                  herbaldataContents[index].title,
-                                  maxLines: 2,
-                                  style: const TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'Roboto',
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      );
-                    },
                   ),
-                )
-              ],
-            ),
-          )
-        ],
+                ),
+              );
+            },
+          ),
+        ),
       ),
     );
   }

@@ -136,9 +136,10 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
               child: const Text(
                 'Berita Kesehatan Terkini',
                 style: TextStyle(
-                    fontFamily: "Sans-serif",
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14),
+                  fontFamily: "Sans-serif",
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
+                ),
               ),
             ),
 
