@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../pages/category.dart';
+import 'package:swamedika/views/pages/category_page.dart';
 import '../pages/more.dart';
 import '../pages/recomendation_local.dart';
 import './widgets.dart';
@@ -53,7 +53,8 @@ class _BottomBarState extends State<BottomBar> {
       bottomNavigationBar: SizedBox(
         height: MediaQuery.of(context).size.height / 10.684,
         child: ClipRRect(
-          borderRadius: const BorderRadius.only(topLeft: Radius.circular(28), topRight: Radius.circular(28)),
+          borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(28), topRight: Radius.circular(28)),
           child: BottomNavigationBar(
             backgroundColor: Colors.white,
             currentIndex: _activeScreenIndex,
