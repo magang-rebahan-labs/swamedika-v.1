@@ -121,22 +121,27 @@ class _ButtonMoreState extends State<ButtonMore> {
                         child: SizedBox(
                           child: SingleChildScrollView(
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
-                                Text(
-                                  'Catatan Rilis',
-                                  style: TextStyle(
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.bold,
-                                    height: 3,
-                                    fontFamily: "Poppins",
+                                Center(
+                                  child: Text(
+                                    'Catatan Rilis',
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.bold,
+                                      height: 3,
+                                      fontFamily: "Poppins",
+                                    ),
                                   ),
                                 ),
-                                Text(
-                                  'Versi 1.0.0 - Pra Rilis | 09/09/2022',
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      height: 2.3,
-                                      fontFamily: "Poppins"),
+                                Center(
+                                  child: Text(
+                                    'Versi 1.0.0 - Pra Rilis | 09/09/2022',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        height: 2.3,
+                                        fontFamily: "Poppins"),
+                                  ),
                                 ),
                                 Text(
                                   '- Peningkatan performa aplikasi',

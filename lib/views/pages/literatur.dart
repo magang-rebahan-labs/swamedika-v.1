@@ -9,7 +9,6 @@ class Literatur extends StatelessWidget {
         backgroundColor: Colors.white,
         appBar: PreferredSize(
           preferredSize:
-             
               Size.fromHeight(MediaQuery.of(context).size.height / 4.413),
           child: AppBar(
             backgroundColor: Colors.white,
@@ -31,17 +30,18 @@ class Literatur extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 30, left: 30),
                 child: Row(
                   children: [
-                    Text('1.'),
+                    const Text('1.'),
                     Container(
                       width: MediaQuery.of(context).size.width * 0.2,
                       height: MediaQuery.of(context).size.height * 0.15,
-                      decoration: BoxDecoration(color: Colors.blue),
+                      decoration: const BoxDecoration(color: Colors.blue),
                     ),
                     Flexible(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Pedoman Penggunan Herbal & SK Dalam Menghadapi Covid 19'),
+                        children: const [
+                          Text(
+                              'Pedoman Penggunan Herbal & SK Dalam Menghadapi Covid 19'),
                           Text('eBook')
                         ],
                       ),
