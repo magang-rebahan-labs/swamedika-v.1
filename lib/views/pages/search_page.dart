@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:swamedika/model/recomendation_data.dart';
+import 'package:swamedika/model/data_list.dart';
 import 'package:swamedika/views/pages/detail.dart';
 
 class SearchPage extends StatefulWidget {
@@ -11,12 +11,12 @@ class SearchPage extends StatefulWidget {
 
 class _SearchPageState extends State<SearchPage> {
   final _controller = TextEditingController();
-  List<RecomendationData> displayList = List.from(recomendationdataContents);
+  List<DataList> displayList = List.from(dataListContent);
 
   void updateList(String value) {
     setState(
       () {
-        displayList = recomendationdataContents
+        displayList = dataListContent
             .where(
               (element) =>
                   element.title.toLowerCase().contains(value.toLowerCase()),
@@ -61,7 +61,7 @@ class _SearchPageState extends State<SearchPage> {
                 fontWeight: FontWeight.w500,
               ),
               // onSubmitted: (value) {
-              //    var senData = recomendationdataContents[
+              //    var senData = dataListContent[
               //    ]
               //   Navigator.of(context).push(
               //               MaterialPageRoute(
@@ -142,7 +142,7 @@ class _SearchPageState extends State<SearchPage> {
                       itemCount: displayList.length,
                       itemBuilder: (context, index) => ListTile(
                         onTap: () {
-                          var senData = recomendationdataContents[index];
+                          var senData = dataListContent[index];
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) => DetailPage(
