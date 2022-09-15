@@ -14,6 +14,9 @@ class Literatur extends StatelessWidget {
             backgroundColor: Colors.white,
             foregroundColor: Colors.black,
             elevation: 0,
+            leading: IconButton(
+                icon: const Icon(Icons.arrow_back_ios_new_rounded),
+                onPressed: () => Navigator.of(context).pop()),
             centerTitle: true,
             title: const Text(
               'Literatur',
@@ -29,7 +32,7 @@ class Literatur extends StatelessWidget {
               // BUKU SAKU PROBIOTIK
               Padding(
                 padding: const EdgeInsets.only(right: 30, left: 30),
-                child:  Row(
+                child: Row(
                   children: [
                     const Padding(
                       padding: EdgeInsets.only(right: 20),
@@ -59,8 +62,8 @@ class Literatur extends StatelessWidget {
                           children: const [
                             Text(
                               'Buku Saku Probiotik',
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Poppins'),
+                              style: TextStyle(
+                                  fontSize: 14, fontFamily: 'Poppins'),
                             ),
                             Text(
                               'eBook',
@@ -110,8 +113,8 @@ class Literatur extends StatelessWidget {
                           children: const [
                             Text(
                               'Buku Saku Vitamin C',
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Poppins'),
+                              style: TextStyle(
+                                  fontSize: 14, fontFamily: 'Poppins'),
                             ),
                             Text(
                               'eBook',
@@ -161,8 +164,8 @@ class Literatur extends StatelessWidget {
                           children: const [
                             Text(
                               'Buku Saku Vitamin D',
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Poppins'),
+                              style: TextStyle(
+                                  fontSize: 14, fontFamily: 'Poppins'),
                             ),
                             Text(
                               'eBook',
@@ -201,7 +204,7 @@ class Literatur extends StatelessWidget {
                           color: Colors.blue,
                           image: DecorationImage(
                               image: AssetImage(
-                                  'assets/images/literatur/bs-probiotik.png'),
+                                  'assets/images/literatur/bs-vitamine.png'),
                               fit: BoxFit.fill)),
                     ),
                     Flexible(
@@ -212,8 +215,8 @@ class Literatur extends StatelessWidget {
                           children: const [
                             Text(
                               'Buku Saku Vitamin E',
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Poppins'),
+                              style: TextStyle(
+                                  fontSize: 14, fontFamily: 'Poppins'),
                             ),
                             Text(
                               'eBook',
@@ -252,7 +255,7 @@ class Literatur extends StatelessWidget {
                           color: Colors.blue,
                           image: DecorationImage(
                               image: AssetImage(
-                                  'assets/images/literatur/bs-probiotik.png'),
+                                  'assets/images/literatur/bs-zink.png'),
                               fit: BoxFit.fill)),
                     ),
                     Flexible(
@@ -263,8 +266,8 @@ class Literatur extends StatelessWidget {
                           children: const [
                             Text(
                               'Buku Saku Zink',
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Poppins'),
+                              style: TextStyle(
+                                  fontSize: 14, fontFamily: 'Poppins'),
                             ),
                             Text(
                               'eBook',
@@ -303,7 +306,7 @@ class Literatur extends StatelessWidget {
                           color: Colors.blue,
                           image: DecorationImage(
                               image: AssetImage(
-                                  'assets/images/literatur/bs-probiotik.png'),
+                                  'assets/images/literatur/bs-selenium.png'),
                               fit: BoxFit.fill)),
                     ),
                     Flexible(
@@ -314,8 +317,8 @@ class Literatur extends StatelessWidget {
                           children: const [
                             Text(
                               'Buku Saku Selenium',
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Poppins'),
+                              style: TextStyle(
+                                  fontSize: 14, fontFamily: 'Poppins'),
                             ),
                             Text(
                               'eBook',
@@ -354,7 +357,7 @@ class Literatur extends StatelessWidget {
                           color: Colors.blue,
                           image: DecorationImage(
                               image: AssetImage(
-                                  'assets/images/literatur/bs-probiotik.png'),
+                                  'assets/images/literatur/pedomansup-covid19.png'),
                               fit: BoxFit.fill)),
                     ),
                     Flexible(
@@ -365,8 +368,8 @@ class Literatur extends StatelessWidget {
                           children: const [
                             Text(
                               'Buku Pedoman Penggunaan Herbal & SK Dalam Menghadapi Covid 19',
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Poppins'),
+                              style: TextStyle(
+                                  fontSize: 14, fontFamily: 'Poppins'),
                             ),
                             Text(
                               'eBook',
@@ -385,7 +388,8 @@ class Literatur extends StatelessWidget {
 
               // BUKU SAKU OBAT TRADISIONAL
               Padding(
-                padding: const EdgeInsets.only(right: 30, left: 30, top: 50, bottom: 50),
+                padding: const EdgeInsets.only(
+                    right: 30, left: 30, top: 50, bottom: 50),
                 child: Row(
                   children: [
                     const Padding(
@@ -405,7 +409,7 @@ class Literatur extends StatelessWidget {
                           color: Colors.blue,
                           image: DecorationImage(
                               image: AssetImage(
-                                  'assets/images/literatur/bs-probiotik.png'),
+                                  'assets/images/literatur/bs-obattradisional.png'),
                               fit: BoxFit.fill)),
                     ),
                     Flexible(
@@ -416,8 +420,8 @@ class Literatur extends StatelessWidget {
                           children: const [
                             Text(
                               'Buku Saku Obat Tradisional',
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Poppins'),
+                              style: TextStyle(
+                                  fontSize: 14, fontFamily: 'Poppins'),
                             ),
                             Text(
                               'eBook',
