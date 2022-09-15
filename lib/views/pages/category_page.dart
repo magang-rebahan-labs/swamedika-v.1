@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:swamedika/views/widgets/widgets.dart';
-import 'package:swamedika/views/pages/hewani_view.dart';
-import 'package:swamedika/views/pages/herbal_view.dart';
+import 'package:swamedika/views/pages/category_views.dart';
 
 class Category extends StatefulWidget {
   const Category({Key? key}) : super(key: key);
@@ -85,14 +84,16 @@ class CategoryName extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         if (urlRoute == "Nabati") {
-          Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const HerbalView()));
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) =>
+                  const CategoryViews(categoryName: "Nabati")));
         } else if (urlRoute == "Hewani") {
-          Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const HewaniViewSatu()));
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) =>
+                  const CategoryViews(categoryName: "Hewani")));
         } else if (urlRoute == "Jamu") {
-          // Navigator.of(context).push(
-          //     MaterialPageRoute(builder: (context) => const HewaniViewSatu()));
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => const CategoryViews(categoryName: "Jamu")));
         }
       },
 

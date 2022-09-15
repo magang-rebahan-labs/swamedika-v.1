@@ -1,25 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:swamedika/model/recomendation_data.dart';
+import 'package:swamedika/model/database.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({
     Key? key,
-    required this.image,
-    required this.title,
-    required this.cate,
-    required this.desc,
-    required this.khasiat,
-    required this.serve,
-    required this.keamanan,
-    required this.peringatan,
+    // required this.image,
+    // required this.title,
+    // required this.cate,
+    // required this.desc,
+    // required this.khasiat,
+    // required this.serve,
+    // required this.keamanan,
+    // required this.peringatan,
   }) : super(key: key);
-  final String image;
-  final String title;
-  final String cate;
-  final String desc;
-  final String khasiat;
-  final String serve;
-  final String keamanan;
-  final String peringatan;
+  // final String image;
+  // final String title;
+  // final String cate;
+  // final String desc;
+  // final String khasiat;
+  // final String serve;
+  // final String keamanan;
+  // final String peringatan;
 
   @override
   State<DetailPage> createState() => _DetailPageState();
@@ -35,6 +37,7 @@ class _DetailPageState extends State<DetailPage> {
   Widget build(BuildContext context) {
     // Variabel untuk menghitung MediaQuiry Tinggi
     double tinggi = MediaQuery.of(context).size.height;
+    final dataSource = ModalRoute.of(context)!.settings.arguments as Databases;
 
     return Scaffold(
       body: CustomScrollView(slivers: [
@@ -49,7 +52,7 @@ class _DetailPageState extends State<DetailPage> {
           expandedHeight: tinggi / 3.06,
           flexibleSpace: FlexibleSpaceBar(
             background: Image.asset(
-              widget.image,
+              dataSource.image,
               fit: BoxFit.cover,
             ),
           ),
@@ -69,7 +72,7 @@ class _DetailPageState extends State<DetailPage> {
                         children: [
                           // Judul
                           Text(
-                            "Swamedikasi Dengan \nBahan ${widget.title}",
+                            "Swamedikasi Dengan \nBahan ${dataSource.title}",
                             style: const TextStyle(
                               fontFamily: "Poppins",
                               fontSize: 24,
@@ -85,7 +88,7 @@ class _DetailPageState extends State<DetailPage> {
 
                           // Tag
                           Text(
-                            "Tag: ${widget.cate}",
+                            "Tag: ${dataSource.cate}",
                             style: const TextStyle(
                               fontFamily: "Poppins",
                               fontSize: 12,
@@ -117,7 +120,7 @@ class _DetailPageState extends State<DetailPage> {
 
                           // Content Deskripsi
                           Text(
-                            widget.desc,
+                            dataSource.desc,
                             style: TextStyle(
                               color: Colors.black.withOpacity(0.6),
                               fontFamily: "Poppins",
@@ -151,7 +154,7 @@ class _DetailPageState extends State<DetailPage> {
                           Padding(
                             padding: const EdgeInsets.only(left: 3, right: 3),
                             child: Text(
-                              widget.khasiat,
+                              dataSource.khasiat,
                               style: TextStyle(
                                 color: Colors.black.withOpacity(0.6),
                                 fontSize: 14,
@@ -182,7 +185,7 @@ class _DetailPageState extends State<DetailPage> {
 
                           // Content Cara Penyajian
                           Text(
-                            widget.serve,
+                            dataSource.serve,
                             style: TextStyle(
                                 color: Colors.black.withOpacity(0.6),
                                 fontSize: 14,
@@ -215,7 +218,7 @@ class _DetailPageState extends State<DetailPage> {
                           Padding(
                             padding: const EdgeInsets.only(left: 3, right: 3),
                             child: Text(
-                              widget.keamanan,
+                              dataSource.keamanan,
                               style: TextStyle(
                                   color: Colors.black.withOpacity(0.6),
                                   fontSize: 14,
@@ -247,7 +250,7 @@ class _DetailPageState extends State<DetailPage> {
                           Padding(
                             padding: const EdgeInsets.only(left: 3, right: 3),
                             child: Text(
-                              widget.peringatan,
+                              dataSource.peringatan,
                               style: TextStyle(
                                   color: Colors.black.withOpacity(0.6),
                                   fontSize: 14,
