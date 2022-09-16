@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../model/herbal_data_list.dart';
+import 'herbal_data_list.dart';
 
 class HerbalView extends StatefulWidget {
   const HerbalView({super.key});

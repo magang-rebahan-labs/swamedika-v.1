@@ -18,7 +18,7 @@ class _CategoryViewsState extends State<CategoryViews> {
   void initState() {
     super.initState();
     _database =
-        herbaldataContents.where((i) => i.cate == widget.categoryName).toList();
+        databaseContent.where((i) => i.cate == widget.categoryName).toList();
   }
 
   Widget _buildChild() {

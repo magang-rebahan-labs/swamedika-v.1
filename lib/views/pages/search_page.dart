@@ -11,12 +11,12 @@ class SearchPage extends StatefulWidget {
 
 class _SearchPageState extends State<SearchPage> {
   final _controller = TextEditingController();
-  List<Databases> displayList = List.from(herbaldataContents);
+  List<Databases> displayList = List.from(databaseContent);
 
   void updateList(String value) {
     setState(
       () {
-        displayList = herbaldataContents
+        displayList = databaseContent
             .where(
               (element) =>
                   element.title.toLowerCase().contains(value.toLowerCase()),
@@ -142,7 +142,7 @@ class _SearchPageState extends State<SearchPage> {
                       itemCount: displayList.length,
                       itemBuilder: (context, index) => ListTile(
                         onTap: () {
-                          var senData = herbaldataContents[index];
+                          var senData = databaseContent[index];
                           Navigator.of(context).push(
                             MaterialPageRoute(
                                 builder: (context) => const DetailPage(

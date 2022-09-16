@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:swamedika/views/pages/search_page.dart';
+
+import '../pages/search_page.dart';
 
 class AppBarSearch extends StatelessWidget {
   const AppBarSearch({Key? key}) : super(key: key);

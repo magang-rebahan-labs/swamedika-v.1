@@ -1,7 +1,9 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:swamedika/model/hewani_data_list.dart';
+
+import 'hewani_data_list.dart';
+
 
 class HewaniViewSatu extends StatefulWidget {
   const HewaniViewSatu({super.key});
