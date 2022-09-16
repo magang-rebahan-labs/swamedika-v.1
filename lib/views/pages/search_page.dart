@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:swamedika/model/data_list.dart';
 import 'package:swamedika/views/pages/detail.dart';
 import 'package:swamedika/model/database.dart';
 
@@ -12,12 +11,12 @@ class SearchPage extends StatefulWidget {
 
 class _SearchPageState extends State<SearchPage> {
   final _controller = TextEditingController();
-  List<DataList> displayList = List.from(dataListContent);
+  List<Databases> displayList = List.from(herbaldataContents);
 
   void updateList(String value) {
     setState(
       () {
-        displayList = dataListContent
+        displayList = herbaldataContents
             .where(
               (element) =>
                   element.title.toLowerCase().contains(value.toLowerCase()),
