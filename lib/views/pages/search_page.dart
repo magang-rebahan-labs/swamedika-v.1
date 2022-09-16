@@ -10,20 +10,26 @@ class SearchPage extends StatefulWidget {
 }
 
 class _SearchPageState extends State<SearchPage> {
-  final _controller = TextEditingController();
-  List<Databases> displayList = List.from(databaseContent);
-
-  void updateList(String value) {
-    setState(
+  TextEditingController searchController = TextEditingController();
+  late String filter;
+  @override
+  initState() {
+    super.initState();
+    searchController.addListener(
       () {
-        displayList = databaseContent
-            .where(
-              (element) =>
-                  element.title.toLowerCase().contains(value.toLowerCase()),
-            )
-            .toList();
+        setState(
+          () {
+            filter = searchController.text;
+          },
+        );
       },
     );
+  }
+
+  @override
+  void dispose() {
+    searchController.dispose();
+    super.dispose();
   }
 
   @override
@@ -53,32 +59,9 @@ class _SearchPageState extends State<SearchPage> {
               height: 20.0,
             ),
             TextField(
+              controller: searchController,
               autofocus: true,
               cursorColor: Colors.black,
-              onChanged: (value) => updateList(value),
-              style: const TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.w500,
-              ),
-              // onSubmitted: (value) {
-              //    var senData = dataListContent[
-              //    ]
-              //   Navigator.of(context).push(
-              //               MaterialPageRoute(
-              //                 builder: (context) => DetailPage(
-              //                   image: senData.image,
-              //                   title: senData.title,
-              //                   cate: senData.cate,
-              //                   desc: senData.desc,
-              //                   khasiat: senData.khasiat,
-              //                   serve: senData.serve,
-              //                   keamanan: senData.keamanan,
-              //                   peringatan: senData.peringatan,
-              //                 ),
-              //               ),
-              //             );
-              // },
-              controller: _controller,
               decoration: InputDecoration(
                 disabledBorder: InputBorder.none,
                 filled: true,
@@ -89,13 +72,7 @@ class _SearchPageState extends State<SearchPage> {
                 ),
                 hintText: "Contoh: Madu",
                 prefixIcon: IconButton(
-                  onPressed: () {
-                    // Navigator.of(context).push(
-                    //   MaterialPageRoute(
-                    //     builder: (context) => const Test(),
-                    //   ),
-                    // );
-                  },
+                  onPressed: () {},
                   icon: const IconTheme(
                     data: IconThemeData(color: Colors.black),
                     child: Icon(
@@ -104,15 +81,15 @@ class _SearchPageState extends State<SearchPage> {
                   ),
                 ),
                 suffixIcon: IconButton(
-                  onPressed: _controller.text.isEmpty
+                  onPressed: searchController.text.isEmpty
                       ? null
                       : () {
-                          _controller.clear();
+                          searchController.clear();
                           // FocusScope.of(context).unfocus();
                         },
                   icon: IconTheme(
                     data: IconThemeData(
-                      color: _controller.text.isNotEmpty
+                      color: searchController.text.isNotEmpty
                           ? Colors.red
                           : Colors.black,
                     ),
@@ -127,61 +104,81 @@ class _SearchPageState extends State<SearchPage> {
               height: 20,
             ),
             Expanded(
-              child: displayList.isEmpty
-                  ? const Center(
-                      child: Text(
-                        "Pencarian Tidak Ditemukan",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 22.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    )
-                  : ListView.builder(
-                      itemCount: displayList.length,
-                      itemBuilder: (context, index) => ListTile(
-                        onTap: () {
-                          var senData = databaseContent[index];
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                                builder: (context) => const DetailPage(
-                                    // image: senData.image,
-                                    // title: senData.title,
-                                    // cate: senData.cate,
-                                    // desc: senData.desc,
-                                    // khasiat: senData.khasiat,
-                                    // serve: senData.serve,
-                                    // keamanan: senData.keamanan,
-                                    // peringatan: senData.peringatan,
-                                    ),
-                                settings: RouteSettings(arguments: senData)),
-                          );
-                          _controller.clear();
-                        },
-                        contentPadding: const EdgeInsets.all(8.0),
-                        title: Text(
-                          displayList[index].title,
-                          style: const TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        leading: ConstrainedBox(
-                          constraints: const BoxConstraints(
-                            minWidth: 44,
-                            minHeight: 44,
-                            maxWidth: 64,
-                            maxHeight: 64,
-                          ),
-                          child: Image(
-                            image: AssetImage(
-                              displayList[index].image,
+              child: ListView.builder(
+                itemCount: databaseContent.length,
+                itemBuilder: (context, index) {
+                  return filter.isEmpty
+                      ? ListTile(
+                          onTap: () {
+                            var senData = databaseContent[index];
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                  builder: (context) => const DetailPage(),
+                                  settings: RouteSettings(arguments: senData)),
+                            );
+                            searchController.clear();
+                          },
+                          contentPadding: const EdgeInsets.all(8.0),
+                          title: Text(
+                            databaseContent[index].title,
+                            style: const TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
-                        ),
-                      ),
-                    ),
+                          leading: ConstrainedBox(
+                            constraints: const BoxConstraints(
+                              minWidth: 44,
+                              minHeight: 44,
+                              maxWidth: 64,
+                              maxHeight: 64,
+                            ),
+                            child: Image(
+                              image: AssetImage(
+                                databaseContent[index].image,
+                              ),
+                            ),
+                          ),
+                        )
+                      : databaseContent[index].title.toLowerCase().contains(
+                                filter.toLowerCase(),
+                              )
+                          ? ListTile(
+                              onTap: () {
+                                var senData = databaseContent[index];
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                      builder: (context) => const DetailPage(),
+                                      settings:
+                                          RouteSettings(arguments: senData)),
+                                );
+                                searchController.clear();
+                              },
+                              contentPadding: const EdgeInsets.all(8.0),
+                              title: Text(
+                                databaseContent[index].title,
+                                style: const TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                              leading: ConstrainedBox(
+                                constraints: const BoxConstraints(
+                                  minWidth: 44,
+                                  minHeight: 44,
+                                  maxWidth: 64,
+                                  maxHeight: 64,
+                                ),
+                                child: Image(
+                                  image: AssetImage(
+                                    databaseContent[index].image,
+                                  ),
+                                ),
+                              ),
+                            )
+                          : Container();
+                },
+              ),
             ),
           ],
         ),
