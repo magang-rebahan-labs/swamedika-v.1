@@ -20,7 +20,7 @@ class Databases {
   });
 }
 
-List<Databases> herbaldataContents = [
+List<Databases> databaseContent = [
   Databases(
     image: 'assets/images/imghome/temulawak.png',
     title: 'Temulawak',
@@ -172,8 +172,6 @@ List<Databases> herbaldataContents = [
     keamanan: '-',
     peringatan: '-',
   ),
-// ];
-// List<Databases> hewanidataContents = [
   Databases(
     image: 'assets/images/hewani/kerang.png',
     title: 'Kerang',

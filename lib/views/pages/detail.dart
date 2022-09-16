@@ -1,27 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:swamedika/model/recomendation_data.dart';
 import 'package:swamedika/model/database.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({
     Key? key,
-    // required this.image,
-    // required this.title,
-    // required this.cate,
-    // required this.desc,
-    // required this.khasiat,
-    // required this.serve,
-    // required this.keamanan,
-    // required this.peringatan,
   }) : super(key: key);
-  // final String image;
-  // final String title;
-  // final String cate;
-  // final String desc;
-  // final String khasiat;
-  // final String serve;
-  // final String keamanan;
-  // final String peringatan;
 
   @override
   State<DetailPage> createState() => _DetailPageState();
