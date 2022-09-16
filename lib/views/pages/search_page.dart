@@ -11,7 +11,7 @@ class SearchPage extends StatefulWidget {
 
 class _SearchPageState extends State<SearchPage> {
   TextEditingController searchController = TextEditingController();
-  late String filter;
+  String? filter;
   @override
   initState() {
     super.initState();
@@ -107,7 +107,7 @@ class _SearchPageState extends State<SearchPage> {
               child: ListView.builder(
                 itemCount: databaseContent.length,
                 itemBuilder: (context, index) {
-                  return filter.isEmpty
+                  return filter == null
                       ? ListTile(
                           onTap: () {
                             var senData = databaseContent[index];
@@ -141,7 +141,7 @@ class _SearchPageState extends State<SearchPage> {
                           ),
                         )
                       : databaseContent[index].title.toLowerCase().contains(
-                                filter.toLowerCase(),
+                                filter!.toLowerCase(),
                               )
                           ? ListTile(
                               onTap: () {

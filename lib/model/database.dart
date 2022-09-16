@@ -133,7 +133,7 @@ List<Databases> databaseContent = [
     peringatan: '-',
   ),
   Databases(
-    image: 'assets/images/herbal/sirih.png',
+    image: 'assets/images/herbal/Sirih.png',
     title: 'Sirih',
     cate: "Nabati",
     desc: 'Sirih',
@@ -153,7 +153,7 @@ List<Databases> databaseContent = [
     peringatan: '-',
   ),
   Databases(
-    image: 'assets/images/herbal/bawangputih.png',
+    image: 'assets/images/herbal/Bawangputih.png',
     title: 'Bawang Putih',
     cate: "Nabati",
     desc: 'Bawang Putih',
