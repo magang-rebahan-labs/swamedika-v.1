@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:swamedika/model/database.dart';
 
+import 'detail.dart';
+
 class CategoryViews extends StatefulWidget {
   const CategoryViews({super.key, required this.categoryName});
   final String categoryName;
@@ -72,43 +74,72 @@ class ContainerDetails extends StatelessWidget {
     const radiusTop = Radius.circular(20);
     return Container(
       decoration: const BoxDecoration(
-          color: Color(0xFFF4F5F7),
-          borderRadius:
-              BorderRadius.only(topLeft: radiusTop, topRight: radiusTop)),
+        color: Color(0xFFF4F5F7),
+        borderRadius: BorderRadius.only(
+          topLeft: radiusTop,
+          topRight: radiusTop,
+        ),
+      ),
       child: Container(
-        margin: const EdgeInsets.only(top: 13, right: 13, left: 13),
+        margin: const EdgeInsets.only(
+          top: 13,
+          right: 13,
+          left: 13,
+        ),
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2, crossAxisSpacing: 2, mainAxisSpacing: 2),
+            crossAxisCount: 2,
+            crossAxisSpacing: 2,
+            mainAxisSpacing: 2,
+          ),
           physics: const BouncingScrollPhysics(),
 
           // SETTING DATA SOURCE
           itemCount: dataSource.length,
           itemBuilder: (BuildContext context, int index) {
+            final senData = dataSource[index];
             // KOTAKAN
             return GridTile(
-              child: Container(
-                // BAGIAN IMAGES
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  image: DecorationImage(
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const DetailPage(),
+                      settings: RouteSettings(
+                        arguments: senData,
+                      ),
+                    ),
+                  );
+                },
+                child: Container(
+                  // BAGIAN IMAGES
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    image: DecorationImage(
                       scale: skala,
                       fit: BoxFit.none,
-                      image: AssetImage(dataSource[index].image)),
-                ),
+                      image: AssetImage(
+                        dataSource[index].image,
+                      ),
+                    ),
+                  ),
 
-                // BAGIAN TITLE
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 130),
-                  child: Center(
-                    child: Text(
-                      dataSource[index].title,
-                      maxLines: 2,
-                      style: TextStyle(
+                  // BAGIAN TITLE
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      top: 130,
+                    ),
+                    child: Center(
+                      child: Text(
+                        dataSource[index].title,
+                        maxLines: 2,
+                        style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
                           fontFamily: "Poppins",
-                          color: const Color(0xFF000000).withOpacity(0.4)),
+                          color: const Color(0xFF000000).withOpacity(0.4),
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -135,12 +166,16 @@ class AppBarDetail extends StatelessWidget implements PreferredSizeWidget {
       toolbarHeight: MediaQuery.of(context).size.height / 8.5,
       centerTitle: true,
       leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new_rounded),
-          onPressed: () => Navigator.of(context).pop()),
+        icon: const Icon(Icons.arrow_back_ios_new_rounded),
+        onPressed: () => Navigator.of(context).pop(),
+      ),
       title: Text(
         title,
         style: const TextStyle(
-            fontFamily: "Poppins", fontStyle: FontStyle.normal, fontSize: 20),
+          fontFamily: "Poppins",
+          fontStyle: FontStyle.normal,
+          fontSize: 20,
+        ),
       ),
     );
   }

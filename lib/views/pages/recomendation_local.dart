@@ -16,8 +16,9 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: PreferredSize(
-        preferredSize:
-            Size.fromHeight(MediaQuery.of(context).size.height / 3.2),
+        preferredSize: Size.fromHeight(
+          MediaQuery.of(context).size.height / 3.2,
+        ),
         child: const AppBarSearch(),
       ),
       body: Container(
@@ -56,17 +57,11 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                              builder: (context) => const DetailPage(
-                                  // image: senData.image,
-                                  // title: senData.title,
-                                  // cate: senData.cate,
-                                  // desc: senData.desc,
-                                  // khasiat: senData.khasiat,
-                                  // serve: senData.serve,
-                                  // keamanan: senData.keamanan,
-                                  // peringatan: senData.peringatan,
-                                  ),
-                              settings: RouteSettings(arguments: senData)),
+                            builder: (context) => const DetailPage(),
+                            settings: RouteSettings(
+                              arguments: senData,
+                            ),
+                          ),
                         );
                       },
 
@@ -109,14 +104,17 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                                   padding: EdgeInsets.only(
                                       top: MediaQuery.of(context).size.height /
                                           203),
-                                  child: Text(databaseContent[index].title,
-                                      maxLines: 2,
-                                      textAlign: TextAlign.left,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: const TextStyle(
-                                          fontFamily: "Sans-serif",
-                                          fontSize: 11,
-                                          fontWeight: FontWeight.bold)),
+                                  child: Text(
+                                    databaseContent[index].title,
+                                    maxLines: 2,
+                                    textAlign: TextAlign.left,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: const TextStyle(
+                                      fontFamily: "Sans-serif",
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),

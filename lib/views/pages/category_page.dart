@@ -51,17 +51,27 @@ class _CategoryState extends State<Category> {
               children: [
                 // TAB NABATI
                 const CategoryName(
-                    imageRoute: 'covernabati.png', urlRoute: 'Nabati'),
-                SizedBox(height: MediaQuery.of(context).size.height / 62.461),
+                  imageRoute: 'covernabati.png',
+                  urlRoute: 'Nabati',
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height / 62.461,
+                ),
 
                 // TAB HEWANI
                 const CategoryName(
-                    imageRoute: 'coverhewani.png', urlRoute: 'Hewani'),
-                SizedBox(height: MediaQuery.of(context).size.height / 62.461),
+                  imageRoute: 'coverhewani.png',
+                  urlRoute: 'Hewani',
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height / 62.461,
+                ),
 
                 // TAB JAMU
                 const CategoryName(
-                    imageRoute: 'coverjamu.png', urlRoute: 'Jamu'),
+                  imageRoute: 'coverjamu.png',
+                  urlRoute: 'Jamu',
+                ),
               ],
             ),
           )
@@ -84,16 +94,29 @@ class CategoryName extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         if (urlRoute == "Nabati") {
-          Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) =>
-                  const CategoryViews(categoryName: "Nabati")));
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => const CategoryViews(
+                categoryName: "Nabati",
+              ),
+            ),
+          );
         } else if (urlRoute == "Hewani") {
-          Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) =>
-                  const CategoryViews(categoryName: "Hewani")));
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => const CategoryViews(
+                categoryName: "Hewani",
+              ),
+            ),
+          );
         } else if (urlRoute == "Jamu") {
-          Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => const CategoryViews(categoryName: "Jamu")));
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => const CategoryViews(
+                categoryName: "Jamu",
+              ),
+            ),
+          );
         }
       },
 
