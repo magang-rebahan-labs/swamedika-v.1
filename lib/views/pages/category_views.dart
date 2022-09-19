@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:swamedika/model/database.dart';
 
 import 'detail.dart';
@@ -102,9 +103,17 @@ class ContainerDetails extends StatelessWidget {
             return GridTile(
               child: GestureDetector(
                 onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => const DetailPage(),
+                  Navigator.push(
+                    context,
+                    PageTransition(
+                      child: const DetailPage(),
+                      type: PageTransitionType.rightToLeft,
+                      duration: const Duration(
+                        milliseconds: 300,
+                      ),
+                      reverseDuration: const Duration(
+                        milliseconds: 300,
+                      ),
                       settings: RouteSettings(
                         arguments: senData,
                       ),

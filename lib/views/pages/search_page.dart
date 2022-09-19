@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:swamedika/views/pages/detail.dart';
 import 'package:swamedika/model/database.dart';
 
@@ -111,10 +112,21 @@ class _SearchPageState extends State<SearchPage> {
                       ? ListTile(
                           onTap: () {
                             var senData = databaseContent[index];
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                  builder: (context) => const DetailPage(),
-                                  settings: RouteSettings(arguments: senData)),
+                            Navigator.push(
+                              context,
+                              PageTransition(
+                                child: const DetailPage(),
+                                type: PageTransitionType.fade,
+                                duration: const Duration(
+                                  milliseconds: 400,
+                                ),
+                                reverseDuration: const Duration(
+                                  milliseconds: 400,
+                                ),
+                                settings: RouteSettings(
+                                  arguments: senData,
+                                ),
+                              ),
                             );
                             searchController.clear();
                           },
@@ -146,11 +158,21 @@ class _SearchPageState extends State<SearchPage> {
                           ? ListTile(
                               onTap: () {
                                 var senData = databaseContent[index];
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                      builder: (context) => const DetailPage(),
-                                      settings:
-                                          RouteSettings(arguments: senData)),
+                                Navigator.push(
+                                  context,
+                                  PageTransition(
+                                    child: const DetailPage(),
+                                    type: PageTransitionType.fade,
+                                    duration: const Duration(
+                                      milliseconds: 200,
+                                    ),
+                                    reverseDuration: const Duration(
+                                      milliseconds: 200,
+                                    ),
+                                    settings: RouteSettings(
+                                      arguments: senData,
+                                    ),
+                                  ),
                                 );
                                 searchController.clear();
                               },

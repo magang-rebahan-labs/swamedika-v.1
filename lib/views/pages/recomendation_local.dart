@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import '../widgets/widgets.dart';
 import 'detail.dart';
 import 'package:swamedika/model/database.dart';
@@ -55,9 +56,17 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                     padding: const EdgeInsets.only(right: 15),
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => const DetailPage(),
+                        Navigator.push(
+                          context,
+                          PageTransition(
+                            child: const DetailPage(),
+                            type: PageTransitionType.rightToLeft,
+                            duration: const Duration(
+                              milliseconds: 300,
+                            ),
+                            reverseDuration: const Duration(
+                              milliseconds: 300,
+                            ),
                             settings: RouteSettings(
                               arguments: senData,
                             ),

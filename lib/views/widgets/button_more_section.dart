@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:swamedika/views/pages/literatur.dart';
 
 class ButtonMore extends StatefulWidget {
@@ -204,7 +205,16 @@ class _ButtonMoreState extends State<ButtonMore> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Literatur()),
+                PageTransition(
+                  child: const Literatur(),
+                  type: PageTransitionType.rightToLeft,
+                  duration: const Duration(
+                    milliseconds: 400,
+                  ),
+                  reverseDuration: const Duration(
+                    milliseconds: 400,
+                  ),
+                ),
               );
             },
             child: Row(
