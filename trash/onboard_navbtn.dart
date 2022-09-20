@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../utils/app_style.dart';
 
 class OnBoardNavBtn extends StatelessWidget {
   const OnBoardNavBtn({Key? key, required this.name, required this.onPressed})
@@ -17,7 +16,7 @@ class OnBoardNavBtn extends StatelessWidget {
         padding: const EdgeInsets.all(4.0),
         child: Text(
           name,
-          style: kBodyText1,
+          // style: kBodyText1,
         ),
       ),
     );

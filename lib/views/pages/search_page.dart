@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:swamedika/views/pages/detail.dart';
 import 'package:swamedika/model/database.dart';
+import 'package:swamedika/views/utils/custom_textstyle.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
@@ -121,10 +122,7 @@ class _SearchPageState extends State<SearchPage> {
                           contentPadding: const EdgeInsets.all(8.0),
                           title: Text(
                             databaseContent[index].title,
-                            style: const TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500,
-                            ),
+                            style: kJudul,
                           ),
                           leading: ConstrainedBox(
                             constraints: const BoxConstraints(
@@ -167,10 +165,7 @@ class _SearchPageState extends State<SearchPage> {
                               contentPadding: const EdgeInsets.all(8.0),
                               title: Text(
                                 databaseContent[index].title,
-                                style: const TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w500,
-                                ),
+                                style: kJudul,
                               ),
                               leading: ConstrainedBox(
                                 constraints: const BoxConstraints(
