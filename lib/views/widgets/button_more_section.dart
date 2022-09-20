@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:swamedika/views/pages/literatur.dart';
+import 'package:swamedika/views/utils/custom_textstyle.dart';
 
 class ButtonMore extends StatefulWidget {
   const ButtonMore({Key? key}) : super(key: key);
@@ -50,19 +51,12 @@ class _ButtonMoreState extends State<ButtonMore> {
                                 Text(
                                   'Tentang Kami',
                                   textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold,
-                                      height: 3,
-                                      fontFamily: "Poppins"),
+                                  style: kMoreTitle,
                                 ),
                                 Text(
                                   'Swamedikasi Thibbun Nabawi adalah aplikasi yang mengedukasi masyarakat untuk pengobatan yang dianjurkan oleh Nabi. Bahan-bahan yang digunakan dalam pengobatan ini merupakan bahan alami berkhasiat obat yang dikenal dalam dunia farmasi.',
                                   textAlign: TextAlign.justify,
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      height: 2.3,
-                                      fontFamily: "Poppins"),
+                                  style: kTextMore,
                                 ),
                               ],
                             ),
@@ -77,12 +71,7 @@ class _ButtonMoreState extends State<ButtonMore> {
               children: const [
                 Text(
                   'Tentang Kami',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Color(0xFF333333),
-                    fontFamily: "Poppins",
-                    // fontWeight: FontWeight.bold,
-                  ),
+                  style: kListTitleMore,
                 ),
                 Icon(
                   Icons.arrow_forward_ios_rounded,
@@ -127,43 +116,26 @@ class _ButtonMoreState extends State<ButtonMore> {
                                 Center(
                                   child: Text(
                                     'Catatan Rilis',
-                                    style: TextStyle(
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold,
-                                      height: 3,
-                                      fontFamily: "Poppins",
-                                    ),
+                                    style: kMoreTitle,
                                   ),
                                 ),
                                 Center(
                                   child: Text(
                                     'Versi 1.0.0 - Pra Rilis | 09/09/2022',
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        height: 2.3,
-                                        fontFamily: "Poppins"),
+                                    style: kTextMore,
                                   ),
                                 ),
                                 Text(
                                   '- Peningkatan performa aplikasi',
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      height: 2.3,
-                                      fontFamily: "Poppins"),
+                                  style: kTextMore,
                                 ),
                                 Text(
                                   '- Perbaikan bug navbar yang selalu muncul',
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      height: 2.3,
-                                      fontFamily: "Poppins"),
+                                  style: kTextMore,
                                 ),
                                 Text(
                                   '- Perbaikan informasi berita yang tidak memunculkan gambar',
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      height: 2.3,
-                                      fontFamily: "Poppins"),
+                                  style: kTextMore,
                                 ),
                               ],
                             ),
@@ -176,13 +148,10 @@ class _ButtonMoreState extends State<ButtonMore> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
-                Text('Catatan Rilis',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Color(0xFF333333),
-                      fontFamily: "Poppins",
-                      // fontWeight: FontWeight.bold,
-                    )),
+                Text(
+                  'Catatan Rilis',
+                  style: kListTitleMore,
+                ),
                 Icon(Icons.arrow_forward_ios_rounded,
                     size: 19, color: Colors.black),
               ],
@@ -220,15 +189,15 @@ class _ButtonMoreState extends State<ButtonMore> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
-                Text('Literatur',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Color(0xFF333333),
-                      fontFamily: "Poppins",
-                      // fontWeight: FontWeight.bold,
-                    )),
-                Icon(Icons.arrow_forward_ios_rounded,
-                    size: 19, color: Colors.black),
+                Text(
+                  'Literatur',
+                  style: kListTitleMore,
+                ),
+                Icon(
+                  Icons.arrow_forward_ios_rounded,
+                  size: 19,
+                  color: Colors.black,
+                ),
               ],
             ),
           ),

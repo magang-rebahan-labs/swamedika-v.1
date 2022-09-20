@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swamedika/views/utils/custom_textstyle.dart';
 import '../widgets/widgets.dart';
 
 class More extends StatelessWidget {
@@ -20,14 +21,10 @@ class More extends StatelessWidget {
           // ),
           backgroundColor: const Color(0xFFFAFAFA),
           elevation: 0,
-          flexibleSpace: const Center(
+          flexibleSpace: Center(
             child: Text(
               'Lainnya',
-              style: TextStyle(
-                  fontSize: 40,
-                  fontFamily: "Poppins",
-                  fontWeight: FontWeight.w800,
-                  color: Colors.black54),
+              style: kTitleScreen,
             ),
           ),
         ),

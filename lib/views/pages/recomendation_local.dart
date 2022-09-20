@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:swamedika/views/utils/custom_text.dart';
+import 'package:swamedika/views/utils/custom_textstyle.dart';
 import '../widgets/widgets.dart';
 import 'detail.dart';
 import 'package:swamedika/model/database.dart';

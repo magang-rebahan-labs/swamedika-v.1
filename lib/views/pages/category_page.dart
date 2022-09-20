@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swamedika/views/utils/custom_textstyle.dart';
 import 'package:swamedika/views/widgets/widgets.dart';
 import 'package:swamedika/views/pages/category_views.dart';
 
@@ -25,12 +26,7 @@ class _CategoryState extends State<Category> {
           flexibleSpace: Center(
             child: Text(
               'Kategori',
-              style: TextStyle(
-                fontSize: 40,
-                fontFamily: "Poppins",
-                fontWeight: FontWeight.w800,
-                color: const Color(0xFF000000).withOpacity(0.6),
-              ),
+              style: kTitleScreen,
             ),
           ),
         ),

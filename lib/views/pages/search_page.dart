@@ -48,17 +48,6 @@ class _SearchPageState extends State<SearchPage> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              "Cari Bahan",
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 22.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(
-              height: 20.0,
-            ),
             TextField(
               controller: searchController,
               autofocus: true,
@@ -86,7 +75,6 @@ class _SearchPageState extends State<SearchPage> {
                       ? null
                       : () {
                           searchController.clear();
-                          // FocusScope.of(context).unfocus();
                         },
                   icon: IconTheme(
                     data: IconThemeData(

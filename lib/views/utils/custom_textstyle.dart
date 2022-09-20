@@ -64,3 +64,42 @@ final kEveryDataDetail = TextStyle(
   height: 1.2,
   fontStyle: FontStyle.normal,
 );
+
+final kTitleList = TextStyle(
+  fontSize: 14,
+  fontWeight: FontWeight.bold,
+  fontFamily: "Poppins",
+  color: const Color(0xFF000000).withOpacity(0.4),
+);
+
+const kTitleAppBar = TextStyle(
+  fontFamily: "Poppins",
+  fontStyle: FontStyle.normal,
+  fontSize: 20,
+);
+
+final kTitleScreen = TextStyle(
+  fontSize: 40,
+  fontFamily: "Poppins",
+  fontWeight: FontWeight.w800,
+  color: const Color(0xFF000000).withOpacity(0.6),
+);
+
+const kMoreTitle = TextStyle(
+  fontSize: 25,
+  fontWeight: FontWeight.bold,
+  height: 3,
+  fontFamily: "Poppins",
+);
+
+const kListTitleMore = TextStyle(
+  fontSize: 18,
+  color: Color(0xFF333333),
+  fontFamily: "Poppins",
+);
+
+const kTextMore = TextStyle(
+  fontSize: 15,
+  height: 2.3,
+  fontFamily: "Poppins",
+);

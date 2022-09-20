@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:swamedika/model/new_news_response.dart';
 import 'package:http/http.dart' as http;
-import 'package:swamedika/views/utils/custom_text.dart';
+import 'package:swamedika/views/utils/custom_textstyle.dart';
 import 'dart:convert';
 import 'package:url_launcher/url_launcher.dart';
 

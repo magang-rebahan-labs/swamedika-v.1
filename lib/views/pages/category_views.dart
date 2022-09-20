@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:swamedika/model/database.dart';
+import 'package:swamedika/views/utils/custom_textstyle.dart';
 
 import 'detail.dart';
 
@@ -142,12 +143,7 @@ class ContainerDetails extends StatelessWidget {
                       child: Text(
                         dataSource[index].title,
                         maxLines: 2,
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "Poppins",
-                          color: const Color(0xFF000000).withOpacity(0.4),
-                        ),
+                        style: kTitleList,
                       ),
                     ),
                   ),
@@ -180,11 +176,7 @@ class AppBarDetail extends StatelessWidget implements PreferredSizeWidget {
       ),
       title: Text(
         title,
-        style: const TextStyle(
-          fontFamily: "Poppins",
-          fontStyle: FontStyle.normal,
-          fontSize: 20,
-        ),
+        style: kTitleAppBar,
       ),
     );
   }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:swamedika/views/utils/custom_text.dart';
+import 'package:swamedika/views/utils/custom_textstyle.dart';
 
 import '../pages/search_page.dart';
 
