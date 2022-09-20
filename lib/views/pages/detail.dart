@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:swamedika/model/database.dart';
+import 'package:swamedika/views/utils/custom_text.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({
@@ -56,14 +57,7 @@ class _DetailPageState extends State<DetailPage> {
                           // Judul
                           Text(
                             "Swamedikasi Dengan \nBahan ${dataSource.title}",
-                            style: const TextStyle(
-                              fontFamily: "Poppins",
-                              fontSize: 24,
-                              fontWeight: FontWeight.w400,
-                              color: Color(0xFF333333),
-                              fontStyle: FontStyle.normal,
-                              height: 1.2,
-                            ),
+                            style: kEveryTitleDetail,
                           ),
                           SizedBox(
                             height: MediaQuery.of(context).size.height / 150.4,
@@ -72,14 +66,7 @@ class _DetailPageState extends State<DetailPage> {
                           // Tag
                           Text(
                             "Tag: ${dataSource.cate}",
-                            style: const TextStyle(
-                              fontFamily: "Poppins",
-                              fontSize: 12,
-                              color: Color(0xFF000000),
-                              fontStyle: FontStyle.normal,
-                              fontWeight: FontWeight.w400,
-                              height: 1.5,
-                            ),
+                            style: kTagDetail,
                           ),
                           SizedBox(
                             height: MediaQuery.of(context).size.height / 28.923,
@@ -88,14 +75,7 @@ class _DetailPageState extends State<DetailPage> {
                           // Deskripsi
                           const Text(
                             "Informasi Umum",
-                            style: TextStyle(
-                              fontFamily: "Poppins",
-                              fontSize: 24,
-                              color: Color(0xFF333333),
-                              fontStyle: FontStyle.normal,
-                              fontWeight: FontWeight.w400,
-                              height: 1.2,
-                            ),
+                            style: kEveryTitleDetail,
                           ),
                           SizedBox(
                             height: MediaQuery.of(context).size.height / 75.2,
@@ -104,13 +84,7 @@ class _DetailPageState extends State<DetailPage> {
                           // Content Deskripsi
                           Text(
                             dataSource.desc,
-                            style: TextStyle(
-                              color: Colors.black.withOpacity(0.6),
-                              fontFamily: "Poppins",
-                              fontSize: 13,
-                              fontStyle: FontStyle.normal,
-                              height: 1.2,
-                            ),
+                            style: kEveryDataDetail,
                             textAlign: TextAlign.justify,
                           ),
                           SizedBox(
@@ -120,14 +94,7 @@ class _DetailPageState extends State<DetailPage> {
                           // Manfaat
                           const Text(
                             "Khasiat",
-                            style: TextStyle(
-                              fontFamily: "Poppins",
-                              fontSize: 24,
-                              color: Color(0xFF333333),
-                              fontStyle: FontStyle.normal,
-                              fontWeight: FontWeight.w400,
-                              height: 1.2,
-                            ),
+                            style: kEveryTitleDetail,
                           ),
                           SizedBox(
                             height: MediaQuery.of(context).size.height / 75.2,
@@ -138,13 +105,7 @@ class _DetailPageState extends State<DetailPage> {
                             padding: const EdgeInsets.only(left: 3, right: 3),
                             child: Text(
                               dataSource.khasiat,
-                              style: TextStyle(
-                                color: Colors.black.withOpacity(0.6),
-                                fontSize: 14,
-                                fontStyle: FontStyle.normal,
-                                fontFamily: "Poppins",
-                                height: 1.21,
-                              ),
+                              style: kEveryDataDetail,
                               textAlign: TextAlign.justify,
                             ),
                           ),
@@ -154,13 +115,7 @@ class _DetailPageState extends State<DetailPage> {
 
                           const Text(
                             "Penggunaan",
-                            style: TextStyle(
-                              fontFamily: "Poppins",
-                              fontSize: 24,
-                              fontStyle: FontStyle.normal,
-                              fontWeight: FontWeight.w400,
-                              height: 1.2,
-                            ),
+                            style: kEveryTitleDetail,
                           ),
                           SizedBox(
                             height: MediaQuery.of(context).size.height / 75.2,
@@ -169,12 +124,7 @@ class _DetailPageState extends State<DetailPage> {
                           // Content Cara Penyajian
                           Text(
                             dataSource.serve,
-                            style: TextStyle(
-                                color: Colors.black.withOpacity(0.6),
-                                fontSize: 14,
-                                fontStyle: FontStyle.normal,
-                                fontFamily: "Poppins",
-                                height: 1.21),
+                            style: kEveryDataDetail,
                             textAlign: TextAlign.start,
                           ),
                           SizedBox(
@@ -184,14 +134,7 @@ class _DetailPageState extends State<DetailPage> {
                           //Keamanan
                           const Text(
                             "Keamanan",
-                            style: TextStyle(
-                              fontFamily: "Poppins",
-                              fontSize: 24,
-                              color: Color(0xFF333333),
-                              fontStyle: FontStyle.normal,
-                              fontWeight: FontWeight.w400,
-                              height: 1.2,
-                            ),
+                            style: kEveryTitleDetail,
                           ),
                           SizedBox(
                             height: MediaQuery.of(context).size.height / 75.2,
@@ -202,12 +145,7 @@ class _DetailPageState extends State<DetailPage> {
                             padding: const EdgeInsets.only(left: 3, right: 3),
                             child: Text(
                               dataSource.keamanan,
-                              style: TextStyle(
-                                  color: Colors.black.withOpacity(0.6),
-                                  fontSize: 14,
-                                  fontStyle: FontStyle.normal,
-                                  fontFamily: "Poppins",
-                                  height: 1.21),
+                              style: kEveryDataDetail,
                               textAlign: TextAlign.start,
                             ),
                           ),
@@ -217,13 +155,7 @@ class _DetailPageState extends State<DetailPage> {
                           //Peringatan
                           const Text(
                             "Peringatan",
-                            style: TextStyle(
-                                fontFamily: "Poppins",
-                                fontSize: 24,
-                                color: Color(0xFF333333),
-                                fontStyle: FontStyle.normal,
-                                fontWeight: FontWeight.w400,
-                                height: 1.2),
+                            style: kEveryTitleDetail,
                           ),
                           SizedBox(
                             height: MediaQuery.of(context).size.height / 75.2,
@@ -234,12 +166,7 @@ class _DetailPageState extends State<DetailPage> {
                             padding: const EdgeInsets.only(left: 3, right: 3),
                             child: Text(
                               dataSource.peringatan,
-                              style: TextStyle(
-                                  color: Colors.black.withOpacity(0.6),
-                                  fontSize: 14,
-                                  fontStyle: FontStyle.normal,
-                                  fontFamily: "Poppins",
-                                  height: 1.21),
+                              style: kEveryDataDetail,
                               textAlign: TextAlign.justify,
                             ),
                           ),

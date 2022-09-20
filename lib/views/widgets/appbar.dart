@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swamedika/views/utils/custom_text.dart';
 
 import '../pages/search_page.dart';
 
@@ -31,11 +32,7 @@ class AppBarSearch extends StatelessWidget {
                 // padding: EdgeInsets.only(top: 0, left: 30.0),
                 child: const Text(
                   "Selamat Datang",
-                  style: TextStyle(
-                      fontFamily: "Poppins",
-                      color: Colors.white,
-                      fontSize: 24,
-                      fontWeight: FontWeight.normal),
+                  style: kHomeTitle,
                 ),
               ),
             ),
@@ -83,12 +80,7 @@ class AppBarSearch extends StatelessWidget {
                         Expanded(
                           child: Text(
                             'Pencarian bahan',
-                            style: TextStyle(
-                              color: Color(0xFFC5C5C7),
-                              fontFamily: "Poppins",
-                              fontSize: 16,
-                              fontWeight: FontWeight.w400,
-                            ),
+                            style: kLabelHint,
                           ),
                         ),
                       ],

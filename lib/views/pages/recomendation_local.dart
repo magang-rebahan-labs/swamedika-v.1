@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:swamedika/views/utils/custom_text.dart';
 import '../widgets/widgets.dart';
 import 'detail.dart';
 import 'package:swamedika/model/database.dart';
@@ -30,11 +31,7 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
             // Judul Rekomendasi
             const Text(
               'Rekomendasi Pengobatan Swamedikasi',
-              style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.bold,
-                fontFamily: "Sans-serif",
-              ),
+              style: kJudul,
             ),
 
             // Konten (Gambar) Rekomendasi
@@ -118,11 +115,7 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                                     maxLines: 2,
                                     textAlign: TextAlign.left,
                                     overflow: TextOverflow.ellipsis,
-                                    style: const TextStyle(
-                                      fontFamily: "Sans-serif",
-                                      fontSize: 11,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                                    style: kTitleBahan,
                                   ),
                                 ),
                               ],
@@ -141,11 +134,7 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                   bottom: MediaQuery.of(context).size.height / 27.06),
               child: const Text(
                 'Berita Kesehatan Terkini',
-                style: TextStyle(
-                  fontFamily: "Sans-serif",
-                  fontWeight: FontWeight.bold,
-                  fontSize: 14,
-                ),
+                style: kJudul,
               ),
             ),
 

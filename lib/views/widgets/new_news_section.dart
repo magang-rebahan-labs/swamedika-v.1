@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:swamedika/model/new_news_response.dart';
 import 'package:http/http.dart' as http;
+import 'package:swamedika/views/utils/custom_text.dart';
 import 'dart:convert';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -134,37 +135,17 @@ class _NewNewsSectionState extends State<NewNewsSection> {
                                                   Text(
                                                     // "Kasus Positif Covid-19 Mingguan naik lebih dari 15 kali lipat selama 2 bulan",
                                                     currentNews.title!,
-                                                    style: const TextStyle(
-                                                        fontSize: 12,
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                        fontStyle:
-                                                            FontStyle.normal,
-                                                        fontFamily:
-                                                            'Sans-serif',
-                                                        color:
-                                                            Color(0xFF000000),
-                                                        height: 1.75),
+                                                    style: kNewsTitle,
                                                   ),
-                                                  // SizedBox(height: 11.0),
                                                   SizedBox(
                                                       height:
                                                           MediaQuery.of(context)
                                                                   .size
                                                                   .height /
                                                               73.81),
-
                                                   Text(
-                                                    // "4 Agustus 2022",
-                                                    // currentNews.publishedAt!,
                                                     outputDate,
-                                                    style: const TextStyle(
-                                                      fontSize: 12,
-                                                      fontWeight:
-                                                          FontWeight.w400,
-                                                      fontFamily: 'Sans-serif',
-                                                      color: Color(0xFF828282),
-                                                    ),
+                                                    style: kNewsDate,
                                                   ),
                                                 ],
                                               ),

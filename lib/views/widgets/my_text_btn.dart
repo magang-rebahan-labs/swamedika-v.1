@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../constants/app_style.dart';
-import '../constants/size_config.dart';
+import '../utils/app_style.dart';
+import '../utils/size_config.dart';
 
 class MyTextButton extends StatelessWidget {
   const MyTextButton({

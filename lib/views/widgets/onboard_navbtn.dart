@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../constants/app_style.dart';
+import '../utils/app_style.dart';
 
 class OnBoardNavBtn extends StatelessWidget {
   const OnBoardNavBtn({Key? key, required this.name, required this.onPressed})
