@@ -20,6 +20,7 @@ class _CategoryState extends State<Category> {
           MediaQuery.of(context).size.height / 4.413,
         ),
         child: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: Colors.transparent,
           foregroundColor: Colors.black,
           elevation: 0,
