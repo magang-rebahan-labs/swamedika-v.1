@@ -20,8 +20,8 @@ class MyTextButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30),
       child: SizedBox(
-        height: SizeConfig.blockSizeH! * 15.5,
-        width: SizeConfig.blockSizeV! * 35,
+        height: SizeConfig.screenHeight! / 15.615,
+        width: SizeConfig.screenWidth! / 1.44,
         child: TextButton(
           onPressed: onPressed,
           style: TextButton.styleFrom(

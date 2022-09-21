@@ -170,10 +170,10 @@ class AppBarDetail extends StatelessWidget implements PreferredSizeWidget {
       elevation: 0,
       toolbarHeight: MediaQuery.of(context).size.height / 8.5,
       centerTitle: true,
-      leading: IconButton(
-        icon: const Icon(Icons.arrow_back_ios_new_rounded),
-        onPressed: () => Navigator.of(context).pop(),
-      ),
+      // leading: IconButton(
+      //   icon: const Icon(Icons.arrow_back_ios_new_rounded),
+      //   onPressed: () => Navigator.of(context).pop(),
+      // ),
       title: Text(
         title,
         style: kTitleAppBar,

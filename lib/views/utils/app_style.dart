@@ -7,15 +7,17 @@ const Color kSecondaryColor = Color.fromARGB(255, 18, 165, 70);
 const Color kScaffoldBackground = Color(0xffFFF3E9);
 const Color kTextColor = Color.fromARGB(255, 51, 51, 51);
 
-final kStart = TextStyle(
+const kStart = TextStyle(
     fontFamily: 'Poppins',
-    fontSize: SizeConfig.blockSizeH! * 5,
+    fontSize: 18,
+    // fontSize: SizeConfig.blockSizeH! * 5,
     color: kScaffoldBackground,
     fontWeight: FontWeight.bold);
 
-final kTitle = TextStyle(
+const kTitle = TextStyle(
     fontFamily: 'Klasik',
-    fontSize: SizeConfig.blockSizeH! * 8,
+    fontSize: 36,
+    // fontSize: SizeConfig.blockSizeH! * 8,
     color: kSecondaryColor,
     fontWeight: FontWeight.bold);
 
@@ -25,10 +27,12 @@ final kTitle2 = TextStyle(
   color: kSecondaryColor,
 );
 
-final kBodyText1 = TextStyle(
+const kBodyText1 = TextStyle(
   color: kSecondaryColor,
-  fontSize: SizeConfig.blockSizeH! * 4.5,
-  fontWeight: FontWeight.bold,
+  fontSize: 18,
+  fontFamily: "Klasik",
+  // fontSize: SizeConfig.blockSizeH! * 4.5,
+  // fontWeight: FontWeight.bold,
 );
 
 final kBodyText2 = TextStyle(
