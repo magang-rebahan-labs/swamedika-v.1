@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class Literatur extends StatelessWidget {
   const Literatur({super.key});
@@ -29,7 +30,7 @@ class Literatur extends StatelessWidget {
           scrollDirection: Axis.vertical,
           child: Column(
             children: [
-              // BUKU SAKU PROBIOTIK
+              // BUKU PEDOMAN PENGGUNAAN HERBAL & SK DALAM MENGHADAPI COVID 19
               Padding(
                 padding: const EdgeInsets.only(right: 30, left: 30),
                 child: Row(
@@ -44,321 +45,25 @@ class Literatur extends StatelessWidget {
                             fontWeight: FontWeight.bold),
                       ),
                     ),
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.2,
-                      height: MediaQuery.of(context).size.height * 0.15,
-                      decoration: const BoxDecoration(
-                          color: Colors.blue,
-                          image: DecorationImage(
-                              image: AssetImage(
-                                  'assets/images/literatur/bs-probiotik.png'),
-                              fit: BoxFit.fill)),
-                    ),
-                    Flexible(
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 20.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text(
-                              'Buku Saku Probiotik',
-                              style: TextStyle(
-                                  fontSize: 14, fontFamily: 'Poppins'),
-                            ),
-                            Text(
-                              'eBook',
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  fontFamily: 'Poppins',
-                                  color: Colors.grey),
-                            )
-                          ],
-                        ),
+                    GestureDetector(
+                      onTap: () async {
+                        const url = 'https://bit.ly/BUKUPEDOMANHERBALDANSK2020';
+                        if (await launchUrlString(url)) {
+                          await launchUrlString(url);
+                        } else {
+                          throw 'Tidak Dapat membuka $url';
+                        }
+                      },
+                      child: Container(
+                        width: MediaQuery.of(context).size.width * 0.2,
+                        height: MediaQuery.of(context).size.height * 0.15,
+                        decoration: const BoxDecoration(
+                            color: Colors.blue,
+                            image: DecorationImage(
+                                image: AssetImage(
+                                    'assets/images/literatur/pedomansup-covid19.png'),
+                                fit: BoxFit.fill)),
                       ),
-                    )
-                  ],
-                ),
-              ),
-
-              // BUKU SAKU VITAMIN C
-              Padding(
-                padding: const EdgeInsets.only(right: 30, left: 30, top: 50),
-                child: Row(
-                  children: [
-                    const Padding(
-                      padding: EdgeInsets.only(right: 20),
-                      child: Text(
-                        '2.',
-                        style: TextStyle(
-                            fontSize: 17,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.2,
-                      height: MediaQuery.of(context).size.height * 0.15,
-                      decoration: const BoxDecoration(
-                          color: Colors.blue,
-                          image: DecorationImage(
-                              image: AssetImage(
-                                  'assets/images/literatur/bs-vitaminc.png'),
-                              fit: BoxFit.fill)),
-                    ),
-                    Flexible(
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 20.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text(
-                              'Buku Saku Vitamin C',
-                              style: TextStyle(
-                                  fontSize: 14, fontFamily: 'Poppins'),
-                            ),
-                            Text(
-                              'eBook',
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  fontFamily: 'Poppins',
-                                  color: Colors.grey),
-                            )
-                          ],
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-
-              // BUKU SAKU VITAMIN D
-              Padding(
-                padding: const EdgeInsets.only(right: 30, left: 30, top: 50),
-                child: Row(
-                  children: [
-                    const Padding(
-                      padding: EdgeInsets.only(right: 20),
-                      child: Text(
-                        '3.',
-                        style: TextStyle(
-                            fontSize: 17,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.2,
-                      height: MediaQuery.of(context).size.height * 0.15,
-                      decoration: const BoxDecoration(
-                          color: Colors.blue,
-                          image: DecorationImage(
-                              image: AssetImage(
-                                  'assets/images/literatur/bs-vitamind.png'),
-                              fit: BoxFit.fill)),
-                    ),
-                    Flexible(
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 20.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text(
-                              'Buku Saku Vitamin D',
-                              style: TextStyle(
-                                  fontSize: 14, fontFamily: 'Poppins'),
-                            ),
-                            Text(
-                              'eBook',
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  fontFamily: 'Poppins',
-                                  color: Colors.grey),
-                            )
-                          ],
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-
-              // BUKU SAKU VITAMIN E
-              Padding(
-                padding: const EdgeInsets.only(right: 30, left: 30, top: 50),
-                child: Row(
-                  children: [
-                    const Padding(
-                      padding: EdgeInsets.only(right: 20),
-                      child: Text(
-                        '4.',
-                        style: TextStyle(
-                            fontSize: 17,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.2,
-                      height: MediaQuery.of(context).size.height * 0.15,
-                      decoration: const BoxDecoration(
-                          color: Colors.blue,
-                          image: DecorationImage(
-                              image: AssetImage(
-                                  'assets/images/literatur/bs-vitamine.png'),
-                              fit: BoxFit.fill)),
-                    ),
-                    Flexible(
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 20.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text(
-                              'Buku Saku Vitamin E',
-                              style: TextStyle(
-                                  fontSize: 14, fontFamily: 'Poppins'),
-                            ),
-                            Text(
-                              'eBook',
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  fontFamily: 'Poppins',
-                                  color: Colors.grey),
-                            )
-                          ],
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-
-              // BUKU SAKU ZINK
-              Padding(
-                padding: const EdgeInsets.only(right: 30, left: 30, top: 50),
-                child: Row(
-                  children: [
-                    const Padding(
-                      padding: EdgeInsets.only(right: 20),
-                      child: Text(
-                        '5.',
-                        style: TextStyle(
-                            fontSize: 17,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.2,
-                      height: MediaQuery.of(context).size.height * 0.15,
-                      decoration: const BoxDecoration(
-                          color: Colors.blue,
-                          image: DecorationImage(
-                              image: AssetImage(
-                                  'assets/images/literatur/bs-zink.png'),
-                              fit: BoxFit.fill)),
-                    ),
-                    Flexible(
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 20.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text(
-                              'Buku Saku Zink',
-                              style: TextStyle(
-                                  fontSize: 14, fontFamily: 'Poppins'),
-                            ),
-                            Text(
-                              'eBook',
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  fontFamily: 'Poppins',
-                                  color: Colors.grey),
-                            )
-                          ],
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-
-              // BUKU SAKU SELENIUM
-              Padding(
-                padding: const EdgeInsets.only(right: 30, left: 30, top: 50),
-                child: Row(
-                  children: [
-                    const Padding(
-                      padding: EdgeInsets.only(right: 20),
-                      child: Text(
-                        '6.',
-                        style: TextStyle(
-                            fontSize: 17,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.2,
-                      height: MediaQuery.of(context).size.height * 0.15,
-                      decoration: const BoxDecoration(
-                          color: Colors.blue,
-                          image: DecorationImage(
-                              image: AssetImage(
-                                  'assets/images/literatur/bs-selenium.png'),
-                              fit: BoxFit.fill)),
-                    ),
-                    Flexible(
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 20.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text(
-                              'Buku Saku Selenium',
-                              style: TextStyle(
-                                  fontSize: 14, fontFamily: 'Poppins'),
-                            ),
-                            Text(
-                              'eBook',
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  fontFamily: 'Poppins',
-                                  color: Colors.grey),
-                            )
-                          ],
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-
-              // BUKU PEDOMAN PENGGUNAAN HERBAL & SK DALAM MENGHADAPI COVID 19
-              Padding(
-                padding: const EdgeInsets.only(right: 30, left: 30, top: 50),
-                child: Row(
-                  children: [
-                    const Padding(
-                      padding: EdgeInsets.only(right: 20),
-                      child: Text(
-                        '7.',
-                        style: TextStyle(
-                            fontSize: 17,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.2,
-                      height: MediaQuery.of(context).size.height * 0.15,
-                      decoration: const BoxDecoration(
-                          color: Colors.blue,
-                          image: DecorationImage(
-                              image: AssetImage(
-                                  'assets/images/literatur/pedomansup-covid19.png'),
-                              fit: BoxFit.fill)),
                     ),
                     Flexible(
                       child: Padding(
@@ -388,29 +93,38 @@ class Literatur extends StatelessWidget {
 
               // BUKU SAKU OBAT TRADISIONAL
               Padding(
-                padding: const EdgeInsets.only(
-                    right: 30, left: 30, top: 50, bottom: 50),
+                padding: const EdgeInsets.only(right: 30, left: 30, top: 50),
                 child: Row(
                   children: [
                     const Padding(
                       padding: EdgeInsets.only(right: 20),
                       child: Text(
-                        '8.',
+                        '2.',
                         style: TextStyle(
                             fontSize: 17,
                             fontFamily: 'Poppins',
                             fontWeight: FontWeight.bold),
                       ),
                     ),
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.2,
-                      height: MediaQuery.of(context).size.height * 0.15,
-                      decoration: const BoxDecoration(
-                          color: Colors.blue,
-                          image: DecorationImage(
-                              image: AssetImage(
-                                  'assets/images/literatur/bs-obattradisional.png'),
-                              fit: BoxFit.fill)),
+                    GestureDetector(
+                      onTap: () async {
+                        const url = 'https://bit.ly/BUKUSAKU_OT';
+                        if (await canLaunchUrlString(url)) {
+                          await launchUrlString(url);
+                        } else {
+                          throw 'Tidak Dapat membuka $url';
+                        }
+                      },
+                      child: Container(
+                        width: MediaQuery.of(context).size.width * 0.2,
+                        height: MediaQuery.of(context).size.height * 0.15,
+                        decoration: const BoxDecoration(
+                            color: Colors.blue,
+                            image: DecorationImage(
+                                image: AssetImage(
+                                    'assets/images/literatur/bs-obattradisional.png'),
+                                fit: BoxFit.fill)),
+                      ),
                     ),
                     Flexible(
                       child: Padding(
