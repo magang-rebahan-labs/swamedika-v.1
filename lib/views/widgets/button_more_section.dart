@@ -121,20 +121,16 @@ class _ButtonMoreState extends State<ButtonMore> {
                                 ),
                                 Center(
                                   child: Text(
-                                    'Versi 1.0.0 - Pra Rilis | 09/09/2022',
+                                    'Versi 1.0.0 - BETA | 21/09/2022',
                                     style: kTextMore,
                                   ),
                                 ),
                                 Text(
-                                  '- Peningkatan performa aplikasi',
+                                  '- Perbaikan Bug Overflowed Bottom',
                                   style: kTextMore,
                                 ),
                                 Text(
-                                  '- Perbaikan bug navbar yang selalu muncul',
-                                  style: kTextMore,
-                                ),
-                                Text(
-                                  '- Perbaikan informasi berita yang tidak memunculkan gambar',
+                                  '- Perbaikan Tab Kategori',
                                   style: kTextMore,
                                 ),
                               ],
