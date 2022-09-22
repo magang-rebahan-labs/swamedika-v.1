@@ -95,12 +95,15 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                                 // Setting gambarnya
                                 ClipRRect(
                                     borderRadius: BorderRadius.circular(6.0),
-                                    child: Image.asset(
-                                      databaseContent[index].image,
-                                      // scale: 0,
-                                      fit: BoxFit.cover,
-                                      width: sizeImage,
-                                      height: sizeImage,
+                                    child: Container(
+                                      color: const Color(0xFFE0E0E0),
+                                      child: Image.asset(
+                                        databaseContent[index].image,
+                                        // scale: 0,
+                                        fit: BoxFit.cover,
+                                        width: sizeImage,
+                                        height: sizeImage,
+                                      ),
                                     )
                                     // width: 130,
                                     // height: MediaQuery.of(context).size.height * 0.15),
