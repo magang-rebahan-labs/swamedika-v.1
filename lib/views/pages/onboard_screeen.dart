@@ -105,7 +105,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 30.0),
+                  padding: const EdgeInsets.only(top: 100.0),
                   child: Container(
                     child: currentPage == onboardingContents.length - 1
                         ? MyTextButton(

@@ -30,10 +30,9 @@ class AppBarSearch extends StatelessWidget {
                     top: MediaQuery.of(context).size.height / 6.76,
                     left: MediaQuery.of(context).size.width / 23.4375),
                 // padding: EdgeInsets.only(top: 0, left: 30.0),
-                child: const Text(
-                  "Selamat Datang",
-                  style: kHomeTitle,
-                ),
+                child: Text("Selamat Datang",
+                    style: kHomeTitle.copyWith(
+                        fontSize: 24 * MediaQuery.of(context).textScaleFactor)),
               ),
             ),
             Positioned(
@@ -42,7 +41,8 @@ class AppBarSearch extends StatelessWidget {
               left: 0.0,
               right: 0.0,
               child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                padding: EdgeInsets.symmetric(
+                    horizontal: MediaQuery.of(context).size.width / 17.857),
                 height: MediaQuery.of(context).size.height / 14.5,
                 child: GestureDetector(
                   onTap: () {
