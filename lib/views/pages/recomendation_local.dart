@@ -99,8 +99,7 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                                       color: const Color(0xFFE0E0E0),
                                       child: Image.asset(
                                         databaseContent[index].image,
-                                        scale: 1.0,
-                                        // fit: BoxFit.cover,
+                                        fit: BoxFit.cover,
                                         width: sizeImage,
                                         height: sizeImage,
                                       ),

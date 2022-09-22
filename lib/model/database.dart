@@ -171,7 +171,7 @@ List<Databases> databaseContent = [
     peringatan: '-',
   ),
   Databases(
-    image: 'assets/images/hewani/madu.png',
+    image: 'assets/images/jamu/beraskencur.png',
     title: 'Beras Kencur',
     cate: "Jamu",
     desc:
@@ -183,7 +183,7 @@ List<Databases> databaseContent = [
     peringatan: '-',
   ),
   Databases(
-    image: 'assets/images/hewani/madu.png',
+    image: 'assets/images/jamu/wedangjahe.png',
     title: 'Wedang Jahe',
     cate: "Jamu",
     desc:
@@ -195,7 +195,7 @@ List<Databases> databaseContent = [
     peringatan: '-',
   ),
   Databases(
-    image: 'assets/images/hewani/madu.png',
+    image: 'assets/images/jamu/wedanguwuh.png',
     title: 'Wedang Uwuh',
     cate: "Jamu",
     desc:
@@ -207,7 +207,7 @@ List<Databases> databaseContent = [
     peringatan: '-',
   ),
   Databases(
-    image: 'assets/images/hewani/madu.png',
+    image: 'assets/images/jamu/wedangsecang.png',
     title: 'Wedang Secang',
     cate: "Jamu",
     desc:
@@ -219,7 +219,7 @@ List<Databases> databaseContent = [
     peringatan: '-',
   ),
   Databases(
-    image: 'assets/images/hewani/madu.png',
+    image: 'assets/images/jamu/kunyitasam.png',
     title: 'Jamu Kunyit Asam',
     cate: "Jamu",
     desc:
@@ -231,7 +231,7 @@ List<Databases> databaseContent = [
     peringatan: '-',
   ),
   Databases(
-    image: 'assets/images/hewani/madu.png',
+    image: 'assets/images/jamu/bandrek.png',
     title: 'Wedang Bandrek',
     cate: "Jamu",
     desc:
@@ -243,7 +243,7 @@ List<Databases> databaseContent = [
     peringatan: '-',
   ),
   Databases(
-    image: 'assets/images/hewani/madu.png',
+    image: 'assets/images/jamu/sarabba.png',
     title: 'Wedang Sarabba',
     cate: "Jamu",
     desc:
