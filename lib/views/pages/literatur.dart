@@ -58,7 +58,7 @@ class Literatur extends StatelessWidget {
                       ),
                       Container(
                         width: MediaQuery.of(context).size.width * 0.2,
-                        height: MediaQuery.of(context).size.height * 0.15,
+                        // height: MediaQuery.of(context).size.height / 6.71,
                         decoration: const BoxDecoration(
                             color: Colors.blue,
                             image: DecorationImage(
