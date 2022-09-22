@@ -1,5 +1,7 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher_string.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Literatur extends StatelessWidget {
   const Literatur({super.key});
@@ -37,11 +39,11 @@ class Literatur extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 30, left: 30),
                 child: GestureDetector(
                   onTap: () async {
-                    const url = 'https://bit.ly/BUKUPEDOMANHERBALDANSK2020';
-                    if (await launchUrlString(url)) {
-                      await launchUrlString(url);
+                    const url = 'https://www.pom.go.id/new/view/direct/hotissue-covid19';
+                    if (await canLaunch(url)) {
+                      await launch(url);
                     } else {
-                      throw 'Tidak Dapat membuka $url';
+                      throw 'Could not launch $url';
                     }
                   },
                   child: Row(
@@ -98,11 +100,11 @@ class Literatur extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 30, left: 30, top: 50),
                 child: GestureDetector(
                   onTap: () async {
-                    const url = 'https://bit.ly/BUKUSAKU_OT';
-                    if (await canLaunchUrlString(url)) {
-                      await launchUrlString(url);
+                    const url = 'https://www.pom.go.id/new/view/direct/hotissue-covid19';
+                    if (await canLaunch(url)) {
+                      await launch(url);
                     } else {
-                      throw 'Tidak Dapat membuka $url';
+                      throw 'Could not launch $url';
                     }
                   },
                   child: Row(
