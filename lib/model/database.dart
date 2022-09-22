@@ -22,7 +22,7 @@ class Databases {
 
 List<Databases> databaseContent = [
   Databases(
-    image: 'assets/images/herbal/mint.png',
+    image: 'assets/images/nabati/kunyit.png',
     title: 'Kunyit',
     cate: "Nabati",
     desc:
@@ -36,7 +36,7 @@ List<Databases> databaseContent = [
     peringatan: '-',
   ),
   Databases(
-    image: 'assets/images/herbal/kumiskucing.png',
+    image: 'assets/images/nabati/temulawak.png',
     title: 'Temulawak',
     cate: "Nabati",
     desc:
@@ -50,7 +50,7 @@ List<Databases> databaseContent = [
     peringatan: '-',
   ),
   Databases(
-    image: 'assets/images/herbal/Sirih.png',
+    image: 'assets/images/nabati/jahe.png',
     title: 'Jahe',
     cate: "Nabati",
     desc:
@@ -64,7 +64,7 @@ List<Databases> databaseContent = [
     peringatan: '-',
   ),
   Databases(
-    image: 'assets/images/herbal/Teh.png',
+    image: 'assets/images/nabati/jambubiji.png',
     title: 'Jambu Biji',
     cate: "Nabati",
     desc:
@@ -78,7 +78,7 @@ List<Databases> databaseContent = [
     peringatan: '-',
   ),
   Databases(
-    image: 'assets/images/herbal/Bawangputih.png',
+    image: 'assets/images/nabati/daunjambubiji.png',
     title: 'Daun Jambu Biji',
     cate: "Nabati",
     desc:
@@ -92,7 +92,7 @@ List<Databases> databaseContent = [
     peringatan: '-',
   ),
   Databases(
-    image: 'assets/images/herbal/jeruknipis.png',
+    image: 'assets/images/nabati/adas.png',
     title: 'Meniran',
     cate: "Nabati",
     desc:
@@ -100,13 +100,13 @@ List<Databases> databaseContent = [
     khasiat:
         'Daun, akar dan semua bagian tumbuhan ini dapat digunakan secara empiris untuk pengobatan ayan, malaria, sembelit, tekanan darah tinggi, tidak teratur datang haid, seriawan (daunnya), mulas, gigi nyeri (akarnya), kencing kurang lancar, kencing nanah, rajasinga, ginjal nyeri, menceret, demam, tetanus, darah kotor, kejang gagau, putih telur dalam kencing, kencing batu (semua bagiannya) dan lain-lain.',
     penggunaan:
-        'Sebagai dekokta: 15-30 g herba meniran dalam 250 mL air, diminum 2-3 kali per hari. Dekokta merupan sediaan cair yang dibuat dengan mengektraksi sediaan herbal dengan air pada suhu 90 C selama 30 menit.',
+        'Sebagai dekokta: 15-30 g herba meniran dalam 250 mL air, diminum 2-3 kali per hari. Dekokta merupan sediaan cair yang dibuat dengan mengektraksi sediaan nabati dengan air pada suhu 90 C selama 30 menit.',
     keamanan:
         '1. Efek tidak diinginkan: Hipoglikemi, hipotensi, ketidakseimbangan elektrolit dan mineral. \n\n2. Interaksi Obat: Dapat meningkatkan efek insulin dan obat-obat diabetes. Meniran mengandung geraniin yang dilaporkan mempunyai efek inotropik negatif, kronotropik negatif, hipotensi dan ACE inhibitor, oleh karena itu, kemungkinan dapat meningkatkan efek obat-obat antihipertensi, alfa blocker dan obat jantung. Ekstrak etanol herba meniran dapat menghambat enzim sitokrom P450 secara in vivo maupun in vitro. Meniran memiliki efek sinergis dengan obat antimikroba, antagonis dengan kortikosteroid (agen imunosupresan). \n\n3. Kontraindikasi: tidak boleh digunakan pada wanita hamil, pasien dengan hipersensitivitas terhadap Phyllanthus niruri L., dan pasien penderita penyakit autoimun.',
     peringatan: '-',
   ),
   Databases(
-    image: 'assets/images/hewani/kerang.png',
+    image: 'assets/images/nabati/adas.png',
     title: 'Sambiloto',
     cate: "Nabati",
     desc:
@@ -120,7 +120,7 @@ List<Databases> databaseContent = [
     peringatan: '-',
   ),
   Databases(
-    image: 'assets/images/hewani/telor.png',
+    image: 'assets/images/nabati/kayuputih.png',
     title: 'Kayu Putih',
     cate: "Nabati",
     desc:
@@ -133,7 +133,7 @@ List<Databases> databaseContent = [
     peringatan: 'Jauhkan dari jangkauan anak - anak.',
   ),
   Databases(
-    image: 'assets/images/hewani/minyakikan.png',
+    image: 'assets/images/nabati/kayumanis.png',
     title: 'Kayu Manis',
     cate: "Nabati",
     desc:
@@ -147,7 +147,7 @@ List<Databases> databaseContent = [
         'Hati-hati pada penyakit kencing manis, harus konsultasi dokter terlebih dahulu.',
   ),
   Databases(
-    image: 'assets/images/hewani/susu.png',
+    image: 'assets/images/nabati/adas.png',
     title: 'Adas',
     cate: "Nabati",
     desc:
@@ -166,6 +166,90 @@ List<Databases> databaseContent = [
     cate: "Hewani",
     desc: 'Madu',
     khasiat: '-',
+    penggunaan: '-',
+    keamanan: '-',
+    peringatan: '-',
+  ),
+  Databases(
+    image: 'assets/images/hewani/madu.png',
+    title: 'Beras Kencur',
+    cate: "Jamu",
+    desc:
+        'Beras Kencur terbuat dari beras, kencur, gula aren, gula pasir, garam, air.',
+    khasiat:
+        'Sebagai peningkat daya tahan tubuh, Untuk mengobati infeksi dan diare dan bersifat antikangker, menghilangkan rasa lelah, menghilangkan darah kotor, menghangatkan badan serta mempercepat penyembuhan luka pasca kelahiran dan mehilangkan bau amis untuk menyegarkan tubuh, mencegah batuk, meningkatkan nafsu makan, serta meningkatkan kenyaringan suara.',
+    penggunaan: '-',
+    keamanan: '-',
+    peringatan: '-',
+  ),
+  Databases(
+    image: 'assets/images/hewani/madu.png',
+    title: 'Wedang Jahe',
+    cate: "Jamu",
+    desc:
+        'Wedang Jahe terbuat dari jahe, kayu secang, serai,air, kapulaga, kayu manis.',
+    khasiat:
+        'Jahe berpotensi sebagai antioksidan sehingga bermanfaat dalam peningkatan daya tahan tubuh, kandungan utama jahe adalah gingerol yang digunakan sebagai agen imunomodulator dengan meregulasi badai sitokin dan sebagai antioksidan sehingga dapat menangkal radikal bebas yang menyebabkan rusaknya sel tubuh.',
+    penggunaan: '-',
+    keamanan: '-',
+    peringatan: '-',
+  ),
+  Databases(
+    image: 'assets/images/hewani/madu.png',
+    title: 'Wedang Uwuh',
+    cate: "Jamu",
+    desc:
+        'Wedang Uwuh terbuat dari Serutan kayu secang kering, gula batu atau gula pasir, jahe, daun kayu manis kering, daun cengkeh kering, daun pala kering, cengkeh kering, air.',
+    khasiat:
+        'Berfungsi sebagai obat batuk, laksatif (pencahar) untuk mengatasi sembelit, dan antioksidan sehingga dapat menangkal radikal bebas yang menyebabkan rusaknya sel tubuh.',
+    penggunaan: '-',
+    keamanan: '-',
+    peringatan: '-',
+  ),
+  Databases(
+    image: 'assets/images/hewani/madu.png',
+    title: 'Wedang Secang',
+    cate: "Jamu",
+    desc:
+        'Wedang Secang terbuat dari Daun stevia, kayu secang, jahe segar, cengkeh, sereh segar, kayu manis, kapulaga, pala, mesoyi, kedawung, klabet, lada, aquadest, standar vitamin C, ethanol, air.',
+    khasiat:
+        'Wedang secang dapat berkhasiat untuk mencegah dan meminimalkan terjadinya penyakit degeneratif melalui aktivitasnya sebagai antioksidan dan menurunkan gula darah bagi penderita diabetes. ',
+    penggunaan: '-',
+    keamanan: '-',
+    peringatan: '-',
+  ),
+  Databases(
+    image: 'assets/images/hewani/madu.png',
+    title: 'Jamu Kunyit Asam',
+    cate: "Jamu",
+    desc:
+        'Jamu Kunyit Asam terbuat dari Kunyit, gula aren, gula putih, asam jawa, garam, air.',
+    khasiat:
+        'Jamu ini bermanfaat sebagai antibiotik dan obat pencegah sariawan, sebagai peningkat daya tahan tubuh, melancarkan haid, memperlancar percernaan, mengurangi asam lambung, dan menghilangkan jerawat.',
+    penggunaan: '-',
+    keamanan: '-',
+    peringatan: '-',
+  ),
+  Databases(
+    image: 'assets/images/hewani/madu.png',
+    title: 'Wedang Bandrek',
+    cate: "Jamu",
+    desc:
+        'Wedang Bandrek terbuat dari Jahe merah, cengkeh, bunga lawang, pala, lada hitam, kayu manis, jinten kasar, kapulaga, serai, daun pandan, gula aren, air.',
+    khasiat:
+        'Melawan penyakit kanker, obat sakit gigi, menurunkan tekanan darah, mencegah radang (Inflamasi), mengatasi masuk angin, mencegah perut kembung, mematikan patogen asing.',
+    penggunaan: '-',
+    keamanan: '-',
+    peringatan: '-',
+  ),
+  Databases(
+    image: 'assets/images/hewani/madu.png',
+    title: 'Wedang Sarabba',
+    cate: "Jamu",
+    desc:
+        'Wedang Sarabba terbuat dari Campuran jahe, kuning telur, gula aren, air, santan dan merica bubuk.',
+    khasiat:
+        'Sarabba cocok untuk mengusir flu, menghangatkan badan, mengeluarkan angin dari tubuh saat masuk angin, mengandung gingerol yang digunakan sebagai agen imunomodulator dengan meregulasi badai sitokin dan sebagai antioksidan sehingga dapat menangkal radikal bebas yang menyebabkan rusaknya sel tubuh.',
     penggunaan: '-',
     keamanan: '-',
     peringatan: '-',

@@ -33,7 +33,7 @@ class _CategoryViewsState extends State<CategoryViews> {
         appBar: AppBarDetail(title: widget.categoryName),
         body: ContainerDetails(
           dataSource: _database,
-          skala: 7.0,
+          skala: 15.0,
         ),
       );
     } else if (widget.categoryName == "Hewani") {
