@@ -60,7 +60,7 @@ class Literatur extends StatelessWidget {
                       ),
                       Container(
                         width: MediaQuery.of(context).size.width * 0.2,
-                        // height: MediaQuery.of(context).size.height / 6.71,
+                        height: MediaQuery.of(context).size.height / 6.71,
                         decoration: const BoxDecoration(
                             color: Colors.blue,
                             image: DecorationImage(
@@ -173,7 +173,7 @@ class Literatur extends StatelessWidget {
                       const Padding(
                         padding: EdgeInsets.only(right: 20),
                         child: Text(
-                          '2.',
+                          '3.',
                           style: TextStyle(
                               fontSize: 17,
                               fontFamily: 'Poppins',
@@ -234,7 +234,7 @@ class Literatur extends StatelessWidget {
                       const Padding(
                         padding: EdgeInsets.only(right: 20),
                         child: Text(
-                          '2.',
+                          '4.',
                           style: TextStyle(
                               fontSize: 17,
                               fontFamily: 'Poppins',
