@@ -43,9 +43,7 @@ class _NewNewsSectionState extends State<NewNewsSection> {
               ? const Padding(
                   padding: EdgeInsets.all(20.0),
                   child: Center(
-                    child: CircularProgressIndicator(
-                      backgroundColor: Colors.red,
-                    ),
+                    child: CircularProgressIndicator(),
                   ),
                 )
               : Column(
