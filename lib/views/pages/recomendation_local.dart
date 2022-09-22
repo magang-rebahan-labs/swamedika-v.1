@@ -13,6 +13,7 @@ class RecomendationLocal extends StatefulWidget {
 }
 
 class _RecomendationLocalState extends State<RecomendationLocal> {
+  var data = databaseContent.shuffle();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +43,7 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                     vertical: MediaQuery.of(context).size.height / 58),
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
-                itemCount: 4,
+                itemCount: 5,
                 itemBuilder: (context, index) {
                   // Ukuran Media query untuk dibawah
                   final senData = databaseContent[index];
