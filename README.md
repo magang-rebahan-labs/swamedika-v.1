@@ -25,17 +25,3 @@ git commit -am "kasih komentarnya apa"
 # untuk upload ke githubnya
 git push origin baremetal
 ```
-
-## Alamat API-nya
-API-nya = [https://backend-swamedikasi.herokuapp.com/api/v1/](https://backend-swamedikasi.herokuapp.com/api/v1/)
-```json
-{
-    "pk": , 
-    "title": "",
-    "desc": "",
-    "serv": "",
-    "images": "",
-    "cate": "",
-    "created_at": ""
-}
-```
