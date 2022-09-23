@@ -1,5 +1,3 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -106,9 +104,9 @@ class BukuStruktur extends StatelessWidget {
           EdgeInsets.only(right: lebarPadding, left: lebarPadding, bottom: 50),
       child: GestureDetector(
         onTap: () async {
-          // url = urlAddress;
-          if (await canLaunch(urlAddress)) {
-            await launch(urlAddress);
+          final urlweb = Uri.parse(urlAddress);
+          if (await canLaunchUrl(urlweb)) {
+            await launchUrl(urlweb, mode: LaunchMode.externalApplication);
           } else {
             throw 'Could not launch $urlAddress';
           }
