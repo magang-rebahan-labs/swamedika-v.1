@@ -62,6 +62,10 @@ class _SearchPageState extends State<SearchPage> {
                   borderSide: BorderSide.none,
                 ),
                 hintText: "Contoh: Madu",
+                hintStyle: const TextStyle(
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.w400,
+                ),
                 prefixIcon: IconButton(
                   onPressed: () {},
                   icon: const IconTheme(
