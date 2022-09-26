@@ -12,7 +12,6 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
-  // final PageStorageBucket _bucket = PageStorageBucket();
   final List<PageItem> _items = [
     PageItem(
       'Beranda',

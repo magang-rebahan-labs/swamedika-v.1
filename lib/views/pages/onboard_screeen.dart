@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../main.dart';
 import '../../model/on_board_data.dart';
-import '../utils/app_style.dart';
+import '../utils/custom_textstyle.dart';
 import '../utils/size_config.dart';
 import '../widgets/widgets.dart';
 import 'logosplash.dart';

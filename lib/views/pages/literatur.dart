@@ -15,9 +15,6 @@ class Literatur extends StatelessWidget {
             backgroundColor: Colors.white,
             foregroundColor: Colors.black,
             elevation: 0,
-            // leading: IconButton(
-            //     icon: const Icon(Icons.arrow_back_ios_new_rounded),
-            //     onPressed: () => Navigator.of(context).pop()),
             centerTitle: true,
             title: const Text(
               'Literatur',
