@@ -41,6 +41,7 @@ dependencies:
   dotted_line: ^3.1.0
   intl: ^0.17.0
   page_transition: ^2.0.9
+  webfeed: ^0.7.0
   
 
 dev_dependencies:
