@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:swamedika/views/utils/custom_textstyle.dart';
+import 'package:swamedika/views/widgets/news_feed.dart';
 import '../widgets/widgets.dart';
 import 'detail.dart';
 import 'package:swamedika/model/database.dart';
@@ -148,7 +149,8 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
 
             const Expanded(
               child: SingleChildScrollView(
-                child: NewNewsSection(),
+                // child: NewNewsSection(),
+                child: NewsFeed(),
               ),
             ),
           ],
