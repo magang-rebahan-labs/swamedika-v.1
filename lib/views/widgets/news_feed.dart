@@ -185,13 +185,13 @@ class NewsFeed extends StatefulWidget {
 }
 
 class _NewsFeedState extends State<NewsFeed> {
-  static String FEED_URL = "https://rss.app/feeds/Fdy6pfEC6ugYLJj4.xml";
+  static const String feedUrl = "https://rss.app/feeds/Fdy6pfEC6ugYLJj4.xml";
   RssFeed? _feed;
 
   Future<RssFeed?> loadFeed() async {
     try {
       final client = http.Client();
-      final response = await client.get(Uri.parse(FEED_URL));
+      final response = await client.get(Uri.parse(feedUrl));
       return RssFeed.parse(response.body);
     } catch (e) {
       //
@@ -202,10 +202,8 @@ class _NewsFeedState extends State<NewsFeed> {
   load() async {
     loadFeed().then((result) {
       if (null == result || result.toString().isEmpty) {
-        print("feedLoadErrorMsg");
         return;
       }
-      print("result: $result");
       updateFeed(result);
     });
   }
@@ -227,7 +225,6 @@ class _NewsFeedState extends State<NewsFeed> {
 
   @override
   Widget build(BuildContext context) {
-    print("object : $_feed");
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -256,7 +253,6 @@ class _NewsFeedState extends State<NewsFeed> {
                         var inputDate = DateTime.parse(parseDate.toString());
                         var outputFormat = DateFormat('dd MMMM yyyy');
                         var outputDate = outputFormat.format(inputDate);
-                        print("object : ${currentNews!.enclosure?.url}");
 
                         // Konten
                         return Container(
@@ -275,7 +271,7 @@ class _NewsFeedState extends State<NewsFeed> {
                               }
                             },
                             child: Container(
-                              child: currentNews.enclosure?.url == null
+                              child: currentNews?.enclosure?.url == null
                                   ? Container()
                                   : Row(
                                       children: [
@@ -297,7 +293,7 @@ class _NewsFeedState extends State<NewsFeed> {
                                             image: DecorationImage(
                                               fit: BoxFit.cover,
                                               image: NetworkImage(
-                                                  "${currentNews.enclosure?.url}",
+                                                  "${currentNews?.enclosure?.url}",
                                                   scale: 1),
                                             ),
                                           ),
@@ -327,7 +323,7 @@ class _NewsFeedState extends State<NewsFeed> {
                                                 children: [
                                                   Text(
                                                     // "Kasus Positif Covid-19 Mingguan naik lebih dari 15 kali lipat selama 2 bulan",
-                                                    currentNews.title!,
+                                                    currentNews!.title!,
                                                     style: kNewsTitle,
                                                   ),
                                                   SizedBox(
