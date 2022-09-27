@@ -13,6 +13,7 @@ class Category extends StatefulWidget {
 class _CategoryState extends State<Category> {
   @override
   Widget build(BuildContext context) {
+    final paddingColom = MediaQuery.of(context).size.width / 18.75;
     return Scaffold(
       // APPBAR
       appBar: PreferredSize(
@@ -41,7 +42,7 @@ class _CategoryState extends State<Category> {
 
           // KONTEN KATEGORINYA
           SingleChildScrollView(
-            padding: const EdgeInsets.only(right: 16, left: 16),
+            padding: EdgeInsets.only(right: paddingColom, left: paddingColom),
 
             // BAGIAN LISTVIEW GAMBAR
             child: Column(

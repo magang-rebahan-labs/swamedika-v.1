@@ -27,17 +27,33 @@ class _DetailPageState extends State<DetailPage> {
       body: CustomScrollView(slivers: [
         // Sliver untuk AppBar
         SliverAppBar(
+          backgroundColor: Colors.transparent,
           // Setting buat urusan sliverAppBar
           pinned: _pinned,
           snap: _snap,
           floating: _floating,
-          backgroundColor: Colors.grey,
           // Setting Sliver Image
           expandedHeight: tinggi / 3.06,
-          flexibleSpace: FlexibleSpaceBar(
-            background: Image.asset(
-              dataSource.image,
-              fit: BoxFit.cover,
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                stops: const [
+                  0.1,
+                  0.25,
+                ],
+                colors: [
+                  const Color(0xFF000000).withOpacity(0.5),
+                  const Color(0xFFCECECE).withOpacity(0.3),
+                ],
+              ),
+            ),
+            child: FlexibleSpaceBar(
+              background: Image.asset(
+                dataSource.image,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
         ),
@@ -123,9 +139,9 @@ class _DetailPageState extends State<DetailPage> {
 
                           // Content Cara Penyajian
                           Text(
-                            dataSource.serve,
+                            dataSource.penggunaan,
                             style: kEveryDataDetail,
-                            textAlign: TextAlign.start,
+                            textAlign: TextAlign.justify,
                           ),
                           SizedBox(
                             height: MediaQuery.of(context).size.height / 37.6,
@@ -146,7 +162,7 @@ class _DetailPageState extends State<DetailPage> {
                             child: Text(
                               dataSource.keamanan,
                               style: kEveryDataDetail,
-                              textAlign: TextAlign.start,
+                              textAlign: TextAlign.justify,
                             ),
                           ),
                           SizedBox(

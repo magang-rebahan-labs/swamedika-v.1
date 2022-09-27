@@ -26,13 +26,14 @@ class _CategoryViewsState extends State<CategoryViews> {
   }
 
   Widget _buildChild() {
+    _database.sort((a, b) => a.title.compareTo(b.title));
     if (widget.categoryName == "Nabati") {
       return Scaffold(
         backgroundColor: const Color(0xFF12A546),
         appBar: AppBarDetail(title: widget.categoryName),
         body: ContainerDetails(
           dataSource: _database,
-          skala: 7.0,
+          skala: 8.0,
         ),
       );
     } else if (widget.categoryName == "Hewani") {
@@ -50,7 +51,7 @@ class _CategoryViewsState extends State<CategoryViews> {
         appBar: AppBarDetail(title: widget.categoryName),
         body: ContainerDetails(
           dataSource: _database,
-          skala: 1,
+          skala: 8.0,
         ),
       );
     }

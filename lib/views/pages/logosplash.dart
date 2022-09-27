@@ -17,7 +17,7 @@ class _LogoSplashState extends State<LogoSplash> {
   }
 
   openSplahScreen() async {
-    var durasiSplash = const Duration(seconds: 2);
+    var durasiSplash = const Duration(seconds: 1);
 
     return Timer(
       durasiSplash,

@@ -13,8 +13,10 @@ class RecomendationLocal extends StatefulWidget {
 }
 
 class _RecomendationLocalState extends State<RecomendationLocal> {
+  var data = databaseContent.shuffle();
   @override
   Widget build(BuildContext context) {
+    final marginContainer = MediaQuery.of(context).size.width / 23.4375;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: PreferredSize(
@@ -24,14 +26,15 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
         child: const AppBarSearch(),
       ),
       body: Container(
-        margin: const EdgeInsets.only(right: 15, left: 15),
+        margin: EdgeInsets.only(right: marginContainer, left: marginContainer),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Judul Rekomendasi
-            const Text(
+            Text(
               'Rekomendasi Pengobatan Swamedikasi',
-              style: kJudul,
+              style: kJudul.copyWith(
+                  fontSize: 14 * MediaQuery.of(context).textScaleFactor),
             ),
 
             // Konten (Gambar) Rekomendasi
@@ -42,7 +45,7 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                     vertical: MediaQuery.of(context).size.height / 58),
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
-                itemCount: 4,
+                itemCount: 5,
                 itemBuilder: (context, index) {
                   // Ukuran Media query untuk dibawah
                   final senData = databaseContent[index];
@@ -94,12 +97,14 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                                 // Setting gambarnya
                                 ClipRRect(
                                     borderRadius: BorderRadius.circular(6.0),
-                                    child: Image.asset(
-                                      databaseContent[index].image,
-                                      // scale: 0,
-                                      fit: BoxFit.cover,
-                                      width: sizeImage,
-                                      height: sizeImage,
+                                    child: Container(
+                                      color: const Color(0xFFE0E0E0),
+                                      child: Image.asset(
+                                        databaseContent[index].image,
+                                        fit: BoxFit.cover,
+                                        width: sizeImage,
+                                        height: sizeImage,
+                                      ),
                                     )
                                     // width: 130,
                                     // height: MediaQuery.of(context).size.height * 0.15),
@@ -115,7 +120,10 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                                     maxLines: 2,
                                     textAlign: TextAlign.left,
                                     overflow: TextOverflow.ellipsis,
-                                    style: kTitleBahan,
+                                    style: kTitleBahan.copyWith(
+                                        fontSize: 11 *
+                                            MediaQuery.of(context)
+                                                .textScaleFactor),
                                   ),
                                 ),
                               ],
