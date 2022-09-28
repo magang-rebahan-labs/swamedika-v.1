@@ -109,6 +109,7 @@ class ContainerDetails extends StatelessWidget {
                     context,
                     PageTransition(
                       child: const DetailPage(),
+                      isIos: true,
                       type: PageTransitionType.rightToLeft,
                       duration: const Duration(
                         milliseconds: 300,

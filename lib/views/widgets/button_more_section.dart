@@ -172,6 +172,7 @@ class _ButtonMoreState extends State<ButtonMore> {
                 context,
                 PageTransition(
                   child: const Literatur(),
+                  isIos: true,
                   type: PageTransitionType.rightToLeft,
                   duration: const Duration(
                     milliseconds: 400,

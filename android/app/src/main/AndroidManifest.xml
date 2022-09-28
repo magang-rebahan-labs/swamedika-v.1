@@ -12,7 +12,7 @@
     </queries>
 
    <application
-        android:label="Swamedika Thibbun Nabawi"
+        android:label="Swamedikasi Thibbun Nabawi"
         android:name="${applicationName}"
         android:icon="@drawable/logo">
         <activity
