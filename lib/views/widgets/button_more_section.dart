@@ -24,6 +24,7 @@ class _ButtonMoreState extends State<ButtonMore> {
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
+              foregroundColor: Colors.blue,
               disabledBackgroundColor: Colors.black,
               elevation: 20,
               shadowColor: const Color(0xFFA3B1C6).withOpacity(0.15),
@@ -88,6 +89,7 @@ class _ButtonMoreState extends State<ButtonMore> {
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
+              foregroundColor: Colors.blue,
               disabledBackgroundColor: Colors.black,
               elevation: 20,
               shadowColor: const Color(0xFFA3B1C6).withOpacity(0.15),
@@ -160,6 +162,7 @@ class _ButtonMoreState extends State<ButtonMore> {
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
+              foregroundColor: Colors.blue,
               disabledBackgroundColor: Colors.black,
               elevation: 20,
               shadowColor: const Color(0xFFA3B1C6).withOpacity(0.15),

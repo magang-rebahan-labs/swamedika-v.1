@@ -8,7 +8,7 @@ bool? seenOnBoard;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  // SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   SharedPreferences pref = await SharedPreferences.getInstance();
   seenOnBoard = pref.getBool('seenOnBoard') ?? false;
   runApp(const MyApp());
@@ -20,13 +20,18 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Swamedikasi Thibbun Nabawi',
-      theme: ThemeData(
-        backgroundColor: Colors.white,
+    return Shortcuts(
+      shortcuts: <LogicalKeySet, Intent>{
+        LogicalKeySet(LogicalKeyboardKey.select): const ActivateIntent(),
+      },
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Swamedikasi Thibbun Nabawi',
+        theme: ThemeData(
+          backgroundColor: Colors.white,
+        ),
+        home: seenOnBoard == true ? const LogoSplash() : const OnBoardingPage(),
       ),
-      home: seenOnBoard == true ? const LogoSplash() : const OnBoardingPage(),
     );
   }
 }
