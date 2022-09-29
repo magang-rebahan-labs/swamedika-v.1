@@ -60,7 +60,7 @@ class _BottomBarState extends State<BottomBar> {
           ],
         ),
         child: SizedBox(
-          height: MediaQuery.of(context).padding.bottom + 75,
+          // height: MediaQuery.of(context).padding.bottom + 75,
           // height: MediaQuery.of(context).size.height / 10.684,
           child: ClipRRect(
             borderRadius: const BorderRadius.only(
