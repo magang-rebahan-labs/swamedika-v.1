@@ -89,8 +89,8 @@ class CategoryName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // KETIKA DI KLIK
-    return GestureDetector(
-      onTap: () {
+    return ElevatedButton(
+      onPressed: () {
         if (urlRoute == "Nabati") {
           Navigator.of(context).push(
             MaterialPageRoute(
