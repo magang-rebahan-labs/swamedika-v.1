@@ -13,7 +13,7 @@ class NewsFeed extends StatefulWidget {
 }
 
 class _NewsFeedState extends State<NewsFeed> {
-  static const String feedUrl = "https://rss.app/feeds/Fdy6pfEC6ugYLJj4.xml";
+  static const String feedUrl = "https://rss.app/feeds/kQxKFxCD1nkj16wY.xml";
   RssFeed? _feed;
 
   Future<RssFeed?> loadFeed() async {
