@@ -31,7 +31,6 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.white,
         ),
         home: seenOnBoard == true ? const LogoSplash() : const OnBoardingPage(),
-        // home: const OnBoardingPage(),
       ),
     );
   }
