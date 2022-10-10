@@ -109,6 +109,7 @@ class _SearchPageState extends State<SearchPage> {
                               context,
                               PageTransition(
                                 child: const DetailPage(),
+                                isIos: true,
                                 type: PageTransitionType.fade,
                                 duration: const Duration(
                                   milliseconds: 400,
@@ -151,6 +152,7 @@ class _SearchPageState extends State<SearchPage> {
                                 Navigator.push(
                                   context,
                                   PageTransition(
+                                    isIos: true,
                                     child: const DetailPage(),
                                     type: PageTransitionType.fade,
                                     duration: const Duration(

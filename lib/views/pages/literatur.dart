@@ -39,7 +39,7 @@ class Literatur extends StatelessWidget {
                     'Buku Pedoman Penggunaan Herbal & SK Dalam Menghadapi Covid 19.',
                 kategori: 'eBook',
               ),
-
+    
               // BUKU SAKU OBAT TRADISIONAL
               BukuStruktur(
                 urlAddress:
@@ -49,7 +49,7 @@ class Literatur extends StatelessWidget {
                 judul: 'Buku Saku Obat Tradisional.',
                 kategori: 'eBook',
               ),
-
+    
               // JURNAL ILMIAH 1
               BukuStruktur(
                 urlAddress:
@@ -60,7 +60,7 @@ class Literatur extends StatelessWidget {
                     'Jurnal Manfaat Madu Sebagai Terapi Adjuvan Pada Pasien COVID-19 Dengan Sakit Tenggorokan.',
                 kategori: 'eBook',
               ),
-
+    
               // JURNAL ILMIAH 2
               BukuStruktur(
                 urlAddress:
