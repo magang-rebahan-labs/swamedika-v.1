@@ -45,7 +45,6 @@ List<Databases> databaseContent = [
         '1. Sebanyak 25 g kunyit segar, dicuci bersih, diparut, diperas, disaring, ditambah 1 sendok makan madu kemudian diminum 2 kali sehari. \n\n2. Bahan kering: 3-9 gram per hari; Serbuk: 1,5- 3,0 g/hari; infus oral: 0,5 - 1 gram tiga kali sehari. \n\n3. Serbuk harus dikonsumsi 2 sampai 3 kali sehari setelah makan; teh (2 sampai 3 gelas) dikonsumsi diantara saat makan. \n\n4. Untuk membuat teh, panaskan 0,5 sampai 1 gram obat pada air mendidih, tutup, tunggu 5 menit.',
     keamanan:
         '1. Tidak ada efek samping mayor yang dilaporkan pada studi klinik penggunaan ekstrak kunyit dan demikian juga kurkumin hingga dosis 8 g /hari selama 3 bulan. Pada uji klinik lain efek samping ringan seperti mual, diare, sakit kepala, kelelahan dan mengantuk dilaporkan pada kelompok kunyit dengan dosis 2 g/hari (serbuk kering rimpang kunyit). \n\n2. Tidak boleh digunakan bersamaan dengan obat golongan Nonsteroidal Anto-inflammatory drugs (NSAID), antiplatelet, dan antihiperlipidemia. \n\n3. Pengunaan pada penderita penyumbatan saluran empedu, cholangitis, batu empedu atau penyakit empedu lainnya sebaiknya berkonsultasi dengan dokter. \n\n4. Penggunaannya tidak dianjurkan pada ibu hamil dan menyusui karena kurangnya data yang relevan tentang keamanan penggunaan selama kehamilan dan menyusui.',
-    peringatan: '-',
   ),
   // Temulawak
   Databases(
@@ -60,7 +59,6 @@ List<Databases> databaseContent = [
         'Untuk meredakan gangguan fungsi hati dapat dilakukan dengan merebus 25 g irisan temulawak segar dengan 500 mL air hingga tinggal 300 mL, diminum untuk sehari. Cara lain dapat dilakukan dengan mengambil 25 g rimpang segar, diparut, diperas, disaring dibagi tiga dan diminum untuk sehari',
     keamanan:
         '1. European Medicine Agency melaporkan tidak ada efek samping serius yang dilaporkan sampai sekarang. Lebih lanjut komposisi kimia dari temulawak tidak memberikan alasan untuk masalah keamanan. \n\n2. Penggunaan temulawak pada wanita hamil dan selama menyusui tidak dianjurkan \n\n3. Penggunaan pada penderita penyumbatan saluran empedu, cholangitis, batu empedu atau penyakit empedu lainnya sebaiknya berkonsultasi dengan dokter.',
-    peringatan: '-',
   ),
   // Jahe
   Databases(
@@ -75,7 +73,6 @@ List<Databases> databaseContent = [
         'Untuk preparasi infus, campurkan air mendidih dengan 0,5 sampai 1 gram serbuk dan diamkan selama 5 menit',
     keamanan:
         '1. Efek samping yang dilaporkan terutama adalah: \n\na. Keluhan gastrointestinal ringan-sedang, seperti rasa yang tidak enak pada mulut, diare, perut tidak nyaman, refluks dan nyeri ulu hati. \nb. Dilaporkan pemberian 6 g jahe kering atau lebih dapat meningkatkan pengelupasan sel-sel lambung, yang memicu timbulnya tukak lambung. Disarankan dosis pada pasien dengan perut kosong dibatasi maksimal 6 g. \nc. Uji klinik pemberian jahe pada anak-anak menunjukkan tidak ada efek samping yang dilaporkan. \n\n2. Penggunaan jahe dosis besar (12-14 g), tidak dianjurkan bersama dengan obat antikoagulan karena dapat meningkatkan efek hipotrombinemia (darah sukar membeku). \n\n3. Dosis besar dapat menyebabkan penekanan sistem saraf pusat dan aritmia. \n\n4. Kontraindikasi: Hati-hati penggunaan pada penderita yang hipersensitif terhadap jahe karena dapat menyebabkan dermatitis.',
-    peringatan: '-',
   ),
   // Jambu Biji
   Databases(
@@ -90,7 +87,6 @@ List<Databases> databaseContent = [
         'Satu buah jambu biji setengah masak, dibelah empat dan direbus dengan 1 L air sampai mendidih, kemudian disaring untuk diambil airnya. Diminum 2 kali sehari pagi dan sore',
     keamanan:
         '1. Efek yang tidak diinginkan: dapat menyebabkan konstipasi. \n\n2. Interaksi Obat: secara teoretis dapat meningkatkan potensi obat-obatan kolesterol, depresi, diabetes, gangguan tidur dan diare.',
-    peringatan: '-',
   ),
   // Daun Jambu Biji
   Databases(
@@ -105,7 +101,6 @@ List<Databases> databaseContent = [
         '15 gram daun segar atau daun kering direbus dengan 1 liter air selama 10 menit dan dihabiskan dalam 1 hari',
     keamanan:
         '1. Efek yang tidak diinginkan: dapat menyebabkan konstipasi. Dilaporkan adanya dermatitis alergi setelah penggunaan eksternal sediaan teh dari tumbuhan ini. \n\n2. Hanya untuk penderita kencing manis yang telah ditetapkan dokter. Jangan digunakan lebih dari 30 hari. Tidak direkomendasikan untuk penggunaan pada anak-anak, wanita hamil dan menyusui. Hipersensitif atau alergi terhadap tumbuhan ini. \n\n3. Interaksi Obat: Secara teoretis dapat meningkatkan potensi obat-obatan kolesterol, depresi, diabetes, gangguan tidur dan diare. Kandungan tanin tumbuhan ini berpotensi menghambat absorpsi besi.',
-    peringatan: '-',
   ),
   // Meniran
   Databases(
@@ -120,7 +115,6 @@ List<Databases> databaseContent = [
         'Sebagai dekokta: 15-30 g herba meniran dalam 250 mL air, diminum 2-3 kali per hari. Dekokta merupan sediaan cair yang dibuat dengan mengektraksi sediaan nabati dengan air pada suhu 90 C selama 30 menit.',
     keamanan:
         '1. Efek tidak diinginkan: Hipoglikemi, hipotensi, ketidakseimbangan elektrolit dan mineral. \n\n2. Interaksi Obat: Dapat meningkatkan efek insulin dan obat-obat diabetes. Meniran mengandung geraniin yang dilaporkan mempunyai efek inotropik negatif, kronotropik negatif, hipotensi dan ACE inhibitor, oleh karena itu, kemungkinan dapat meningkatkan efek obat-obat antihipertensi, alfa blocker dan obat jantung. Ekstrak etanol herba meniran dapat menghambat enzim sitokrom P450 secara in vivo maupun in vitro. Meniran memiliki efek sinergis dengan obat antimikroba, antagonis dengan kortikosteroid (agen imunosupresan). \n\n3. Kontraindikasi: tidak boleh digunakan pada wanita hamil, pasien dengan hipersensitivitas terhadap Phyllanthus niruri L., dan pasien penderita penyakit autoimun.',
-    peringatan: '-',
   ),
   // Sambiloto
   Databases(
@@ -135,7 +129,6 @@ List<Databases> databaseContent = [
         '3-9 g herba kering atau 25-75 g herba segar sebagai dosis tunggal sesuai kebutuhan. Sebanyak tiga gram bahan kering atau 25 gram bahan segar direbus dan diminum 2 kali sehari sebelum makan.',
     keamanan:
         '1. Efek tidak diinginkan: penggunaan dosis tinggi herba sambiloto dapat menyebabkan perut tidak enak, muntah-muntah, mual dan kehilangan selera makan, hal ini disebabkan karena rasa pahit dari andrografolida, sedangkan pada wanita dapat menyebabkan efek antifertilitas. Pernah dilaporkan (sangat jarang) timbulnya gatal-gatal (kaligata/urtikaria) dan bengkak pada mata setelah minum rebusan sambiloto. \n\n2. Disarankan untuk menghindari tanaman ini selama kehamilan karena efek pencegahan ovulasi. \n\n3. Individu yang alergi terhadap tanaman bahkan dapat menimbulkan reaksi anafilaksis. \n\n4. Hindari penggunaan jangka panjang bersamaan dengan obat imunosupresan. \n\n5. Interaksi Obat\n Ekstrak herba sambiloto kemungkinan memiliki efek sinergis dengan isoniazid. Sambiloto memiliki efek hipotensif dan antiplatelet sehingga dapat meningkatkan efek obat-obat antihipertensi dan antiplatelet.',
-    // peringatan: '-',
   ),
   // Kayu Putih
   Databases(
@@ -296,9 +289,6 @@ List<Databases> databaseContent = [
         'Beras Kencur terbuat dari beras, kencur, gula aren, gula pasir, garam, air.',
     khasiat:
         'Sebagai peningkat daya tahan tubuh, Untuk mengobati infeksi dan diare dan bersifat antikangker, menghilangkan rasa lelah, menghilangkan darah kotor, menghangatkan badan serta mempercepat penyembuhan luka pasca kelahiran dan mehilangkan bau amis untuk menyegarkan tubuh, mencegah batuk, meningkatkan nafsu makan, serta meningkatkan kenyaringan suara.',
-    penggunaan: '-',
-    keamanan: '-',
-    peringatan: '-',
   ),
   // Wedang Jahe
   Databases(
@@ -309,9 +299,6 @@ List<Databases> databaseContent = [
         'Wedang Jahe terbuat dari jahe, kayu secang, serai,air, kapulaga, kayu manis.',
     khasiat:
         'Jahe berpotensi sebagai antioksidan sehingga bermanfaat dalam peningkatan daya tahan tubuh, kandungan utama jahe adalah gingerol yang digunakan sebagai agen imunomodulator dengan meregulasi badai sitokin dan sebagai antioksidan sehingga dapat menangkal radikal bebas yang menyebabkan rusaknya sel tubuh.',
-    penggunaan: '-',
-    keamanan: '-',
-    peringatan: '-',
   ),
   // Wedang Uwuh
   Databases(
@@ -322,9 +309,6 @@ List<Databases> databaseContent = [
         'Wedang Uwuh terbuat dari Serutan kayu secang kering, gula batu atau gula pasir, jahe, daun kayu manis kering, daun cengkeh kering, daun pala kering, cengkeh kering, air.',
     khasiat:
         'Berfungsi sebagai obat batuk, laksatif (pencahar) untuk mengatasi sembelit, dan antioksidan sehingga dapat menangkal radikal bebas yang menyebabkan rusaknya sel tubuh.',
-    penggunaan: '-',
-    keamanan: '-',
-    peringatan: '-',
   ),
   // Wedang Secang
   Databases(
@@ -335,9 +319,6 @@ List<Databases> databaseContent = [
         'Wedang Secang terbuat dari Daun stevia, kayu secang, jahe segar, cengkeh, sereh segar, kayu manis, kapulaga, pala, mesoyi, kedawung, klabet, lada, aquadest, standar vitamin C, ethanol, air.',
     khasiat:
         'Wedang secang dapat berkhasiat untuk mencegah dan meminimalkan terjadinya penyakit degeneratif melalui aktivitasnya sebagai antioksidan dan menurunkan gula darah bagi penderita diabetes. ',
-    penggunaan: '-',
-    keamanan: '-',
-    peringatan: '-',
   ),
   // Jamu Kunyit Asam
   Databases(
@@ -348,9 +329,6 @@ List<Databases> databaseContent = [
         'Jamu Kunyit Asam terbuat dari Kunyit, gula aren, gula putih, asam jawa, garam, air.',
     khasiat:
         'Jamu ini bermanfaat sebagai antibiotik dan obat pencegah sariawan, sebagai peningkat daya tahan tubuh, melancarkan haid, memperlancar percernaan, mengurangi asam lambung, dan menghilangkan jerawat.',
-    penggunaan: '-',
-    keamanan: '-',
-    peringatan: '-',
   ),
   // Wedang Bandrek
   Databases(
@@ -361,9 +339,6 @@ List<Databases> databaseContent = [
         'Wedang Bandrek terbuat dari Jahe merah, cengkeh, bunga lawang, pala, lada hitam, kayu manis, jinten kasar, kapulaga, serai, daun pandan, gula aren, air.',
     khasiat:
         'Melawan penyakit kanker, obat sakit gigi, menurunkan tekanan darah, mencegah radang (Inflamasi), mengatasi masuk angin, mencegah perut kembung, mematikan patogen asing.',
-    penggunaan: '-',
-    keamanan: '-',
-    peringatan: '-',
   ),
   // Wedang Sarabba
   Databases(
@@ -374,8 +349,5 @@ List<Databases> databaseContent = [
         'Wedang Sarabba terbuat dari Campuran jahe, kuning telur, gula aren, air, santan dan merica bubuk.',
     khasiat:
         'Sarabba cocok untuk mengusir flu, menghangatkan badan, mengeluarkan angin dari tubuh saat masuk angin, mengandung gingerol yang digunakan sebagai agen imunomodulator dengan meregulasi badai sitokin dan sebagai antioksidan sehingga dapat menangkal radikal bebas yang menyebabkan rusaknya sel tubuh.',
-    penggunaan: '-',
-    keamanan: '-',
-    peringatan: '-',
   ),
 ];
