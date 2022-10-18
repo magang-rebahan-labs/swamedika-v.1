@@ -101,7 +101,9 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                                     child: Container(
                                       color: const Color(0xFFE0E0E0),
                                       child: Image.asset(
-                                        databaseContent[index].image,
+                                        databaseContent[index].image == null
+                                            ? "assets/images/not_found.jpg"
+                                            : databaseContent[index].image!,
                                         fit: BoxFit.cover,
                                         width: sizeImage,
                                         height: sizeImage,
@@ -117,7 +119,7 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                                       top: MediaQuery.of(context).size.height /
                                           203),
                                   child: Text(
-                                    databaseContent[index].title,
+                                    databaseContent[index].title!,
                                     maxLines: 2,
                                     textAlign: TextAlign.left,
                                     overflow: TextOverflow.ellipsis,
