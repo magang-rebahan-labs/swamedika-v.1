@@ -21,9 +21,9 @@ class _DetailPageState extends State<DetailPage> {
   Widget build(BuildContext context) {
     // Variabel untuk menghitung MediaQuiry Tinggi
     double tinggi = MediaQuery.of(context).size.height;
-    double lebar = MediaQuery.of(context).size.width;
+    // double lebar = MediaQuery.of(context).size.width;
     final dataSource = ModalRoute.of(context)!.settings.arguments as Databases;
-    print(lebar);
+
     return Scaffold(
       body: CustomScrollView(slivers: [
         // Sliver untuk AppBar
@@ -116,7 +116,7 @@ class _DetailPageState extends State<DetailPage> {
 
                           // Content Deskripsi
                           Text(
-                            dataSource.desc!,
+                            dataSource.desc,
                             style: kEveryDataDetail,
                             textAlign: TextAlign.justify,
                           ),
