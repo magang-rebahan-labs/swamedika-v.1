@@ -119,7 +119,7 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                                       top: MediaQuery.of(context).size.height /
                                           203),
                                   child: Text(
-                                    databaseContent[index].title!,
+                                    databaseContent[index].title,
                                     maxLines: 2,
                                     textAlign: TextAlign.left,
                                     overflow: TextOverflow.ellipsis,
