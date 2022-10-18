@@ -126,7 +126,7 @@ class _SearchPageState extends State<SearchPage> {
                           },
                           contentPadding: const EdgeInsets.all(8.0),
                           title: Text(
-                            databaseContent[index].title!,
+                            databaseContent[index].title,
                             style: kJudul,
                           ),
                           leading: ConstrainedBox(
@@ -143,7 +143,7 @@ class _SearchPageState extends State<SearchPage> {
                             ),
                           ),
                         )
-                      : databaseContent[index].title!.toLowerCase().contains(
+                      : databaseContent[index].title.toLowerCase().contains(
                                 filter!.toLowerCase(),
                               )
                           ? ListTile(
@@ -170,7 +170,7 @@ class _SearchPageState extends State<SearchPage> {
                               },
                               contentPadding: const EdgeInsets.all(8.0),
                               title: Text(
-                                databaseContent[index].title!,
+                                databaseContent[index].title,
                                 style: kJudul,
                               ),
                               leading: ConstrainedBox(
