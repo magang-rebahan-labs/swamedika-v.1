@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:swamedika/model/database.dart';
 import 'package:swamedika/views/utils/custom_textstyle.dart';
@@ -116,7 +118,7 @@ class _DetailPageState extends State<DetailPage> {
 
                           // Content Deskripsi
                           Text(
-                            dataSource.desc!,
+                            dataSource.desc,
                             style: kEveryDataDetail,
                             textAlign: TextAlign.justify,
                           ),
