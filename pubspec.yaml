@@ -42,6 +42,10 @@ dependencies:
   intl: ^0.17.0
   page_transition: ^2.0.9
   webfeed: ^0.7.0
+  lottie: ^1.4.3
+  connectivity_plus: ^2.1.0
+ 
+
   
 
 dev_dependencies:
@@ -75,6 +79,7 @@ flutter:
     - assets/images/kategori/
     - assets/images/hewani/
     - assets/images/literatur/
+    - assets/images/lottie/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
