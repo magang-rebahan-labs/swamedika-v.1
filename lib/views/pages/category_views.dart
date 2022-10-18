@@ -26,7 +26,7 @@ class _CategoryViewsState extends State<CategoryViews> {
   }
 
   Widget _buildChild() {
-    _database.sort((a, b) => a.title!.compareTo(b.title!));
+    _database.sort((a, b) => a.title.compareTo(b.title));
     if (widget.categoryName == "Nabati") {
       return Scaffold(
         backgroundColor: const Color(0xFF12A546),
@@ -145,7 +145,7 @@ class ContainerDetails extends StatelessWidget {
                     ),
                     child: Center(
                       child: Text(
-                        dataSource[index].title!,
+                        dataSource[index].title,
                         maxLines: 2,
                         style: kTitleList,
                       ),
