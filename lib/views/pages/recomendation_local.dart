@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:swamedika/views/utils/custom_textstyle.dart';
+import 'package:swamedika/views/widgets/news_feed.dart';
 import '../widgets/widgets.dart';
 import 'detail.dart';
 import 'package:swamedika/model/database.dart';
@@ -16,6 +17,7 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
   var data = databaseContent.shuffle();
   @override
   Widget build(BuildContext context) {
+    final marginContainer = MediaQuery.of(context).size.width / 23.4375;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: PreferredSize(
@@ -25,14 +27,15 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
         child: const AppBarSearch(),
       ),
       body: Container(
-        margin: const EdgeInsets.only(right: 15, left: 15),
+        margin: EdgeInsets.only(right: marginContainer, left: marginContainer),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Judul Rekomendasi
-            const Text(
+            Text(
               'Rekomendasi Pengobatan Swamedikasi',
-              style: kJudul,
+              style: kJudul.copyWith(
+                  fontSize: 14 * MediaQuery.of(context).textScaleFactor),
             ),
 
             // Konten (Gambar) Rekomendasi
@@ -98,8 +101,9 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                                     child: Container(
                                       color: const Color(0xFFE0E0E0),
                                       child: Image.asset(
-                                        databaseContent[index].image,
-                                        // scale: 0,
+                                        databaseContent[index].image == null
+                                            ? "assets/images/not_found.jpg"
+                                            : databaseContent[index].image!,
                                         fit: BoxFit.cover,
                                         width: sizeImage,
                                         height: sizeImage,
@@ -119,7 +123,10 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
                                     maxLines: 2,
                                     textAlign: TextAlign.left,
                                     overflow: TextOverflow.ellipsis,
-                                    style: kTitleBahan,
+                                    style: kTitleBahan.copyWith(
+                                        fontSize: 11 *
+                                            MediaQuery.of(context)
+                                                .textScaleFactor),
                                   ),
                                 ),
                               ],
@@ -144,7 +151,8 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
 
             const Expanded(
               child: SingleChildScrollView(
-                child: NewNewsSection(),
+                // child: NewNewsSection(),
+                child: NewsFeed(),
               ),
             ),
           ],

@@ -62,6 +62,10 @@ class _SearchPageState extends State<SearchPage> {
                   borderSide: BorderSide.none,
                 ),
                 hintText: "Contoh: Madu",
+                hintStyle: const TextStyle(
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.w400,
+                ),
                 prefixIcon: IconButton(
                   onPressed: () {},
                   icon: const IconTheme(
@@ -105,6 +109,7 @@ class _SearchPageState extends State<SearchPage> {
                               context,
                               PageTransition(
                                 child: const DetailPage(),
+                                isIos: true,
                                 type: PageTransitionType.fade,
                                 duration: const Duration(
                                   milliseconds: 400,
@@ -133,7 +138,9 @@ class _SearchPageState extends State<SearchPage> {
                             ),
                             child: Image(
                               image: AssetImage(
-                                databaseContent[index].image,
+                                databaseContent[index].image == null
+                                    ? "assets/images/not_found.jpg"
+                                    : databaseContent[index].image!,
                               ),
                             ),
                           ),
@@ -147,6 +154,7 @@ class _SearchPageState extends State<SearchPage> {
                                 Navigator.push(
                                   context,
                                   PageTransition(
+                                    isIos: true,
                                     child: const DetailPage(),
                                     type: PageTransitionType.fade,
                                     duration: const Duration(
@@ -176,7 +184,9 @@ class _SearchPageState extends State<SearchPage> {
                                 ),
                                 child: Image(
                                   image: AssetImage(
-                                    databaseContent[index].image,
+                                    databaseContent[index].image == null
+                                        ? "assets/images/not_found.jpg"
+                                        : databaseContent[index].image!,
                                   ),
                                 ),
                               ),

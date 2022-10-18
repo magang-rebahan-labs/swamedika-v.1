@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../main.dart';
 import '../../model/on_board_data.dart';
-import '../utils/app_style.dart';
+import '../utils/custom_textstyle.dart';
 import '../utils/size_config.dart';
 import '../widgets/widgets.dart';
 import 'logosplash.dart';
@@ -20,10 +20,10 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
 
   AnimatedContainer dotIndicator(index) {
     return AnimatedContainer(
-      margin: const EdgeInsets.only(right: 5),
+      margin: const EdgeInsets.only(right: 5.44),
       duration: const Duration(milliseconds: 400),
-      height: 12,
-      width: 12,
+      height: 10,
+      width: 10,
       decoration: BoxDecoration(
         color: currentPage == index ? kSecondaryColor : kTextColor,
         shape: BoxShape.circle,
@@ -64,7 +64,8 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
               itemBuilder: (context, index) => Column(
                 children: [
                   SizedBox(
-                    height: sizeV * 8,
+                    // height: sizeV * 8,
+                    height: MediaQuery.of(context).size.height / 16.24,
                   ),
                   Text(
                     onboardingContents[index].title,
@@ -72,7 +73,8 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(
-                    height: sizeV * 5,
+                    // height: sizeV * 5,
+                    height: MediaQuery.of(context).size.height / 18.45,
                   ),
                   SizedBox(
                     height: sizeV * 30,
@@ -82,7 +84,8 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                     ),
                   ),
                   SizedBox(
-                    height: sizeV * 6,
+                    // height: sizeV * 6,
+                    height: MediaQuery.of(context).size.height / 14,
                   ),
                   Text(
                     onboardingContents[index].desc,
@@ -105,7 +108,9 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 30.0),
+                  // padding: const EdgeInsets.only(top: 100.0),
+                  padding: EdgeInsets.only(
+                      top: MediaQuery.of(context).size.height / 14.763),
                   child: Container(
                     child: currentPage == onboardingContents.length - 1
                         ? MyTextButton(

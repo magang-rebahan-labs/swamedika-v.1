@@ -71,10 +71,9 @@ class _NewNewsSectionState extends State<NewNewsSection> {
                             onTap: () async {
                               Uri uri = Uri.parse(currentNews.url!);
                               try {
-                                // ignore: deprecated_member_use
-                                (await canLaunch("$uri"))
-                                    // ignore: deprecated_member_use
-                                    ? launch("$uri")
+                                (await canLaunchUrl(uri))
+                                    ? launchUrl(uri,
+                                        mode: LaunchMode.externalApplication)
                                     : debugPrint('tidak berhasil');
                               } catch (e) {
                                 debugPrint('error');

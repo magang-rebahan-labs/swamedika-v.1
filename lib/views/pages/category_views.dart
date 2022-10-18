@@ -33,7 +33,7 @@ class _CategoryViewsState extends State<CategoryViews> {
         appBar: AppBarDetail(title: widget.categoryName),
         body: ContainerDetails(
           dataSource: _database,
-          skala: 7.0,
+          skala: 8.0,
         ),
       );
     } else if (widget.categoryName == "Hewani") {
@@ -42,7 +42,7 @@ class _CategoryViewsState extends State<CategoryViews> {
         appBar: AppBarDetail(title: widget.categoryName),
         body: ContainerDetails(
           dataSource: _database,
-          skala: 1,
+          skala: 3.3,
         ),
       );
     } else {
@@ -51,7 +51,7 @@ class _CategoryViewsState extends State<CategoryViews> {
         appBar: AppBarDetail(title: widget.categoryName),
         body: ContainerDetails(
           dataSource: _database,
-          skala: 1,
+          skala: 8.0,
         ),
       );
     }
@@ -109,6 +109,7 @@ class ContainerDetails extends StatelessWidget {
                     context,
                     PageTransition(
                       child: const DetailPage(),
+                      isIos: true,
                       type: PageTransitionType.rightToLeft,
                       duration: const Duration(
                         milliseconds: 300,
@@ -128,9 +129,11 @@ class ContainerDetails extends StatelessWidget {
                     color: Colors.white,
                     image: DecorationImage(
                       scale: skala,
-                      fit: BoxFit.none,
+                      // fit: BoxFit.none,
                       image: AssetImage(
-                        dataSource[index].image,
+                        dataSource[index].image == null
+                            ? "assets/images/not_found.jpg"
+                            : dataSource[index].image!,
                       ),
                     ),
                   ),

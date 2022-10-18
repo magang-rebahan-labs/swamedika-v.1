@@ -1,4 +1,4 @@
-package com.example.swamedika
+package com.rebahan.swamedikasi
 
 import io.flutter.embedding.android.FlutterActivity
 
