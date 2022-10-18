@@ -44,6 +44,7 @@ dependencies:
   webfeed: ^0.7.0
   lottie: ^1.4.3
   connectivity_plus: ^2.1.0
+  change_app_package_name: ^0.1.3
  
 
   
