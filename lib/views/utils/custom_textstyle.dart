@@ -105,18 +105,18 @@ const kTextMore = TextStyle(
   fontFamily: "Poppins",
 );
 
-
 const Color kPrimaryColor = Color(0xffFC9D45);
 const Color kSecondaryColor = Color.fromARGB(255, 18, 165, 70);
 const Color kScaffoldBackground = Color(0xffFFF3E9);
 const Color kTextColor = Color.fromARGB(255, 51, 51, 51);
 
 const kStart = TextStyle(
-    fontFamily: 'Poppins',
-    fontSize: 18,
-    // fontSize: SizeConfig.blockSizeH! * 5,
-    color: kScaffoldBackground,
-    fontWeight: FontWeight.bold);
+  fontFamily: 'Poppins',
+  fontSize: 18,
+  // fontSize: SizeConfig.blockSizeH! * 5,
+  color: kScaffoldBackground,
+  // fontWeight: FontWeight.bold,
+);
 
 const kTitle = TextStyle(
     fontFamily: 'Klasik',
@@ -159,4 +159,3 @@ final kInputHintStyle = kBodyText2.copyWith(
   fontWeight: FontWeight.normal,
   color: kSecondaryColor.withOpacity(0.5),
 );
-
