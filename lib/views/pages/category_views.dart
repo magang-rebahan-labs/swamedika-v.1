@@ -26,7 +26,7 @@ class _CategoryViewsState extends State<CategoryViews> {
   }
 
   Widget _buildChild() {
-    _database.sort((a, b) => a.title.compareTo(b.title));
+    _database.sort((a, b) => a.title!.compareTo(b.title!));
     if (widget.categoryName == "Nabati") {
       return Scaffold(
         backgroundColor: const Color(0xFF12A546),
@@ -129,9 +129,11 @@ class ContainerDetails extends StatelessWidget {
                     color: Colors.white,
                     image: DecorationImage(
                       scale: skala,
-                      fit: BoxFit.none,
+                      // fit: BoxFit.none,
                       image: AssetImage(
-                        dataSource[index].image,
+                        dataSource[index].image == null
+                            ? "assets/images/not_found.jpg"
+                            : dataSource[index].image!,
                       ),
                     ),
                   ),
@@ -143,7 +145,7 @@ class ContainerDetails extends StatelessWidget {
                     ),
                     child: Center(
                       child: Text(
-                        dataSource[index].title,
+                        dataSource[index].title!,
                         maxLines: 2,
                         style: kTitleList,
                       ),
