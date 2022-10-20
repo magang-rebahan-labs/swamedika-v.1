@@ -4,26 +4,18 @@ class Databases {
   final String desc;
   final String? hadist;
   final String? penggunaan;
-  final String? cate;
+  final String cate;
   final String? khasiat;
   final String? keamanan;
   final String? peringatan;
 
   Databases({
-    // required this.image,
-    // required this.title,
-    // required this.desc,
-    // required this.penggunaan,
-    // required this.cate,
-    // required this.khasiat,
-    // required this.keamanan,
-    // required this.peringatan,
     this.image,
     required this.title,
     required this.desc,
     this.hadist,
     this.penggunaan,
-    this.cate,
+    required this.cate,
     this.khasiat,
     this.keamanan,
     this.peringatan,
@@ -60,20 +52,7 @@ List<Databases> databaseContent = [
     keamanan:
         '1. European Medicine Agency melaporkan tidak ada efek samping serius yang dilaporkan sampai sekarang. Lebih lanjut komposisi kimia dari temulawak tidak memberikan alasan untuk masalah keamanan. \n\n2. Penggunaan temulawak pada wanita hamil dan selama menyusui tidak dianjurkan \n\n3. Penggunaan pada penderita penyumbatan saluran empedu, cholangitis, batu empedu atau penyakit empedu lainnya sebaiknya berkonsultasi dengan dokter.',
   ),
-  // Jahe
-  Databases(
-    image: 'assets/images/nabati/jahe.png',
-    title: 'Jahe',
-    cate: "Nabati",
-    desc:
-        'Jahe adalah tumbuhan yang rimpangnya sering digunakan sebagai rempah-rempah dan bahan baku pengobatan tradisional. Rimpangnya berbentuk jemari yang menggembung di ruas-ruas tengah. Rasa dominan pedas yang dirasakan dari jahe disebabkan oleh senyawa keton bernama zingeron.',
-    khasiat:
-        'Rimpang jahe yang diparut digunakan sebagai obat oles untuk mengobati pembengkakan, rematik dan sakit kepala. Masyarakat Melayu memanfaatkan air perasan rimpang untuk obat kolik. Sedangkan masyarakat Jawa menggunakan rimpang jahe sunthi yang diperas untuk mengobati luka akibat tertusuk duri, kuku lecet, luka akibat digigit ular, gatal-gatal dan bengkak. Dalam literatur Cina kuno, jahe bermanfaat untuk mengobati radang ginjal, kram perut saat menstruasi dan memperlancar haid. Selan itu juga dimanfaatkan untuk mengobati mual-muntah, batuk, sakit gembur-gembur (pembengkakan yang disebabkan oleh kelebihan cairan dalam jaringan tubuh), diare serta sering digunakan untuk mengatasi perut kembung, sebagai stimulansia dan diuretik',
-    penggunaan:
-        'Untuk preparasi infus, campurkan air mendidih dengan 0,5 sampai 1 gram serbuk dan diamkan selama 5 menit',
-    keamanan:
-        '1. Efek samping yang dilaporkan terutama adalah: \n\na. Keluhan gastrointestinal ringan-sedang, seperti rasa yang tidak enak pada mulut, diare, perut tidak nyaman, refluks dan nyeri ulu hati. \nb. Dilaporkan pemberian 6 g jahe kering atau lebih dapat meningkatkan pengelupasan sel-sel lambung, yang memicu timbulnya tukak lambung. Disarankan dosis pada pasien dengan perut kosong dibatasi maksimal 6 g. \nc. Uji klinik pemberian jahe pada anak-anak menunjukkan tidak ada efek samping yang dilaporkan. \n\n2. Penggunaan jahe dosis besar (12-14 g), tidak dianjurkan bersama dengan obat antikoagulan karena dapat meningkatkan efek hipotrombinemia (darah sukar membeku). \n\n3. Dosis besar dapat menyebabkan penekanan sistem saraf pusat dan aritmia. \n\n4. Kontraindikasi: Hati-hati penggunaan pada penderita yang hipersensitif terhadap jahe karena dapat menyebabkan dermatitis.',
-  ),
+
   // Jambu Biji
   Databases(
     image: 'assets/images/nabati/jambubiji.png',
@@ -104,7 +83,7 @@ List<Databases> databaseContent = [
   ),
   // Meniran
   Databases(
-    image: 'assets/images/nabati/adas.png',
+    image: 'assets/images/nabati/meniran.png',
     title: 'Meniran',
     cate: "Nabati",
     desc:
@@ -118,7 +97,7 @@ List<Databases> databaseContent = [
   ),
   // Sambiloto
   Databases(
-    image: 'assets/images/nabati/adas.png',
+    image: 'assets/images/nabati/sambiloto.png',
     title: 'Sambiloto',
     cate: "Nabati",
     desc:
@@ -174,6 +153,125 @@ List<Databases> databaseContent = [
     peringatan:
         'Dosis besar dapat menyebabkan penurunan hormone laki-laki karena tanaman ini mengandung bahan yang mirip hormone perempuan (kandungan zat aktif mempunyai aktivitas estrogenik).',
   ),
+  Databases(
+    image: 'assets/images/nabati/bawangmerah.png',
+    title: 'Bawang Merah',
+    cate: "Nabati",
+    desc:
+        'Bawang merah merupakan tanaman semusim yang memiliki umbi yang berlapis, berakar serabut, dengan daun berbentuk silinder berongga. Umbi bawang merah terbentuk dari pangkal daun yang bersatu dan membentuk batang yang berubah bentuk dan fungsi, membesar dan membentuk umbi.',
+    khasiat:
+        'Sebagai obat tradisional dapat menyembuhkan deman, kencing manis dan batuk. Bawang merah mengandung kuersetin, antioksidan yang kuat bertindak sebagai agen menghambat sel kanker. Kandungan lain dari bawang merah: protein, mineral, sulfur, antosianin, karbohidrat, dan serat. Bawang mengandung flavonoid yang telah diketahui untuk mendeaktifkan banyak karsinogen potensial dan pemicu tumor, seperti mengganggu pertumbuhan sel sensitif estrogen pada kanker payudara.',
+    hadist:
+        'Tumbuhan ini disebutkan didalam Al-Qur’an: \n\nQS. Al-Baqarah \nSurah ke-2; Madaniyyah; ayat 61 \n\nDan (ingatlah), ketika kamu berkata: “Hai Musa, kami tidak bisa sabar (tahan) dengan satu macam makanan saja. Sebab itu mohonkanlah untuk kami kepada Tuhanmu, agar Dia mengeluarkan bagi kami dari apa yang ditumbuhkan bumi, yaitu sayur-mayurnya, ketimunnya, bawang putihnya, kacang adasnya, dan bawang merahnya”. Musa berkata: “Maukah kamu mengambil yang rendah sebagai pengganti yang lebih baik? Pergilah kamu ke suatu kota, pasti kamu memperoleh apa yang kamu minta”. Lalu ditimpahkanlah kepada mereka nista dan kehinaan, serta mereka mendapat kemurkaan dari Allah. Hal itu (terjadi) karena mereka selalu mengingkari ayat-ayat Allah dan membunuh para Nabi yang memang tidak dibenarkan. Demikian itu (terjadi) karena mereka selalu berbuat durhaka dan melampaui batas” (QS. Al-Baqarah: 61).',
+  ),
+
+  Databases(
+    image: 'assets/images/nabati/bawangputih.png',
+    title: 'Bawang Putih',
+    desc:
+        'Bawang putih (Allium sativum) adalah tanaman herba semusim berumpun yang mempunyai ketinggian sekitar 60 cm. Bawang putih banyak ditanam di ladang-ladang di daerah pegunungan yang cukup mendapat sinar matahari. Bawang putih adalah tanaman dari Allium sekaligus nama dari umbi yang dihasilkan.',
+    khasiat:
+        'Kandungan kimia Bawang Putih yang memiliki aktivitas biologi dan bermanfaat dalam pengobatan adalah senyawa organosulfur, Bawang Putih memiliki banyak kandungan zat dan nutrisi yang baik bagi tubuh, diantaranya mineral-mineral yodium, vitamin A, B1 dan C, lemak, protein, fosfor, zat besi, zink, selenium, flavonoid dan lain sebagainya. Selain itu, Bawang Putih juga mengandung minyak atsiri yang bersifat antibakteri dan antiseptik.',
+    hadist:
+        'Tumbuhan ini disebutkan didalam Al-Qur’an: \n\nQS. Al-Baqarah \nSurah ke-2; Madaniyyah; ayat 61 \n\nDan (ingatlah), ketika kamu berkata: “Hai Musa, kami tidak bisa sabar (tahan) dengan satu macam makanan saja. Sebab itu mohonkanlah untuk kami kepada Tuhanmu, agar Dia mengeluarkan bagi kami dari apa yang ditumbuhkan bumi, yaitu sayur-mayurnya, ketimunnya, bawang putihnya, kacang adasnya, dan bawang merahnya”. Musa berkata: “Maukah kamu mengambil yang rendah sebagai pengganti yang lebih baik? Pergilah kamu ke suatu kota, pasti kamu memperoleh apa yang kamu minta”. Lalu ditimpahkanlah kepada mereka nista dan kehinaan, serta mereka mendapat kemurkaan dari Allah. Hal itu (terjadi) karena mereka selalu mengingkari ayat-ayat Allah dan membunuh para Nabi yang memang tidak dibenarkan. Demikian itu (terjadi) karena mereka selalu berbuat durhaka dan melampaui batas” (QS. Al-Baqarah: 61).',
+    cate: 'Nabati',
+  ),
+
+  Databases(
+    image: 'assets/images/nabati/mentimun.png',
+    title: 'Mentimun',
+    desc:
+        'Mentimun termasuk tanaman semusim (annual) yang bersifat menjalar atau memanjat dengan perantaraan pemegang yang berbentuk pilin (spiral). Batangnya basah, berbulu serta berbuku-buku. Panjang atau tinggi tanaman dapat mencapai 50 cm - 250 cm, bercabang dan bersulur yang tumbuh di sisi tangkai daun.',
+    khasiat:
+        'Ketimun diduga memiliki khasiat untuk menyembuhkan beberapa penyakit, seperti: hipertensi (tekanan darah tinggi), sariawan, batu ginjal, dan penyejuk kulit. Sari Ketimun buah yang rendah kalori, kaya akan air, dan merupakan sumber vitamin C yang cukup tinggi, dan mengandung flavonoid yang mempunyai efek antioksidan.',
+    hadist:
+        'Tumbuhan ini disebutkan didalam Al-Qur’an: \n\nQS. Al-Baqarah \nSurah ke-2; Madaniyyah; ayat 61 \n\nDan (ingatlah), ketika kamu berkata: “Hai Musa, kami tidak bisa sabar (tahan) dengan satu macam makanan saja. Sebab itu mohonkanlah untuk kami kepada Tuhanmu, agar Dia mengeluarkan bagi kami dari apa yang ditumbuhkan bumi, yaitu sayur-mayurnya, ketimunnya, bawang putihnya, kacang adasnya, dan bawang merahnya”. Musa berkata: “Maukah kamu mengambil yang rendah sebagai pengganti yang lebih baik? Pergilah kamu ke suatu kota, pasti kamu memperoleh apa yang kamu minta”. Lalu ditimpahkanlah kepada mereka nista dan kehinaan, serta mereka mendapat kemurkaan dari Allah. Hal itu (terjadi) karena mereka selalu mengingkari ayat-ayat Allah dan membunuh para Nabi yang memang tidak dibenarkan. Demikian itu (terjadi) karena mereka selalu berbuat durhaka dan melampaui batas” (QS. Al-Baqarah: 61).',
+    cate: 'Nabati',
+  ),
+
+  Databases(
+    image: 'assets/images/nabati/kacangadas.png',
+    title: 'Kacang Adas',
+    desc:
+        'Lentil atau kacang adas termasuk jenis kacang yang banyak diolah dalam kuliner Timur Tengah.',
+    khasiat:
+        'Polifenol pada kacang Lentil bersifat sebagai antioksidan, antibakteri, antiperadangan, dan antivirus. Bahkan, Lentil disebut-sebut berguna untuk mengurangi risiko penyakit kanker. Membantu menjaga kesehatan jantung, baik untuk ibu hamil.',
+    hadist:
+        'Tumbuhan ini disebutkan didalam Al-Qur’an: \n\nQS. Al-Baqarah \nSurah ke-2; Madaniyyah; ayat 61 \n\nDan (ingatlah), ketika kamu berkata: “Hai Musa, kami tidak bisa sabar (tahan) dengan satu macam makanan saja. Sebab itu mohonkanlah untuk kami kepada Tuhanmu, agar Dia mengeluarkan bagi kami dari apa yang ditumbuhkan bumi, yaitu sayur-mayurnya, ketimunnya, bawang putihnya, kacang adasnya, dan bawang merahnya”. Musa berkata: “Maukah kamu mengambil yang rendah sebagai pengganti yang lebih baik? Pergilah kamu ke suatu kota, pasti kamu memperoleh apa yang kamu minta”. Lalu ditimpahkanlah kepada mereka nista dan kehinaan, serta mereka mendapat kemurkaan dari Allah. Hal itu (terjadi) karena mereka selalu mengingkari ayat-ayat Allah dan membunuh para Nabi yang memang tidak dibenarkan. Demikian itu (terjadi) karena mereka selalu berbuat durhaka dan melampaui batas” (QS. Al-Baqarah: 61).',
+    cate: 'Nabati',
+  ),
+
+  Databases(
+    image: 'assets/images/nabati/anggur.png',
+    title: 'Anggur',
+    desc:
+        'Anggur merupakan tanaman yang tumbuh memanjat, yang mempunyai keistimewaan yaitu ranting- rantingnya dapat mengeluarkan buah yang lebat. Anggur dapat tumbuh dan dibudidayakan di daerah dingin, subtropis, maupun tropis.',
+    khasiat:
+        'Anggur tedapat senyawa resveratrol (antioksidan polyphenol) yang memiliki potensi untuk melawan kanker, penyakit jantung, penyakit degenerative saraf. Kandungan Anggur lainnya adalah Anthocyanin dan Phenolic. Anthocyanin merupakan polyphenolic utama dalam anggur merah, sementara catechin merupakan phenolic yang banyak terdapat pada angggur putih.',
+    hadist:
+        'Tumbuhan ini disebutkan didalam Al-Qur’an: \n\nQS. Al-Baqarah \nSurah ke-2; Madaniyyah; ayat 266 \n\nAdakah salah seorang di antara kamu yang ingin memiliki kebun kurma dan anggur yang mengalir di bawahnya sungai-su ngai, di sana dia memiliki segala macam buah-buahan, kemudian datanglah masa tuanya sedang dia memiliki keturunan yang masih kecil-kecil. Lalu kebun itu ditiup angin keras yang mengandung api, sehingga terbakar. Demikianlah Allah menerangkan ayat-ayat Nya kepadamu agar kamu memikirkan nya” (QS. Al-Baqarah: 266).\n\nQS. Al-An’aam\nSurah ke-6; Makkiyyah ; ayat 99\n\nDan Dialah yang menurunkan air dari langit, lalu Kami tumbuhkan dengan air itu segala macam tumbuh-tumbuhan, maka Kami keluarkan dari tumbuh-tumbuhan itu tanaman yang menghijau, Kami keluarkan dari tanaman yang menghijau itu butir yang banyak; dan dari mayang kurma, mengurai tangkai-tangkai yang menjulai, dan kebun-kebun anggur, dan (Kami keluarkan pula) zaitun dan delima yang serupa dan yang tidak serupa. Perhatikanlah buahnya pada waktu berbuah, dan menjadi masak. Sungguh, pada yang demikian itu ada tanda-tanda (kekuasaan Allah) bagi orang-orang yang beriman” (QS. Al-An’aam: 99).\n\nQS. Ar-Ra’d \nSurah ke-13; Makkiyyah ; ayat 4\n\nDan di bumi terdapat bagian-bagian yang berdampingan, kebun- kebun anggur, tanaman-tanaman, pohon kurma yang bercabang, dan yang tidak bercabang; disirami dengan air yang sama, tetapi Kami lebihkan tanaman yang satu dari yang lainnya dalam hal rasanya. Sungguh, pada yang demikian itu terdapat tanda-tanda (kebesaran Allah) bagi orang-orang yang mengerti” (QS. Ar-Ra’d: 4)\n\nQS. An-Nahl \nSurah ke-16; Makkiyyah ; ayat 10-11\n\nDialah yang telSah menurunkan air (hujan) dari langit untuk kamu, sebagiannya menjadi minuman dan sebagiannya (menyuburkan) tumbuhan, padanya kamu menggembalakan ternakmu. Dengan (air hujan) itu Dia menumbuhkan untuk kamu tanam-tanaman, zaitun, kurma, anggur dan segala macam buah-buahan. Sungguh, pada yang demikian itu benar-benar terdapat tanda (kebesaran Allah) bagi orang yang berpikir” (QS. An-Nahl: 10-11).',
+    cate: 'Nabati',
+  ),
+
+  Databases(
+    image: 'assets/images/nabati/kurma.png',
+    title: 'Kurma',
+    desc:
+        'Kurma mempunyai karakteristik yang hampir sama dengan kelapa, yaitu roset batang, monokotil, diaceous (berumah dua), panjang dan bertulang, daun menyirip, bunga bentuk tandan, buah warna hijau dan ketika tua berubah menjadi merah kecoklatan',
+    khasiat:
+        'Kandungan gula dalam Kurma merupakan komponen penting, dan paling banyak dalam Kurma, yaitu sebesar 70-75 %, terdiri atas sukrosa, fruktosa, dan glukosa. Kurma juga mengandung 16 jenis asam amino, dan sejumlah vitamin yang larut dalam air, seperti riboflavin, asam folat, dan sejumlah biotin, serta asam askorbat. Pada keduanya terkandung sumber gizi untuk memenuhi semua yang dibutuhkan tubuh yang berupa energi kalori, gula, dan yang lainnya. kurma mempunyai kandungan tannin yang tinggi dan biasanya digunakan sebagai pengobatan pada gangguan saluran pencernaan, radang tenggorokkan, pilek, bronchitis, dan demam.',
+    hadist:
+        'Tumbuhan ini disebutkan didalam Al-Qur’an: \n\nQS. Al-Baqarah \nSurah ke-2; Madaniyyah; ayat 266 \n\nAdakah salah seorang di antara kamu yang ingin memiliki kebun kurma dan anggur yang mengalir di bawahnya sungai-sungai, di sana dia memiliki segala macam buah-buahan, kemudian datanglah masa tuanya sedang dia memiliki keturunan yang masih kecil-kecil. Lalu kebun itu ditiup angin keras yang mengandung api, sehingga terbakar. Demikianlah Allah menerangkan ayat-ayat-Nya kepadamu agar kamu memikirkan nya” (QS. Al-Baqarah: 266).\n\nQS. Al-An’aam\nSurah ke-6; Makkiyyah; ayat 99\n\nDan Dialah yang menurunkan air dari langit, lalu Kami tumbuhkan dengan air itu segala macam tumbuh-tumbuhan, maka Kami keluarkan dari tumbuh-tumbuhan itu tanaman yang menghijau, Kami keluarkan dari tanaman yang menghijau itu butir yang banyak; dan dari mayang kurma, mengurai tangkai-tangkai yang menjulai, dan kebun-kebun anggur, dan (Kami keluarkan pula) zaitun dan delima yang serupa dan yang tidak serupa. Perhatikanlah buahnya pada waktu berbuah, dan menjadi masak. Sungguh, pada yang demikian itu ada tanda-tanda (kekuasaan Allah) bagi orang-orang yang beriman” (QS. Al-An’aam: 99).\n\nQS. Al-An’aam\nSurah ke-6; Makkiyyah; ayat 141\n\nDan Dialah yang menjadikan tanaman-tanaman yang merambat dan yang tidak merambat, pohon kurma, tanaman yang beraneka ragam rasanya, zaitun dan delima yang serupa (bentuk dan warnanya) dan tidak serupa (rasanya).Makanlah buahnya apabila ia berbuah dan berikanlah haknya (zakatnya) pada waktu memetik hasilnya, tapi janganlah berlebih-lebihan. Sesungguhnya Allah tidak menyukai orang-orang yang berlebihan” (QS. Al-An’aam: 141).',
+    cate: 'Nabati',
+  ),
+
+  Databases(
+    image: 'assets/images/nabati/delima.png',
+    title: 'Delima',
+    desc:
+        'Delima (Punica granatum) adalah tanaman buah-buahan yang dapat tumbuh hingga 5–8 m. Tanaman ini diperkirakan berasal dari Iran, namun telah lama dikembangbiakkan di daerah Mediterania. Bangsa Moor memberi nama salah satu kota kuno di Spanyol, Granada berdasarkan nama buah ini. Tanaman ini juga banyak ditanam di daerah Cina Selatan dan Asia Tenggara.',
+    khasiat:
+        'Delima yang manis dan basah sangat baik untuk perut, menguatkan perut karena mengandung daya pencegah diare yang lembut. Cairan yang dikandung buah ini menjadi pelembut bagi perut, serta sumber gizi yang melimpah bagi tubuh. Dapat untuk obat pencegah diare, bermanfaat untuk perut yang sedang mengalami peradangan, melancarkan aliran air ken- cing, menyembuhkan sakit kuning (hepatitis). Delima yang manis bersifat panas dan lembab, amat baik untuk lambung, berguna juga untuk tenggorokan, dan paru-paru, selain untuk mengobati batuk. Airnya dapat memperbaiki lambung, memberikan gizi pada tubuh, menghasilkan panas yang cukup di Lambung.',
+    hadist:
+        'Tumbuhan ini disebutkan didalam Al-Qur’an: \n\nQS. Al-An’aam\nSurah ke-6; Makkiyyah; ayat 99\n\nDan Dialah yang menurunkan air dari langit, lalu Kami tumbuhkan dengan air itu segala macam tumbuh-tumbuhan, maka Kami keluarkan dari tumbuh-tumbuhan itu tanaman yang menghijau, Kami keluarkan dari tanaman yang menghijau itu butir yang banyak; dan dari mayang kurma, mengurai tangkai-tangkai yang menjulai, dan kebun-kebun anggur, dan (Kami keluarkan pula) zaitun dan delima yang serupa dan yang tidak serupa. Perhatikanlah buahnya pada waktu berbuah, dan menjadi masak. Sungguh, pada yang demikian itu ada tanda-tanda (kekuasaan Allah) bagi orang-orang yang beriman” (QS. Al-An’aam: 99).\n\nQS. Al-An’aam\nSurah ke-6; Makkiyyah; ayat 141\n\nDan Dialah yang menjadikan tanaman-tanaman yang merambat dan yang tidak merambat, pohon kurma, tanaman yang beraneka ragam rasanya, zaitun dan delima yang serupa (bentuk dan warnanya) dan tidak serupa (rasanya). Makanlah buah nya apabila ia berbuah dan berikanlah haknya (zakatnya) pada waktu memetik hasilnya, tapi janganlah berlebih-lebihan. Sesungguhnya Allah tidak menyukai orang-orang yang berlebihan” (QS. Al-An’aam: 141).\n\nQS. Ar-Rahmaan\nSurah ke-55; Madaniyyah; ayat 68\n\nDi dalam kedua surga itu ada buah-buahan, kurma dan delima” (QS. Ar-Rahmaan: 68).',
+    cate: 'Nabati',
+  ),
+
+  Databases(
+    image: 'assets/images/nabati/zaitun.png',
+    title: 'Zaitun',
+    desc:
+        'Zaitun (Olea europaea) adalah pohon kecil tahunan dan hijau abadi, yang buah mudanya dapat dimakan mentah ataupun sesudah diawetkan sebagai penyegar. Buahnya yang tua diperas dan minyaknya diekstrak menjadi minyak zaitun yang dapat dipergunakan untuk berbagai macam keperluan. Zaitun adalah anggota suku Oleaceae.',
+    khasiat:
+        'Kandungan lemak monounsaturated dalam minyak zaitun dihubungkan dengan pengurangan resiko terkena penyakit jantung koroner. Minyak zaitun banyak mengandung monounsaturated yaitu oleic acid. Banyak bukti klinis, menggunakan minyak zaitun memberikan keuntungan pada jantung, seperti: anti inflamasi (anti peradangan), anti thrombotic (anti penggumpalan darah), anti hipertensi, bersifat laxative.',
+    hadist:
+        'Tumbuhan ini disebutkan didalam Al-Qur’an: \n\nQS. Al-An’aam \nSurah ke-6; Makkiyyah; ayat 99 \n\nDan Dialah yang menurunkan air dari langit, lalu Kami tumbuhkan dengan air itu segala macam tumbuh-tumbuhan, maka Kami keluarkan dari tumbuh-tumbuhan itu tanaman yang menghijau, Kami keluarkan dari tanaman yang menghijau itu butir yang banyak; dan dari mayang kurma, mengurai tangkai-tangkai yang menjulai, dan kebun-kebun anggur, dan (Kami keluarkan pula) zaitun dan delima yang serupa dan yang tidak serupa. Perhatikanlah buahnya pada waktu berbuah, dan menjadi masak. Sungguh, pada yang demikian itu ada tanda-tanda (kekuasaan Allah) bagi orang-orang yang beriman” (QS. Al-An’aam: 99).\n\nQS. Al-An’aam\nSurah ke-6; Makkiyyah; ayat 141\n\nDan Dialah yang menjadikan tanaman-tanaman yang merambat dan yang tidak merambat, pohon kurma, tanaman yang beraneka ragam rasanya, zaitun dan delima yang serupa (bentuk dan warnanya) dan tidak serupa (rasanya). Makanlah buah nya apabila ia berbuah dan berikanlah haknya (zakatnya) pada waktu memetik hasilnya, tapi janganlah berlebih-lebihan. Sesungguhnya Allah tidak menyukai orang- orang yang berlebihan” (QS. Al-An’aam: 141).\n\nQS. An-Nahl\nSurah ke-16; Makkiyyah; ayat 11\n\nDengan (air hujan) itu Dia menumbuhkan untuk kamu tanam-tanaman, zaitun, kurma, anggur dan segala macam buah-buahan. Sungguh, pada yang demikian itu benar-benar terdapat tanda (kebesaran Allah) bagi orang yang berpikir” (Q.S. An-Nahl: 11).',
+    cate: 'Nabati',
+  ),
+
+  Databases(
+    image: 'assets/images/nabati/jahe.png',
+    title: 'Jahe',
+    desc:
+        'Jahe adalah tumbuhan yang rimpangnya sering digunakan sebagai rempah-rempah dan bahan baku pengobatan tradisional. Rimpangnya berbentuk jemari yang menggembung di ruas-ruas tengah. Rasa dominan pedas yang dirasakan dari jahe disebabkan oleh senyawa keton bernama zingeron.',
+    khasiat:
+        'Jahe dapat memberikan rasa hangat bagi tubuh. Ibnu Masawih menyatakan, Jahe berguna bagi gangguan hati akibat cuaca panas ataupun dingin, mampu meningkatkan vitalitas pria, dan mengobati gastritis pada lambung dan usus. Ibnu Sina berpendapat, Jahe dapat meningkatkan daya tahan tubuh. Jahe membantu para wanita hamil mengatasi morning sickness, tanpa menimbulkan efek samping janin di kandungannya.',
+    hadist:
+        'Tumbuhan ini disebutkan didalam Al-Qur’an: \n\nQS. Al-Insaan \nSurah ke-76; Madaniyyah; ayat 17 \n\nDan di sana mereka diberi segelas minuman bercampur jahe” (QS. Al-Insaan: 17).',
+    cate: 'Nabati',
+  ),
+
+  Databases(
+    image: 'assets/images/nabati/bidara.png',
+    title: 'Bidara',
+    desc:
+        'Bidara, atau dalam bahasa arab dikenal dengan sidr ini merupakan tanaman yang berasal dari Arab, sejenis pohon kecil yang selalu hijau, penghasil buah yang tumbuh di daerah tropis serta Asia Barat dan dapat tumbuh di lembah-lembah sampai ketinggian 500 m dpl.',
+    khasiat:
+        'Bidara digunakan sebagai antidiabetes, sedatif, bronkitis, dan antidiare. Bidara memiliki kandungan polifenol, siklopeptida alkaloid, saponin, vitamin, mi- neral, asam amino, dan asam lemak tak jenuh. Senyawa-senyawa tersebut bersifat anti mikroba, anti inflamasi, hipoglikemik, antioksidan, serta memiliki efek imunomodulator. Flavonoid dan saponin- senyawa bioaktif yang ditemukan di tumbuhan Bidara, terbukti meningkatkan waktu tidur. Bahan alami ini ternyata telah digunakan ribuan tahun untuk mengobati masalah gastrointestinal, termasuk kembung, sakit perut, dan sembelit.',
+    hadist:
+        'Tumbuhan ini disebutkan didalam Al-Qur’an: \n\nQS. Saba’ \nSurah ke-34; Makkiyyah; ayat 16 \n\nTetapi mereka berpaling, maka Kami kirim kepada mereka banjir yang besar dan Kami ganti kedua kebun mereka dengan dua kebun yang ditumbuhi (pohon-pohon) yang berbuah pahit, pohon Asl dan sedikit pohon Sidr” (QS. Saba’: 16).\n\nQS. An-Najm\nSurah ke-53; Makkiyyah; ayat 14-16\n\n(Yaitu) di Sidratul Muntaha, di dekatnya ada surga tempat tinggal, (Muhammad melihat Jibril) ketika Sidratil muntah diliputi oleh sesuatu yang meliputinya,” (QS. An-Najm: 14-16).\n\nQS. Al-Waaqi’ah\nSurah ke-56; Madaniyyah; ayat 27-34\n\nDan golongan kanan, siapakah golongan kanan itu. (Mereka) berada di antara pohon bidara yang tidak berduri, dan pohon pisang yang bersusun-susun (buahnya), dan naungan yang terbentang luas, dan air yang mengalir terus-menerus, dan buah-buahan yang banyak, yang tidak berhenti berbuah dan tidak terlarang mengambilnya, dan kasur-kasur yang tebal lagi empuk.” (QS. Al-Waaqi,ah: 27-34).',
+    cate: 'Nabati',
+  ),
 
   // HEWANI ==============================================================
   // Madu
@@ -186,7 +284,7 @@ List<Databases> databaseContent = [
       khasiat:
           'Sebagai sumber energi madu memiliki kandungan nutrisi yang baik dan dapat menjadi sumber energi karena kandungan karbohidratnya, Madu mengandung potent antioksidant material yang dapat menghentikan reaksi berantai akibat radikal bebas, Anti bakteri dari madu berasal dari sifat asam dari madu, tekanan osmosis tinggi dan kandungan air rendah, serta hidrogen peroksida, Madu memiliki efek anti inflamasi pada proses penyembuhan luka. Madu dapat dioleskan pada luka tekanan osmosis pada madu akan menyerap kandungan air di luka sehingga luka akan lebih cepat kering.',
       hadist:
-          'Madu dalam al-quran disebutkan sebanyak satu kali sebagaimana yang terdapat dalam QS. Muhammad/47: 15. \n\n“(apakah) perumpamaan (penghuni) jannah yang dijanjikan kepada orang-orang yang bertakwa yang di dalamnya ada sungai-sungai dari air yang tiada berubah rasa dan baunya, sungai-sungai dari air susu yang tidak beubah rasanya, sungai-sungai dari khamar yang lezat rasanya bagi peminumnya dan sungai-sungai dari madu yang disaring; dan mereka memperoleh di dalamnya segala macam buah-buahan dan ampunan dari Rabb mereka, sama dengan orang yang kekal dalam Jahannam dan diberi minuman dengan air yang mendidih sehingga memotong ususnya”?. \n\nAyat di atas menerangkan minuman yang ada di surga dan neraka, salah satuminuman yang ada di dalam surga adalah madu, betapa istimewanya madu, sehingga madu tidak hanya merupakan minuman di dunia melainkan madu juga termasuk minuman yang ada di surga yang diperuntukkan bagi penghuninya. \n\nSurah An Nahl ayat 68 yang berbunyi : Dan Tuhanmu mewahyukan kepada lebah: “Buatlah sarang-sarang di bukit-bukit, di pohon-pohon kayu, dan di tempat-tempat yang dibikin manusia” \n\nDan pada surah An-Nahl ayat 69 yang berbunyi: \n\n “Dari perut lebah itu ke luar minuman (madu) yang bermacam-macam warnanya, di dalamnya terdapat obat yang menyembuhkan bagi manusia”.'),
+          'Madu dalam Al-Quran disebutkan sebanyak satu kali sebagaimana yang terdapat dalam QS. Muhammad/47: 15. \n\n“(apakah) perumpamaan (penghuni) jannah yang dijanjikan kepada orang-orang yang bertakwa yang di dalamnya ada sungai-sungai dari air yang tiada berubah rasa dan baunya, sungai-sungai dari air susu yang tidak beubah rasanya, sungai-sungai dari khamar yang lezat rasanya bagi peminumnya dan sungai-sungai dari madu yang disaring; dan mereka memperoleh di dalamnya segala macam buah-buahan dan ampunan dari Rabb mereka, sama dengan orang yang kekal dalam Jahannam dan diberi minuman dengan air yang mendidih sehingga memotong ususnya”?. \n\nAyat di atas menerangkan minuman yang ada di surga dan neraka, salah satuminuman yang ada di dalam surga adalah madu, betapa istimewanya madu, sehingga madu tidak hanya merupakan minuman di dunia melainkan madu juga termasuk minuman yang ada di surga yang diperuntukkan bagi penghuninya. \n\nSurah An Nahl ayat 68 yang berbunyi : Dan Tuhanmu mewahyukan kepada lebah: “Buatlah sarang-sarang di bukit-bukit, di pohon-pohon kayu, dan di tempat-tempat yang dibikin manusia” \n\nDan pada surah An-Nahl ayat 69 yang berbunyi: \n\n “Dari perut lebah itu ke luar minuman (madu) yang bermacam-macam warnanya, di dalamnya terdapat obat yang menyembuhkan bagi manusia”.'),
   // Susu Hewan Ternak
   Databases(
       image: 'assets/images/hewani/susu.png',
