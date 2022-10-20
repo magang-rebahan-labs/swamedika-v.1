@@ -83,6 +83,7 @@ List<Databases> databaseContent = [
   ),
   // Meniran
   Databases(
+    image: 'assets/images/nabati/meniran.png',
     title: 'Meniran',
     cate: "Nabati",
     desc:
@@ -96,6 +97,7 @@ List<Databases> databaseContent = [
   ),
   // Sambiloto
   Databases(
+    image: 'assets/images/nabati/sambiloto.png',
     title: 'Sambiloto',
     cate: "Nabati",
     desc:
@@ -176,6 +178,7 @@ List<Databases> databaseContent = [
   ),
 
   Databases(
+    image: 'assets/images/nabati/mentimun.png',
     title: 'Mentimun',
     desc:
         'Mentimun termasuk tanaman semusim (annual) yang bersifat menjalar atau memanjat dengan perantaraan pemegang yang berbentuk pilin (spiral). Batangnya basah, berbulu serta berbuku-buku. Panjang atau tinggi tanaman dapat mencapai 50 cm - 250 cm, bercabang dan bersulur yang tumbuh di sisi tangkai daun.',
@@ -211,6 +214,7 @@ List<Databases> databaseContent = [
   ),
 
   Databases(
+    image: 'assets/images/nabati/kurma.png',
     title: 'Kurma',
     desc:
         'Kurma mempunyai karakteristik yang hampir sama dengan kelapa, yaitu roset batang, monokotil, diaceous (berumah dua), panjang dan bertulang, daun menyirip, bunga bentuk tandan, buah warna hijau dan ketika tua berubah menjadi merah kecoklatan',
@@ -234,6 +238,7 @@ List<Databases> databaseContent = [
   ),
 
   Databases(
+    image: 'assets/images/nabati/zaitun.png',
     title: 'Zaitun',
     desc:
         'Zaitun (Olea europaea) adalah pohon kecil tahunan dan hijau abadi, yang buah mudanya dapat dimakan mentah ataupun sesudah diawetkan sebagai penyegar. Buahnya yang tua diperas dan minyaknya diekstrak menjadi minyak zaitun yang dapat dipergunakan untuk berbagai macam keperluan. Zaitun adalah anggota suku Oleaceae.',
