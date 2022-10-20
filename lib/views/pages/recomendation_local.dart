@@ -18,16 +18,20 @@ class _RecomendationLocalState extends State<RecomendationLocal> {
   @override
   Widget build(BuildContext context) {
     final marginContainer = MediaQuery.of(context).size.width / 23.4375;
+    // final margintContainer = MediaQuery.of(context).size.width / 10.0;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(
-          MediaQuery.of(context).size.height / 3.8,
+          MediaQuery.of(context).size.height / 3.5,
         ),
         child: const AppBarSearch(),
       ),
       body: Container(
-        margin: EdgeInsets.only(right: marginContainer, left: marginContainer),
+        margin: EdgeInsets.only(
+            right: marginContainer,
+            left: marginContainer,
+            top: marginContainer),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
