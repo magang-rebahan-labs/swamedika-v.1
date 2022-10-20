@@ -15,7 +15,7 @@ class DetailPage extends StatefulWidget {
 
 class _DetailPageState extends State<DetailPage> {
   // Variabel untuk settingan SliverAppBar
-  final bool _pinned = true;
+  final bool _pinned = false;
   final bool _snap = false;
   final bool _floating = false;
 
