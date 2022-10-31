@@ -68,9 +68,7 @@ class _DetailPageState extends State<DetailPage> {
             ),
             child: FlexibleSpaceBar(
               background: Image.asset(
-                dataSource.image == null
-                    ? "assets/images/not_found.jpg"
-                    : dataSource.image!,
+                dataSource.image,
                 fit: BoxFit.cover,
               ),
             ),

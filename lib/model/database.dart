@@ -1,5 +1,5 @@
 class Databases {
-  final String? image;
+  final String image;
   final String title;
   final String desc;
   final String? hadist;
@@ -10,7 +10,7 @@ class Databases {
   final String? peringatan;
 
   Databases({
-    this.image,
+    required this.image,
     required this.title,
     required this.desc,
     this.hadist,
