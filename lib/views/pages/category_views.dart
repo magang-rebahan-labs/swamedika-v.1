@@ -131,9 +131,7 @@ class ContainerDetails extends StatelessWidget {
                       scale: skala,
                       // fit: BoxFit.none,
                       image: AssetImage(
-                        dataSource[index].image == null
-                            ? "assets/images/not_found.jpg"
-                            : dataSource[index].image!,
+                        dataSource[index].image,
                       ),
                     ),
                   ),

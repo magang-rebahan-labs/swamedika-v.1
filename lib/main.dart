@@ -8,7 +8,7 @@ bool? seenOnBoard;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   SharedPreferences pref = await SharedPreferences.getInstance();
   seenOnBoard = pref.getBool('seenOnBoard') ?? false;
   runApp(const MyApp());

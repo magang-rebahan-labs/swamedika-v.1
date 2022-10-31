@@ -138,9 +138,7 @@ class _SearchPageState extends State<SearchPage> {
                             ),
                             child: Image(
                               image: AssetImage(
-                                databaseContent[index].image == null
-                                    ? "assets/images/not_found.jpg"
-                                    : databaseContent[index].image!,
+                                databaseContent[index].image,
                               ),
                             ),
                           ),
@@ -184,9 +182,7 @@ class _SearchPageState extends State<SearchPage> {
                                 ),
                                 child: Image(
                                   image: AssetImage(
-                                    databaseContent[index].image == null
-                                        ? "assets/images/not_found.jpg"
-                                        : databaseContent[index].image!,
+                                    databaseContent[index].image,
                                   ),
                                 ),
                               ),
